@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+{# PAGE CREATION DE COMPTE#}
+{% form_theme Formulaire 'bootstrap_4_layout.html.twig' %}
+{% block title %}Troc'Eco | Connexion{% endblock %}
+
+{# MAIN #}
+{% block contenuPrincipal %}
+{{parent()}}
+<section>
+    <div class="shadow-lg">
+        <h1 class="text-center py-3 my-5">Connexion</h1>
+    </div>
+    
+     {# FORMULAIRE#}
+        <div>
+                <form method="post">
+                        <div class="container shadow bg-vert rounded">
+                        <button type="button" class="btn btn-outline-info">
+                                <a class="text-dark btn" href="{{ path('app_login') }}">J'ai déjà un compte</a>
+                        </button>
+                        
+                        {{ form_start(Formulaire, {'attr': {'id': 'new_user'}}) }}
+                        <div class="row">
+                                <div class="col-12">
+                                        {{ form_label(Formulaire.nom) }}
+                                        {{ form_widget(Formulaire.nom) }}
+                                </div>
+                                <div class="col-12">
+                                        {{ form_label(Formulaire.email) }}
+                                        {{ form_widget(Formulaire.email) }}
+                                </div>
+                                <div class="col-12">
+                                        {{ form_label(Formulaire.password) }}
+                                        {{ form_widget(Formulaire.password) }}
+                                </div>
+                                <div class="col-12">
+                                        {{ form_label(Formulaire.cp) }}
+                                        {{ form_widget(Formulaire.cp) }}
+                                </div>
+                                <div class="col-12">
+                                        {{ form_label(Formulaire.ville) }}
+                                        {{ form_widget(Formulaire.ville) }}
+                                </div>
+                                <div class="col-12">
+                                        {{ form_label(Formulaire.telephone) }}
+                                        {{ form_widget(Formulaire.telephone) }}
+                                </div>
+                                
+                                <div class="col-12">
+                                        <label for="verifpass">Saisir une seconde fois le mot de passe</label>
+                                        <input type="password" id="verifpass" required>
+                                </div>
+                        </div>
+                                
+                                {{ form_end(Formulaire) }}
+
+                                <a href="{{ path('accueil') }}">Retour à l'accueil</a>
+                        
+                                
+                        
+                        
+                        </div>
+                </form>
+        </div>
+</section>
+
+{% endblock %}

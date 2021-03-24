@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Troc'Eco | Catégorie Vêtement{% endblock %}
+
+{% block contenuPrincipal %}
+
+<div class="shadow-lg">
+    <h1 class="text-center py-3 my-5">Catégorie Vêtement</h1>
+</div>
+<div>
+    <ul>
+    {% for produit in produits %}
+        <div class="card mb-3 card-size shadow" style="max-width: 1120px;">
+            <div class="row g-0">
+                <div class="col-md-4 image">
+                <img src="{{ asset('/uploads/brochures/' ~ produit.photo) }}" class="img-thumbnail" alt="photo-produit"/>
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body background-maison">
+                    <!-- synthaxe: produit.titre (produit= nom1ereVarDuFor . titre= nomDonnéSurFormulaireAdd) -->
+                        <h5 class="card-title">{{ produit.titre }}</h5>
+                        <p class="card-text">{{ produit.description }}</p>
+                        <p class="card-text"><small class="text-muted"></small></p>
+                    </div>
+                </div>
+            </div>
+            <a href="{{ path('annonce')}}"><span class="badge badge-pill badge-danger">Voir ce troc</span>
+        </div>
+    {% endfor %}
+    </ul>
+</div>
+
+{% endblock %}
