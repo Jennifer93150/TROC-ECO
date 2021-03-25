@@ -15,14 +15,10 @@
             <div class="my-custom-class-for-errors">
                 {{ form_errors(Formulaire) }}
             </div>
-
             <div class="col" id="some-custom-id">
-                <h2><small>Nom</small></h2>
                 {{ form_row(Formulaire.nom) }}
-                
-                <h2><small>Photo</small></h2>
-                <div class="m-2 pb-3 btn btn-light bg-light">{{ form_row(Formulaire.photo) }}</div>
-                <div class="m-2 btn btn-light bg-light rounded">{{ form_row(Formulaire.enregistrer) }}</div>
+                {{ form_row(Formulaire.photo) }}
+                <div style="background-color:#FFDAC3" class="m-2 px-5 btn rounded">{{ form_row(Formulaire.enregistrer) }}</div>
             </div>
             
         {{ form_end(Formulaire) }}

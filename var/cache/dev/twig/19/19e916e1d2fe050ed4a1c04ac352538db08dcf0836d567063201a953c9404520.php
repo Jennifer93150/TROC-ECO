@@ -122,11 +122,11 @@ class __TwigTemplate_e2e6d6302ca1fa5b9ae86213efeb8f8e7ae171ac162f7d17cdc4881a0a8
             
             <div class=\"container shadow bg-vert rounded\">
                 <div>
-                    <button type=\"button\" class=\"btn btn-outline-info mb-3\">
+                    <button type=\"button\" class=\"btn  mb-3\">
                         <a class=\"text-dark btn\" href=\"";
         // line 29
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inscription");
-        echo "\">Je crée un compte</a>
+        echo "\">Je crée un compte ></a>
                     </button>
                 </div>
                 <div>
@@ -144,7 +144,7 @@ class __TwigTemplate_e2e6d6302ca1fa5b9ae86213efeb8f8e7ae171ac162f7d17cdc4881a0a8
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\">
 
-                    <button class=\"btn btn-outline-info\" type=\"submit\">Se connecter</button>
+                    <button class=\"btn px-5\" style=\"background-color:#FFDAC3\" type=\"submit\">Se connecter</button>
                 </div>
             </div>
         
@@ -209,8 +209,8 @@ class __TwigTemplate_e2e6d6302ca1fa5b9ae86213efeb8f8e7ae171ac162f7d17cdc4881a0a8
             
             <div class=\"container shadow bg-vert rounded\">
                 <div>
-                    <button type=\"button\" class=\"btn btn-outline-info mb-3\">
-                        <a class=\"text-dark btn\" href=\"{{ path('inscription') }}\">Je crée un compte</a>
+                    <button type=\"button\" class=\"btn  mb-3\">
+                        <a class=\"text-dark btn\" href=\"{{ path('inscription') }}\">Je crée un compte ></a>
                     </button>
                 </div>
                 <div>
@@ -222,7 +222,7 @@ class __TwigTemplate_e2e6d6302ca1fa5b9ae86213efeb8f8e7ae171ac162f7d17cdc4881a0a8
                     <input type=\"hidden\" name=\"_csrf_token\"
                         value=\"{{ csrf_token('authenticate') }}\">
 
-                    <button class=\"btn btn-outline-info\" type=\"submit\">Se connecter</button>
+                    <button class=\"btn px-5\" style=\"background-color:#FFDAC3\" type=\"submit\">Se connecter</button>
                 </div>
             </div>
         

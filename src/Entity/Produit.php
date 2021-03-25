@@ -31,6 +31,7 @@ class Produit
      * @ORM\Column(type="string", length=255)
      */
     private $description;
+    
 
 //JE LIE mon produit A user
     /**

@@ -18,9 +18,9 @@ class CategorieType extends AbstractType
     {
         $builder
         
-            ->add('nom',TextType::class, ['label' => ' ','required' => true,])
+            ->add('nom',TextType::class, ['label' => 'Nom','required' => true,])
             ->add('photo', FileType::class, [
-                'label' => ' ',])
+                'label' => 'Photo',])
             ->add('enregistrer', SubmitType::class, [
                 'attr' => ['class' => 'Enregistrer'],
             ]);
