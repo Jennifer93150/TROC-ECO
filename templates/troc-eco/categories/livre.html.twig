@@ -3,29 +3,32 @@
 {% block title %}Troc'Eco | Catégorie livre...{% endblock %}
 
 {% block contenuPrincipal %}
-
-<div>
-    <h1 class="text-center">Catégorie Livre, CD et DVD</h1>
-</div>
-<div>
-    <ul>
-    {% for produit in produits %}
-        <div class="card mb-3 card-size" style="max-width: 1120px;">
-            <div class="row g-0">
-                <div class="col-md-4 image">
-                <img src="{{ asset('uploads/brochures/' ~ produit.photo) }}" class="img-thumbnail" alt="{{ produit.titre }}"/>
-                </div>
-                <div class="col-md-8">
-                    <div class="card-body background-maison">
-                        <h5 class="card-title">{{ produit.titre }}</h5>
-                        <p class="card-text">{{ produit.description }}</p>
-                        <p class="card-text"><small class="text-muted"></small></p>
+<section>
+    <div class="shadow-lg">
+        <h1 class="py-3 my-5 text-center">Catégorie Livre, CD et DVD</h1>
+    </div>
+    <div class="container">
+        <div class="row">
+            
+            {% for produit in produits %}
+                <div class="carte-produit shadow card p-3 mb-3 card-size" style="max-width: 1120px;">
+                    <div class="row g-0">
+                        <div class="col-6 image">
+                        <a href="#"><img src="{{ asset('/uploads/brochures/' ~ produit.photo) }}" class="img-thumbnail" alt="photo-produit"/></a>
+                        </div>
+                        <div class="col-6">
+                            <div class="card-body background-maison">
+                                <h2 class="card-title">{{ produit.titre }}</h2>
+                                <p class="card-text">{{ produit.description }}</p>
+                            </div>
+                        </div>
                     </div>
+                    <a href="#"><h3 class="btn text-center text-dark ">Voir ce troc</h3></a>
                 </div>
-            </div>
+            {% endfor %}
+            
         </div>
-    {% endfor %}
-    </ul>
-</div>
+    </div>
+</section>
 
 {% endblock %}

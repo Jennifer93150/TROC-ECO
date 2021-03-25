@@ -8,8 +8,7 @@ use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Validator\Constraints as Assert;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
-use Symfony\Component\HttpFoundation\File\File;
-use Vich\UploaderBundle\Mapping\Annotation as Vich;
+
 
 /**
  * @ORM\Table(name="user")
@@ -63,6 +62,8 @@ class User implements UserInterface
      */
     private $telephone;
 
+    
+
     /**
      * @ORM\Column(type="boolean")
      * @Assert\NotBlank(message="Vous devez accepter la politique de confidentialité.")
@@ -88,7 +89,7 @@ class User implements UserInterface
      * @ORM\OneToMany(targetEntity="App\Entity\Message", mappedBy="user")
      */
     private $messages;
-    
+
 
     public function __construct()
     {
@@ -272,5 +273,5 @@ class User implements UserInterface
         return $this;
     }
 
-   
+    
 }

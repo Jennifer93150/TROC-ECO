@@ -10,17 +10,19 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
+
+# FORMULAIRE NOUVELLE CATEGORIE ACCESIBLE UNIQUEMENT EN TANT QU'ADMIN
 class CategorieType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
         
-            ->add('nom',TextType::class, ['label' => 'Nom','required' => true,])
+            ->add('nom',TextType::class, ['label' => ' ','required' => true,])
             ->add('photo', FileType::class, [
-                'label' => 'photo',])
-            ->add('save', SubmitType::class, [
-                'attr' => ['class' => 'save'],
+                'label' => ' ',])
+            ->add('enregistrer', SubmitType::class, [
+                'attr' => ['class' => 'Enregistrer'],
             ]);
 
         ;

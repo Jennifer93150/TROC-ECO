@@ -135,6 +135,6 @@ class __TwigTemplate_901e7abd9bc637d4038dac110b7ff5c91ed4441deaf463377c28a0b0077
         {% endfor %}
     </tbody>
 </table>
-", "@WebProfiler/Profiler/bag.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/bag.html.twig");
+", "@WebProfiler/Profiler/bag.html.twig", "/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/vendor/symfony/web-profiler-bundle/Resources/views/Profiler/bag.html.twig");
     }
 }

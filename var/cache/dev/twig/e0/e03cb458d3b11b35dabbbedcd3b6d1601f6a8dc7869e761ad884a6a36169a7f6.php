@@ -25,6 +25,7 @@ class __TwigTemplate_ee21069033373a7136129064069dc42344e40ca0ad6e3a90273fcd51495
         $this->source = $this->getSourceContext();
 
         $this->blocks = [
+            'title' => [$this, 'block_title'],
             'contenuPrincipal' => [$this, 'block_contenuPrincipal'],
         ];
     }
@@ -54,7 +55,26 @@ class __TwigTemplate_ee21069033373a7136129064069dc42344e40ca0ad6e3a90273fcd51495
 
     }
 
-    // line 4
+    // line 3
+    public function block_title($context, array $blocks = [])
+    {
+        $macros = $this->macros;
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
+
+        echo "Troc'Eco | Politique de confidentialité ";
+        
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
+
+        
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
+
+    }
+
+    // line 6
     public function block_contenuPrincipal($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -64,7 +84,7 @@ class __TwigTemplate_ee21069033373a7136129064069dc42344e40ca0ad6e3a90273fcd51495
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "contenuPrincipal"));
 
-        // line 5
+        // line 7
         $this->displayParentBlock("contenuPrincipal", $context, $blocks);
         echo "
 <section>
@@ -167,12 +187,14 @@ class __TwigTemplate_ee21069033373a7136129064069dc42344e40ca0ad6e3a90273fcd51495
 
     public function getDebugInfo()
     {
-        return array (  68 => 5,  58 => 4,  35 => 1,);
+        return array (  88 => 7,  78 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
+
+{% block title %}Troc'Eco | Politique de confidentialité {% endblock %}
 
 {# MAIN #}
 {% block contenuPrincipal %}
@@ -257,6 +279,6 @@ class __TwigTemplate_ee21069033373a7136129064069dc42344e40ca0ad6e3a90273fcd51495
 </section>
 
 {% endblock %}
-", "troc-eco/politique.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/troc-eco/politique.html.twig");
+", "troc-eco/politique.html.twig", "/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/templates/troc-eco/politique.html.twig");
     }
 }

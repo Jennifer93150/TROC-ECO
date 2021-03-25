@@ -14,7 +14,7 @@ use Symfony\Component\Form\Extension\Core\Type\TelType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 
-# FORMULAIRE MODIFIER UTILISATEUR  
+# FORMULAIRE MODIFICATION UTILISATEUR  
 
 class ModifProfilType extends AbstractType
 {

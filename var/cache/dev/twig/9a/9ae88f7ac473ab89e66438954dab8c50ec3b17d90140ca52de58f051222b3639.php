@@ -46,7 +46,7 @@ class __TwigTemplate_696db48eb11ddf85b8e67f253cb8f0c1e948611fe1c3f845e646822dd16
         ";
         // line 3
         $this->displayBlock('header', $context, $blocks);
-        // line 52
+        // line 60
         echo "</header>";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -67,95 +67,107 @@ class __TwigTemplate_696db48eb11ddf85b8e67f253cb8f0c1e948611fe1c3f845e646822dd16
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "header"));
 
         // line 4
-        echo "            <!-- BARRE DE NAVIGATION -->
-            <div class=\"container-fluid header mt-4\">
-                <div>
-                    <a href=\"";
-        // line 7
+        echo "
+
+<nav class=\"navbar navbar-expand-lg navbar-light bg-nav \">
+  <div class=\"container-fluid\">
+    <a class=\"navbar-brand\" href=\"";
+        // line 8
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil");
         echo "\">
-                        <img  class=\"logo m-3\" src=\"../img/logo.png\" alt=\"logo\" width=\"50\" height=\"50\">
-                    </a>
-                </div>
-                
+      <img  class=\"logo m-3\" src=\"";
+        // line 9
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/logo.png"), "html", null, true);
+        echo "\" alt=\"logo\" width=\"50\" height=\"50\">
 
-                <nav class=\"nav\">
-                   
-                    
-                    <a href=\"";
-        // line 16
+    </a>
+    <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+      <span class=\"navbar-toggler-icon\"></span>
+    </button>
+    <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
+      <ul class=\"navbar-nav\">
+        <li class=\"nav-item\">
+          <a class=\"nav-link active\" aria-current=\"page\" href=\"";
+        // line 18
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil");
-        echo "\">Comment je fais ?</a>   
-                    <a href=\"";
-        // line 17
+        echo "\">Comment je fais ?</a>
+        </li>
+        <li class=\"nav-item\">
+          <a class=\"nav-link\" href=\"";
+        // line 21
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("recherche");
         echo "\">Je recherche</a>
-                    
+        </li>
 
-                    <!-- Si connecté affiche dans la navbar \"j'ajoute troc\", \"profil\",\"message\"-->
-                    ";
-        // line 21
+        ";
+        // line 24
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 22
-            echo "
-                        <a href=\"";
-            // line 23
+            // line 25
+            echo "        <li class=\"nav-item\">
+          <a class=\"nav-link\" href=\"";
+            // line 26
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ajout");
             echo "\">J'ajoute un troc</a>
-                        <a href=\"";
-            // line 24
+        </li>
+        <li class=\"nav-item\">
+          <a class=\"nav-link\" href=\"";
+            // line 29
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profil");
-            echo "\">Mon profil</a>
-                        <a href=\"";
-            // line 25
+            echo "\">Mon Profil</a>
+        </li>
+        <li class=\"nav-item\">
+          <a class=\"nav-link\" href=\"";
+            // line 32
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("message");
-            echo "\">Mes messages</a>
+            echo "\">Mes Messages</a>
+        </li>
 
-                        <!-- Si role admin alors affiche btn Gestion -->
-                        ";
-            // line 28
+        ";
+            // line 35
             if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-                // line 29
-                echo "                        
-                            <a href=\"";
-                // line 30
+                // line 36
+                echo "        <li class=\"nav-item\">
+          <a class=\"nav-link\" href=\"";
+                // line 37
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("gestion");
                 echo "\">Gestion</a>
-                        ";
+        </li>
+        ";
             }
-            // line 32
-            echo "                        <!-- Fin condition btn Gestion -->
-
-                        
-                        <a href=\"";
-            // line 35
+            // line 40
+            echo "
+        <li class=\"nav-item\">
+          <a class=\"nav-link\" href=\"";
+            // line 42
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\">Je me déconnecte</a>
-                        
+        </li>
 
-                    <!-- sinon (pas connecté) affiche \"Se connecter\" et \"Je m'inscris\" -->        
-                    ";
+        ";
         } else {
-            // line 40
-            echo "                        <a href=\"";
+            // line 46
+            echo "        <li class=\"nav-item\">
+          <a class=\"nav-link\" href=\"";
+            // line 47
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inscription");
             echo "\">Je m'inscris</a>
-                        
-                        <a href=\"";
-            // line 42
+        </li>
+        <li class=\"nav-item\">
+          <a class=\"nav-link\" href=\"";
+            // line 50
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\">Je me connecte</a>
-                       
-
-                    ";
-        }
-        // line 46
-        echo "                    <!-- Fin condition-->
-                        
-                </nav>
-
-            </div>
+        </li>
         ";
+        }
+        // line 53
+        echo "
+      </ul>
+    </div>
+  </div>
+</nav>
+
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -171,7 +183,7 @@ class __TwigTemplate_696db48eb11ddf85b8e67f253cb8f0c1e948611fe1c3f845e646822dd16
 
     public function getDebugInfo()
     {
-        return array (  153 => 46,  146 => 42,  140 => 40,  132 => 35,  127 => 32,  122 => 30,  119 => 29,  117 => 28,  111 => 25,  107 => 24,  103 => 23,  100 => 22,  98 => 21,  91 => 17,  87 => 16,  75 => 7,  70 => 4,  60 => 3,  50 => 52,  48 => 3,  44 => 1,);
+        return array (  164 => 53,  158 => 50,  152 => 47,  149 => 46,  142 => 42,  138 => 40,  132 => 37,  129 => 36,  127 => 35,  121 => 32,  115 => 29,  109 => 26,  106 => 25,  104 => 24,  98 => 21,  92 => 18,  80 => 9,  76 => 8,  70 => 4,  60 => 3,  50 => 60,  48 => 3,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -179,54 +191,62 @@ class __TwigTemplate_696db48eb11ddf85b8e67f253cb8f0c1e948611fe1c3f845e646822dd16
         return new Source("<header>
     <!-- BLOC HEADER -->
         {% block header %}
-            <!-- BARRE DE NAVIGATION -->
-            <div class=\"container-fluid header mt-4\">
-                <div>
-                    <a href=\"{{ path('accueil') }}\">
-                        <img  class=\"logo m-3\" src=\"../img/logo.png\" alt=\"logo\" width=\"50\" height=\"50\">
-                    </a>
-                </div>
-                
 
-                <nav class=\"nav\">
-                   
-                    
-                    <a href=\"{{ path('accueil') }}\">Comment je fais ?</a>   
-                    <a href=\"{{ path('recherche') }}\">Je recherche</a>
-                    
 
-                    <!-- Si connecté affiche dans la navbar \"j'ajoute troc\", \"profil\",\"message\"-->
-                    {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+<nav class=\"navbar navbar-expand-lg navbar-light bg-nav \">
+  <div class=\"container-fluid\">
+    <a class=\"navbar-brand\" href=\"{{ path('accueil') }}\">
+      <img  class=\"logo m-3\" src=\"{{ asset('img/logo.png') }}\" alt=\"logo\" width=\"50\" height=\"50\">
 
-                        <a href=\"{{ path('ajout') }}\">J'ajoute un troc</a>
-                        <a href=\"{{ path('profil') }}\">Mon profil</a>
-                        <a href=\"{{ path('message') }}\">Mes messages</a>
+    </a>
+    <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarNav\" aria-controls=\"navbarNav\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
+      <span class=\"navbar-toggler-icon\"></span>
+    </button>
+    <div class=\"collapse navbar-collapse\" id=\"navbarNav\">
+      <ul class=\"navbar-nav\">
+        <li class=\"nav-item\">
+          <a class=\"nav-link active\" aria-current=\"page\" href=\"{{ path('accueil') }}\">Comment je fais ?</a>
+        </li>
+        <li class=\"nav-item\">
+          <a class=\"nav-link\" href=\"{{ path('recherche') }}\">Je recherche</a>
+        </li>
 
-                        <!-- Si role admin alors affiche btn Gestion -->
-                        {% if is_granted('ROLE_ADMIN') %}
-                        
-                            <a href=\"{{ path('gestion') }}\">Gestion</a>
-                        {% endif %}
-                        <!-- Fin condition btn Gestion -->
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+        <li class=\"nav-item\">
+          <a class=\"nav-link\" href=\"{{ path('ajout') }}\">J'ajoute un troc</a>
+        </li>
+        <li class=\"nav-item\">
+          <a class=\"nav-link\" href=\"{{ path('profil') }}\">Mon Profil</a>
+        </li>
+        <li class=\"nav-item\">
+          <a class=\"nav-link\" href=\"{{ path('message') }}\">Mes Messages</a>
+        </li>
 
-                        
-                        <a href=\"{{ path('app_logout') }}\">Je me déconnecte</a>
-                        
+        {% if is_granted('ROLE_ADMIN') %}
+        <li class=\"nav-item\">
+          <a class=\"nav-link\" href=\"{{ path('gestion') }}\">Gestion</a>
+        </li>
+        {% endif %}
 
-                    <!-- sinon (pas connecté) affiche \"Se connecter\" et \"Je m'inscris\" -->        
-                    {% else %}
-                        <a href=\"{{ path('inscription') }}\">Je m'inscris</a>
-                        
-                        <a href=\"{{ path('app_login') }}\">Je me connecte</a>
-                       
+        <li class=\"nav-item\">
+          <a class=\"nav-link\" href=\"{{ path('app_logout') }}\">Je me déconnecte</a>
+        </li>
 
-                    {% endif %}
-                    <!-- Fin condition-->
-                        
-                </nav>
+        {% else %}
+        <li class=\"nav-item\">
+          <a class=\"nav-link\" href=\"{{ path('inscription') }}\">Je m'inscris</a>
+        </li>
+        <li class=\"nav-item\">
+          <a class=\"nav-link\" href=\"{{ path('app_login') }}\">Je me connecte</a>
+        </li>
+        {% endif %}
 
-            </div>
-        {% endblock %}
-</header>", "composants/nav.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/composants/nav.html.twig");
+      </ul>
+    </div>
+  </div>
+</nav>
+
+{% endblock %}
+</header>", "composants/nav.html.twig", "/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/templates/composants/nav.html.twig");
     }
 }

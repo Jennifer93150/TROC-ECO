@@ -24,18 +24,7 @@ class DefaultController extends AbstractController
         return $this->render('/troc-eco/index.html.twig');
     }
 
-    /**
-    * Nécessite juste d'être connecté
-    * @Route("/ajout-troc", name="ajout")
-    * @IsGranted("IS_AUTHENTICATED_FULLY")
-    * fonctionne aussi avec ROLE_USER
-    */
-    public function ajout()
-    {
-    
-        return $this->render('/troc-eco/ajout-troc.html.twig');
-    }
-
+   
     # Affichage les categories dans page Recherche
 
     /**

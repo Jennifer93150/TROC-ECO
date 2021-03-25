@@ -85,9 +85,8 @@ class __TwigTemplate_e2e6d6302ca1fa5b9ae86213efeb8f8e7ae171ac162f7d17cdc4881a0a8
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "contenuPrincipal"));
 
         // line 6
-        $this->displayParentBlock("contenuPrincipal", $context, $blocks);
         echo "
-
+<section>
     <div class=\"shadow-lg\">
         <h1 class=\"text-center my-5 py-3\">En avant pour troquer !</h1>
     </div>
@@ -110,11 +109,11 @@ class __TwigTemplate_e2e6d6302ca1fa5b9ae86213efeb8f8e7ae171ac162f7d17cdc4881a0a8
         // line 19
         if (twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 19, $this->source); })()), "user", [], "any", false, false, false, 19)) {
             // line 20
-            echo "                <div class=\"mb-3\">
+            echo "                <div class=\"bg-warning mb-3\">
                     Vous êtes déjà connecté en tant que ";
             // line 21
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 21, $this->source); })()), "user", [], "any", false, false, false, 21), "nom", [], "any", false, false, false, 21), "html", null, true);
-            echo ", 
+            echo ".
                 </div>
             ";
         }
@@ -148,7 +147,7 @@ class __TwigTemplate_e2e6d6302ca1fa5b9ae86213efeb8f8e7ae171ac162f7d17cdc4881a0a8
                     <button class=\"btn btn-outline-info\" type=\"submit\">Se connecter</button>
                 </div>
             </div>
-            
+        
 
             ";
         // line 56
@@ -156,6 +155,7 @@ class __TwigTemplate_e2e6d6302ca1fa5b9ae86213efeb8f8e7ae171ac162f7d17cdc4881a0a8
             
         </form>
     </div>
+</section>
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -177,7 +177,7 @@ class __TwigTemplate_e2e6d6302ca1fa5b9ae86213efeb8f8e7ae171ac162f7d17cdc4881a0a8
 
     public function getDebugInfo()
     {
-        return array (  155 => 56,  145 => 39,  137 => 34,  129 => 29,  122 => 24,  116 => 21,  113 => 20,  111 => 19,  108 => 18,  102 => 16,  100 => 15,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  154 => 56,  144 => 39,  136 => 34,  128 => 29,  121 => 24,  115 => 21,  112 => 20,  110 => 19,  107 => 18,  101 => 16,  99 => 15,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -187,8 +187,8 @@ class __TwigTemplate_e2e6d6302ca1fa5b9ae86213efeb8f8e7ae171ac162f7d17cdc4881a0a8
 {% block title %}Troc'Eco | Connexion{% endblock %}
 
 {% block contenuPrincipal %}
-{{parent()}}
 
+<section>
     <div class=\"shadow-lg\">
         <h1 class=\"text-center my-5 py-3\">En avant pour troquer !</h1>
     </div>
@@ -201,8 +201,8 @@ class __TwigTemplate_e2e6d6302ca1fa5b9ae86213efeb8f8e7ae171ac162f7d17cdc4881a0a8
             {% endif %}
 
             {% if app.user %}
-                <div class=\"mb-3\">
-                    Vous êtes déjà connecté en tant que {{ app.user.nom }}, 
+                <div class=\"bg-warning mb-3\">
+                    Vous êtes déjà connecté en tant que {{ app.user.nom }}.
                 </div>
             {% endif %}
 
@@ -225,7 +225,7 @@ class __TwigTemplate_e2e6d6302ca1fa5b9ae86213efeb8f8e7ae171ac162f7d17cdc4881a0a8
                     <button class=\"btn btn-outline-info\" type=\"submit\">Se connecter</button>
                 </div>
             </div>
-            
+        
 
             {#
                 Décommentez cette section et ajoutez une option Remember_me sous votre pare-feu pour activer la fonctionnalité Remember me.
@@ -241,7 +241,8 @@ class __TwigTemplate_e2e6d6302ca1fa5b9ae86213efeb8f8e7ae171ac162f7d17cdc4881a0a8
             
         </form>
     </div>
+</section>
 {% endblock %}
-", "security/login.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/security/login.html.twig");
+", "security/login.html.twig", "/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/templates/security/login.html.twig");
     }
 }

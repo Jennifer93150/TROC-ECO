@@ -90,7 +90,7 @@ class __TwigTemplate_4181d9c445e895c384b9e496c3a1ee332dff0c5ffad56da9c85ffec4138
     <h1 class=\"text-center py-3 my-5\">Annonce</h1>
 </div>
 <div class=\"container\">
-    <ul class=\"row\">
+    <div class=\"row\">
     
         <div class=\"card mb-3 card-size shadow\" style=\"max-width: 1120px;\">
             <div class=\"row g-0\">
@@ -104,21 +104,21 @@ class __TwigTemplate_4181d9c445e895c384b9e496c3a1ee332dff0c5ffad56da9c85ffec4138
                 </div>
                 <div class=\"col-md-8\">
                     <div class=\"card-body background-maison\">
-                        <h5 class=\"card-title\">";
+                        <h2 class=\"card-title\">";
         // line 20
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 20, $this->source); })()), "titre", [], "any", false, false, false, 20), "html", null, true);
-        echo "</h5>
+        echo "</h2>
                         <p class=\"card-text\">";
         // line 21
         echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, (isset($context["produit"]) || array_key_exists("produit", $context) ? $context["produit"] : (function () { throw new RuntimeError('Variable "produit" does not exist.', 21, $this->source); })()), "description", [], "any", false, false, false, 21), "html", null, true);
         echo "</p>
-                        <p class=\"card-text\"><small class=\"text-muted\"></small></p>
+                        
                     </div>
                 </div>
             </div>
         </div>
   
-    </ul>
+    </div>
 </div>
 
 ";
@@ -157,7 +157,7 @@ class __TwigTemplate_4181d9c445e895c384b9e496c3a1ee332dff0c5ffad56da9c85ffec4138
     <h1 class=\"text-center py-3 my-5\">Annonce</h1>
 </div>
 <div class=\"container\">
-    <ul class=\"row\">
+    <div class=\"row\">
     
         <div class=\"card mb-3 card-size shadow\" style=\"max-width: 1120px;\">
             <div class=\"row g-0\">
@@ -166,17 +166,17 @@ class __TwigTemplate_4181d9c445e895c384b9e496c3a1ee332dff0c5ffad56da9c85ffec4138
                 </div>
                 <div class=\"col-md-8\">
                     <div class=\"card-body background-maison\">
-                        <h5 class=\"card-title\">{{ produit.titre }}</h5>
+                        <h2 class=\"card-title\">{{ produit.titre }}</h2>
                         <p class=\"card-text\">{{ produit.description }}</p>
-                        <p class=\"card-text\"><small class=\"text-muted\"></small></p>
+                        
                     </div>
                 </div>
             </div>
         </div>
   
-    </ul>
+    </div>
 </div>
 
-{% endblock %}", "troc-eco/categories/annonce.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/troc-eco/categories/annonce.html.twig");
+{% endblock %}", "troc-eco/categories/annonce.html.twig", "/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/templates/troc-eco/categories/annonce.html.twig");
     }
 }

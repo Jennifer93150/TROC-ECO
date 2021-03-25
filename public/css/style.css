@@ -8,7 +8,7 @@
  
 
 /*********** HEADER **********/
-header{
+.bg-nav{
     background-color: #B28871;
 }
 
@@ -45,7 +45,7 @@ header{
 
 /*lien de la navbar*/
 
-header a{
+/*header a{
     font-family: 'Lato';
     color: white;;
     margin-left: 40px;

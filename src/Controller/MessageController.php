@@ -37,7 +37,7 @@ class MessageController extends AbstractController
         if ($form->isSubmitted() && $form->isValid()) {
           
             # $form->getData() contient les valeurs soumises
-            #$message = $form->getData();
+            $message = $form->getData();
             $date= new \DateTime('NOW');
             $message->setDate($date);
             

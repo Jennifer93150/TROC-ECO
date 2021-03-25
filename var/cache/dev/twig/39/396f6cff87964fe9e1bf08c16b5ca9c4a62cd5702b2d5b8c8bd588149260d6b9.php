@@ -57,37 +57,37 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
         ";
         // line 7
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 36
+        // line 37
         echo "        
     </head>
     <!-- PARTIE BODY -->
     <body>
         ";
-        // line 40
-        $this->loadTemplate("composants/nav.html.twig", "base.html.twig", 40)->display($context);
         // line 41
+        $this->loadTemplate("composants/nav.html.twig", "base.html.twig", 41)->display($context);
+        // line 42
         echo "         <!--   MAIN     -->
         <main>
             
             ";
-        // line 44
+        // line 45
         $this->displayBlock('contenuPrincipal', $context, $blocks);
-        // line 47
+        // line 48
         echo "                  
         </main>
         ";
-        // line 49
-        $this->loadTemplate("composants/footer.html.twig", "base.html.twig", 49)->display($context);
         // line 50
+        $this->loadTemplate("composants/footer.html.twig", "base.html.twig", 50)->display($context);
+        // line 51
         echo "
         
         
 
         ";
-        // line 55
+        // line 56
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 71
+        // line 72
         echo "
     </body>
 </html>
@@ -149,10 +149,10 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
             ";
         // line 24
         $this->displayBlock('css', $context, $blocks);
-        // line 32
+        // line 33
         echo "            <!-- icone barre navigation -->
             <link href=\"";
-        // line 33
+        // line 34
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/logo1.png"), "html", null, true);
         echo "\" rel=\"icon\" type=\"image/x-icon\"/> 
             
@@ -191,12 +191,13 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
         echo "\" media=\"all\"/>
             <link rel=\"stylesheet\" href=\"";
         // line 29
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("../css/maison.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("../css/categorie.css"), "html", null, true);
         echo "\" media=\"all\"/>
             <link rel=\"stylesheet\" href=\"";
         // line 30
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("css/gestion.css"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("../css/recherche.css"), "html", null, true);
         echo "\" media=\"all\"/>
+            
             ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -206,7 +207,7 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
 
     }
 
-    // line 44
+    // line 45
     public function block_contenuPrincipal($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -216,7 +217,7 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "contenuPrincipal"));
 
-        // line 45
+        // line 46
         echo "                           
             ";
         
@@ -227,7 +228,7 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
 
     }
 
-    // line 55
+    // line 56
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -237,7 +238,7 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 56
+        // line 57
         echo "
              
             <!-- JavaScript Bundle with Popper -->
@@ -246,7 +247,7 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
             <script src=\"https://code.jquery.com/jquery-3.5.1.min.js\" integrity=\"sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=\"
             crossorigin=\"anonymous\">
             </script>
-            <!--JavaScript Textilate -->
+            <!--JavaScript-->
             <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>
             <script src=\"https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js\"></script>
             <script src=\"https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.js\"></script>
@@ -273,7 +274,7 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
 
     public function getDebugInfo()
     {
-        return array (  241 => 56,  231 => 55,  220 => 45,  210 => 44,  198 => 30,  194 => 29,  190 => 28,  186 => 27,  182 => 26,  179 => 25,  169 => 24,  156 => 33,  153 => 32,  151 => 24,  133 => 8,  123 => 7,  105 => 5,  91 => 71,  88 => 55,  82 => 50,  80 => 49,  76 => 47,  74 => 44,  69 => 41,  67 => 40,  61 => 36,  59 => 7,  54 => 5,  48 => 1,);
+        return array (  242 => 57,  232 => 56,  221 => 46,  211 => 45,  198 => 30,  194 => 29,  190 => 28,  186 => 27,  182 => 26,  179 => 25,  169 => 24,  156 => 34,  153 => 33,  151 => 24,  133 => 8,  123 => 7,  105 => 5,  91 => 72,  88 => 56,  82 => 51,  80 => 50,  76 => 48,  74 => 45,  69 => 42,  67 => 41,  61 => 37,  59 => 7,  54 => 5,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -306,8 +307,9 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
             <link rel=\"stylesheet\" href=\"{{asset('../css/style.css') }}\" media=\"all\"/>
             <link rel=\"stylesheet\" href=\"{{asset('../css/index.css') }}\" media=\"all\"/>
             <link rel=\"stylesheet\" href=\"{{asset('../css/form.css') }}\" media=\"all\"/>
-            <link rel=\"stylesheet\" href=\"{{asset('../css/maison.css') }}\" media=\"all\"/>
-            <link rel=\"stylesheet\" href=\"{{ asset('css/gestion.css') }}\" media=\"all\"/>
+            <link rel=\"stylesheet\" href=\"{{asset('../css/categorie.css') }}\" media=\"all\"/>
+            <link rel=\"stylesheet\" href=\"{{asset('../css/recherche.css') }}\" media=\"all\"/>
+            
             {% endblock %}
             <!-- icone barre navigation -->
             <link href=\"{{ asset('img/logo1.png') }}\" rel=\"icon\" type=\"image/x-icon\"/> 
@@ -341,7 +343,7 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
             <script src=\"https://code.jquery.com/jquery-3.5.1.min.js\" integrity=\"sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=\"
             crossorigin=\"anonymous\">
             </script>
-            <!--JavaScript Textilate -->
+            <!--JavaScript-->
             <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js\"></script>
             <script src=\"https://cdnjs.cloudflare.com/ajax/libs/lettering.js/0.6.1/jquery.lettering.min.js\"></script>
             <script src=\"https://cdnjs.cloudflare.com/ajax/libs/textillate/0.4.0/jquery.textillate.js\"></script>
@@ -352,6 +354,6 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
     </body>
 </html>
 
-", "base.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/base.html.twig");
+", "base.html.twig", "/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/templates/base.html.twig");
     }
 }

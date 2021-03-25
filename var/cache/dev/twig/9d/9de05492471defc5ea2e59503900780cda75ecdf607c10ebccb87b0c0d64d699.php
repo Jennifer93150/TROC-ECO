@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* /user/profil.html.twig */
+/* user/profil.html.twig */
 class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547e7bda extends \Twig\Template
 {
     private $source;
@@ -39,12 +39,12 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/user/profil.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "user/profil.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/user/profil.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "user/profil.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "/user/profil.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "user/profil.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -74,9 +74,9 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
             <div class=\"mb-3\">
                 <div class=\"row g-0\">
                     <div class=\"col-lg-6\">
-                        <img class=\"rounded shadow-lg\" src=\"";
+                        <img class=\"rounded abeille\" src=\"";
         // line 13
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/profil.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/abeille-profil.png"), "html", null, true);
         echo "\" alt=\"img-profil\">
                     </div>
                     <div class=\"contenu-profil col-lg-6 px-5 pb-5\">
@@ -114,50 +114,47 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
             </div>
             <div>
                 <h2>Mes trocs</h2>
-                <!-- Faire une boucle for 
-                
-                -->
+                <!-- Faire une boucle for  -->
                 ";
-        // line 35
+        // line 33
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 35, $this->source); })()), "user", [], "any", false, false, false, 35), "produits", [], "any", false, false, false, 35));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 33, $this->source); })()), "user", [], "any", false, false, false, 33), "produits", [], "any", false, false, false, 33));
         foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
-            // line 36
+            // line 34
             echo "                <div class=\"mb-3\">
                     <div class=\"row g-0 border\">
                         <div class=\"col-md-6\">
                             <img src=\"";
-            // line 39
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/brochures/" . twig_get_attribute($this->env, $this->source, $context["produit"], "photo", [], "any", false, false, false, 39))), "html", null, true);
-            echo "\" alt=\"Photo ";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "titre", [], "any", false, false, false, 39), "html", null, true);
+            // line 37
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/brochures/" . twig_get_attribute($this->env, $this->source, $context["produit"], "photo", [], "any", false, false, false, 37))), "html", null, true);
+            echo "\" alt=\"Photo-";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "titre", [], "any", false, false, false, 37), "html", null, true);
             echo "\">
                         </div>
                         <div class=\"col-md-6 p-5\">
-                            <div class=\"\">
+                            <div>
                                 <h2 class=\"text-capitalize\">";
-            // line 43
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "titre", [], "any", false, false, false, 43), "html", null, true);
+            // line 41
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "titre", [], "any", false, false, false, 41), "html", null, true);
             echo "</h2>
                                 <p class=\"\">";
-            // line 44
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 44), "html", null, true);
+            // line 42
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 42), "html", null, true);
             echo "</p>
-                                <p class=\"\"><small class=\"text-muted\">mettre date ici</small></p>
                             </div>
                         </div>
                     </div>
-                    <!-- Fonction de suppression du produit par user A faire-->
-                    
+                    <!-- Fonction de suppression du produit par user A faire avec ceci entre accolades: path('deleteproduit', {'id':produit.id})-->
+                   <a href=\"#\"><h3 class=\"btn text-center text-dark\">Supprimer cette annonce</h3></a>
+
                 </div>
                 ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 53
+        // line 51
         echo "                
-
             </div>
 
         </div>
@@ -175,7 +172,7 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
 
     public function getTemplateName()
     {
-        return "/user/profil.html.twig";
+        return "user/profil.html.twig";
     }
 
     public function isTraitable()
@@ -185,7 +182,7 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
 
     public function getDebugInfo()
     {
-        return array (  159 => 53,  144 => 44,  140 => 43,  131 => 39,  126 => 36,  122 => 35,  112 => 28,  102 => 21,  98 => 20,  94 => 19,  90 => 18,  86 => 17,  79 => 13,  68 => 4,  58 => 3,  35 => 1,);
+        return array (  157 => 51,  142 => 42,  138 => 41,  129 => 37,  124 => 34,  120 => 33,  112 => 28,  102 => 21,  98 => 20,  94 => 19,  90 => 18,  86 => 17,  79 => 13,  68 => 4,  58 => 3,  35 => 1,);
     }
 
     public function getSourceContext()
@@ -202,7 +199,7 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
             <div class=\"mb-3\">
                 <div class=\"row g-0\">
                     <div class=\"col-lg-6\">
-                        <img class=\"rounded shadow-lg\" src=\"{{ asset('img/profil.png')}}\" alt=\"img-profil\">
+                        <img class=\"rounded abeille\" src=\"{{ asset('img/abeille-profil.png')}}\" alt=\"img-profil\">
                     </div>
                     <div class=\"contenu-profil col-lg-6 px-5 pb-5\">
                         
@@ -221,29 +218,26 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
             </div>
             <div>
                 <h2>Mes trocs</h2>
-                <!-- Faire une boucle for 
-                
-                -->
+                <!-- Faire une boucle for  -->
                 {% for produit in app.user.produits %}
                 <div class=\"mb-3\">
                     <div class=\"row g-0 border\">
                         <div class=\"col-md-6\">
-                            <img src=\"{{ asset('uploads/brochures/' ~ produit.photo)}}\" alt=\"Photo {{ produit.titre }}\">
+                            <img src=\"{{ asset('uploads/brochures/' ~ produit.photo)}}\" alt=\"Photo-{{ produit.titre }}\">
                         </div>
                         <div class=\"col-md-6 p-5\">
-                            <div class=\"\">
+                            <div>
                                 <h2 class=\"text-capitalize\">{{ produit.titre }}</h2>
                                 <p class=\"\">{{ produit.description }}</p>
-                                <p class=\"\"><small class=\"text-muted\">mettre date ici</small></p>
                             </div>
                         </div>
                     </div>
-                    <!-- Fonction de suppression du produit par user A faire-->
-                    
+                    <!-- Fonction de suppression du produit par user A faire avec ceci entre accolades: path('deleteproduit', {'id':produit.id})-->
+                   <a href=\"#\"><h3 class=\"btn text-center text-dark\">Supprimer cette annonce</h3></a>
+
                 </div>
                 {% endfor %}
                 
-
             </div>
 
         </div>
@@ -251,6 +245,6 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
 
 
 {% endblock %}
-", "/user/profil.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/user/profil.html.twig");
+", "user/profil.html.twig", "/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/templates/user/profil.html.twig");
     }
 }

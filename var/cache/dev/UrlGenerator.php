@@ -28,11 +28,9 @@ return [
     'Puericulture' => [[], ['_controller' => 'App\\Controller\\ProduitController::puericulture'], [], [['text', '/categorie/puericulture']], [], []],
     'Multimedia' => [[], ['_controller' => 'App\\Controller\\ProduitController::multimedia'], [], [['text', '/categorie/multimedia']], [], []],
     'Livres' => [[], ['_controller' => 'App\\Controller\\ProduitController::livre'], [], [['text', '/categorie/livre']], [], []],
-    'annonce' => [[], ['_controller' => 'App\\Controller\\ProduitController::annonces'], [], [['text', '/categories/annonce']], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], []],
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], []],
     'inscription' => [[], ['_controller' => 'App\\Controller\\UserController::new'], [], [['text', '/inscription']], [], []],
     'profil' => [[], ['_controller' => 'App\\Controller\\UserController::profil'], [], [['text', '/profil']], [], []],
-    'edit_profil' => [['id'], ['_controller' => 'App\\Controller\\UserController::edit'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id'], ['text', '/edit']], [], []],
-    'delete_user' => [['id'], ['_controller' => 'App\\Controller\\UserController::delete'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id'], ['text', '/delete']], [], []],
+    'edit_profil' => [['id'], ['_controller' => 'App\\Controller\\UserController::edit'], ['id' => '\\d+'], [['variable', '/', '\\d+', 'id'], ['text', '/profil/edit']], [], []],
 ];

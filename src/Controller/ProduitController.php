@@ -5,27 +5,35 @@ namespace App\Controller;
 use App\Entity\Produit;
 use App\Form\ProduitType;
 use App\Repository\ProduitRepository;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
-use Symfony\Component\HttpFoundation\File\File;
+use Symfony\Component\HttpFoundation\Response;
+#use Symfony\Component\HttpFoundation\File\Exception\FileException;
+#use Symfony\Component\HttpFoundation\File\File;
 
 
 class ProduitController extends AbstractController
 {
     # Fonction ajout nouveau produit
+    
 
     /**
+     * Nécessite juste d'être connecté
      * @Route("/ajouter", name="ajout", methods={"GET","POST"})
+     * @IsGranted("IS_AUTHENTICATED_FULLY")
+     * fonctionne aussi avec ROLE_USER
      */
     public function new(Request $request)
     {
+
+        
         # Création d'un nouvel object vide
         $produit = new Produit();
         
-        # (via la methode getUser() de la classe Produit), je recupere le user du produit qui sera ajouté
+        # (via la methode getUser() de la classe Produit, je recupere le user du produit qui sera ajouté
         $user = $this->getUser();
 
         # Création d'un nouvel objet form
@@ -35,8 +43,11 @@ class ProduitController extends AbstractController
 
         # Si "submit" ET tout valide
         if ($form->isSubmitted() && $form->isValid()) {
+
+            # Fonction desactivée pour le moment 
+
            /** @var UploadedFile $brochureFile */
-           $brochureFile = $form->get('photo')->getData();
+           /*$brochureFile = $form->get('photo')->getData();
 
            # cette condition est nécessaire car le champ 'brochure' n'est pas obligatoire
            # donc le fichier PDF ne doit être traité que lorsqu'un fichier est téléchargé
@@ -61,7 +72,8 @@ class ProduitController extends AbstractController
                $produit->setPhoto($newFilename);
                $produit->setPhoto(new File($this->getParameter('brochures_directory').'/'.$produit->getPhoto())
             );
-           }
+                $produit->setPhoto($newFilename);
+           }*/
 
             # Grace à ça l'id de user qui aura ajouté le produit sera indiqué ds la bdd  
             $produit->setUser($user);
@@ -78,7 +90,25 @@ class ProduitController extends AbstractController
         # Passer le formulaire à la vue
         return $this->render('/troc-eco/ajout-troc.html.twig', ['Formulaire' => $form->createView()]);
     }
-    
+
+
+    # Suppression produit
+    # En cours de création (pas eu le temps)
+    /**
+     * @Route("/produit/delete/{id<\d+>}", name="deleteproduit")
+     */
+    /*public function delete(Request $$request, Produit $produit)
+    {
+       
+        $em = $this->getDoctrine()->getManager();
+        $em->remove($produit);
+        $em->flush();
+        #return new Response('Votre annonce a bien été supprimé.');
+
+        # redirige la page
+        return $this->redirectToRoute('accueil');
+    }*/
+
     
     # Affichage DE TS LES PRODUITS CATEGORIE VETEMENT
 
@@ -87,10 +117,11 @@ class ProduitController extends AbstractController
      */
     public function vetement(ProduitRepository $produitRepository)
     {
-        return $this->render('/troc-eco/categories/vetement.html.twig', ['produits'=>$produitRepository->findBy(['categorie' => 1])]);
+        return $this->render('/troc-eco/categories/vetement.html.twig', ['produits'=>$produitRepository->findBy(['categorie' => 18])]);
         #return new Response(count($produitRepository). "produits dans cette catégorie.");
     }
     
+
     # Affichage categorie JARDIN
 
     /**
@@ -98,8 +129,9 @@ class ProduitController extends AbstractController
      */
     public function jardin(ProduitRepository $produitRepository)
     {
-        return $this->render('/troc-eco/categories/jardin.html.twig', ['produits'=>$produitRepository->findBy(['categorie' => 2])]);
+        return $this->render('/troc-eco/categories/jardin.html.twig', ['produits'=>$produitRepository->findBy(['categorie' => 19])]);
     }
+
 
      # Affichage categorie MAISON
 
@@ -109,8 +141,9 @@ class ProduitController extends AbstractController
     public function maison(ProduitRepository $produitRepository)
     {
         # methode optimisée
-        return $this->render('/troc-eco/categories/maison.html.twig', ['produits'=>$produitRepository->findBy(['categorie' => 3])]);
+        return $this->render('/troc-eco/categories/maison.html.twig', ['produits'=>$produitRepository->findBy(['categorie' => 20])]);
     }
+
 
      # Affichage categorie PUERICULTURE
 
@@ -120,8 +153,9 @@ class ProduitController extends AbstractController
     public function puericulture(ProduitRepository $produitRepository)
     {
        
-        return $this->render('/troc-eco/categories/puericulture.html.twig', ['produits'=>$produitRepository->findBy(['categorie' => 4])]);
+        return $this->render('/troc-eco/categories/puericulture.html.twig', ['produits'=>$produitRepository->findBy(['categorie' => 21])]);
     }
+
 
     # Affichage categorie MULTIMEDIA
 
@@ -131,8 +165,9 @@ class ProduitController extends AbstractController
     public function multimedia(ProduitRepository $produitRepository)
     {
         
-        return $this->render('/troc-eco/categories/multimedia.html.twig', ['produits'=>$produitRepository->findBy(['categorie' => 5])]);
+        return $this->render('/troc-eco/categories/multimedia.html.twig', ['produits'=>$produitRepository->findBy(['categorie' => 22])]);
     }
+
 
     # Affichage categorie LIVRE
 
@@ -142,19 +177,19 @@ class ProduitController extends AbstractController
     public function livre(ProduitRepository $produitRepository)
     {
        
-        return $this->render('/troc-eco/categories/livre.html.twig', ['produits'=>$produitRepository->findBy(['categorie' => 6])]);
+        return $this->render('/troc-eco/categories/livre.html.twig', ['produits'=>$produitRepository->findBy(['categorie' => 16])]);
     }
+
 
     # Affichage d'une annonce selectionnée
+    # En cours....
     /**
-    * @Route("/categories/annonce", name="annonce", methods={"GET"})
+    * @Route("/categorie/annonce", name="annonce", methods={"GET"})
     */
-    public function annonces(ProduitRepository $produitRepository)
+    /*public function annonces($id, ProduitRepository $produitRepository)
     {
-    
-        return $this->render('/troc-eco/categories/annonce.html.twig', ['produits'=>$produitRepository->findOneBy(['titre' => ''])]);
-    }
-
-
+        
+        return $this->render('/troc-eco/categorie/annonce.html.twig', ['produits'=>$produitRepository->find($id)]);
+    }*/
 
 }

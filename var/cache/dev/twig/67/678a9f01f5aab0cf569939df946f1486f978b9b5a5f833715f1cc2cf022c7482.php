@@ -223,6 +223,6 @@ class __TwigTemplate_0456057d721f596645bcd07bbfdbb18b341aba2c76c6e7b0230d51c40b0
 
 
 {% endblock %}
-", "user/edit.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/user/edit.html.twig");
+", "user/edit.html.twig", "/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/templates/user/edit.html.twig");
     }
 }

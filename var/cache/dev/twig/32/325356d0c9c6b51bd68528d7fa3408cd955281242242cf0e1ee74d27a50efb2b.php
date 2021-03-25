@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* user/message.html.twig */
+/* /user/message.html.twig */
 class __TwigTemplate_6551caa805820b6bcfae8094f00ec83fff586d33c1205f2b2065286827ff14ae extends \Twig\Template
 {
     private $source;
@@ -40,15 +40,15 @@ class __TwigTemplate_6551caa805820b6bcfae8094f00ec83fff586d33c1205f2b2065286827f
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "user/message.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/user/message.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "user/message.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/user/message.html.twig"));
 
         // line 3
         $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 3, $this->source); })()), [0 => "bootstrap_4_layout.html.twig"], true);
         // line 1
-        $this->parent = $this->loadTemplate("base.html.twig", "user/message.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "/user/message.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -68,7 +68,7 @@ class __TwigTemplate_6551caa805820b6bcfae8094f00ec83fff586d33c1205f2b2065286827f
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Troc'Eco | Mes messages";
+        echo "Troc'Eco | Message";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -91,7 +91,7 @@ class __TwigTemplate_6551caa805820b6bcfae8094f00ec83fff586d33c1205f2b2065286827f
         echo "
 <section>
     <div class=\"shadow-lg\">
-        <h1 class=\"text-center py-3 my-5\">Mes messages</h1>
+        <h1 class=\"text-center py-3 my-5\">Message</h1>
     </div>
     
 ";
@@ -121,7 +121,7 @@ class __TwigTemplate_6551caa805820b6bcfae8094f00ec83fff586d33c1205f2b2065286827f
 
     public function getTemplateName()
     {
-        return "user/message.html.twig";
+        return "/user/message.html.twig";
     }
 
     public function isTraitable()
@@ -139,14 +139,14 @@ class __TwigTemplate_6551caa805820b6bcfae8094f00ec83fff586d33c1205f2b2065286827f
         return new Source("{% extends 'base.html.twig' %}
 {# PAGE CREATION DE COMPTE#}
 {% form_theme Formulaire 'bootstrap_4_layout.html.twig' %}
-{% block title %}Troc'Eco | Mes messages{% endblock %}
+{% block title %}Troc'Eco | Message{% endblock %}
 
 {# MAIN #}
 {% block contenuPrincipal %}
 
 <section>
     <div class=\"shadow-lg\">
-        <h1 class=\"text-center py-3 my-5\">Mes messages</h1>
+        <h1 class=\"text-center py-3 my-5\">Message</h1>
     </div>
     
 {# FORMULAIRE#}
@@ -161,6 +161,6 @@ class __TwigTemplate_6551caa805820b6bcfae8094f00ec83fff586d33c1205f2b2065286827f
     </div>
 </section>
 
-{% endblock %}", "user/message.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/user/message.html.twig");
+{% endblock %}", "/user/message.html.twig", "/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/templates/user/message.html.twig");
     }
 }

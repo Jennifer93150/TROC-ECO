@@ -12,7 +12,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 
-/********************* FORMULAIRE NOUVEL UTILISATEUR ***************************/
+# FORMULAIRE ENVOI MESSAGE
 class MessageType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)

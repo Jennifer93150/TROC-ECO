@@ -103,24 +103,26 @@ class __TwigTemplate_fefe6028ef36a5132aca91387c763affc89ece4ce19b0168e47074da7f0
             </div>
 
             <div class=\"col\" id=\"some-custom-id\">
+                <h2><small>Nom</small></h2>
                 ";
-        // line 20
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 20, $this->source); })()), "nom", [], "any", false, false, false, 20), 'row');
+        // line 21
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 21, $this->source); })()), "nom", [], "any", false, false, false, 21), 'row');
         echo "
-
-                ";
-        // line 22
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 22, $this->source); })()), "photo", [], "any", false, false, false, 22), 'row');
-        echo "
-                ";
-        // line 23
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 23, $this->source); })()), "save", [], "any", false, false, false, 23), 'row');
-        echo "
+                
+                <h2><small>Photo</small></h2>
+                <div class=\"m-2 pb-3 btn btn-light bg-light\">";
+        // line 24
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 24, $this->source); })()), "photo", [], "any", false, false, false, 24), 'row');
+        echo "</div>
+                <div class=\"m-2 btn btn-light bg-light rounded\">";
+        // line 25
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 25, $this->source); })()), "enregistrer", [], "any", false, false, false, 25), 'row');
+        echo "</div>
             </div>
             
         ";
-        // line 26
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 26, $this->source); })()), 'form_end');
+        // line 28
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 28, $this->source); })()), 'form_end');
         echo "
     </div>
 </section>
@@ -148,7 +150,7 @@ class __TwigTemplate_fefe6028ef36a5132aca91387c763affc89ece4ce19b0168e47074da7f0
 
     public function getDebugInfo()
     {
-        return array (  123 => 26,  117 => 23,  113 => 22,  108 => 20,  101 => 16,  96 => 14,  88 => 8,  78 => 7,  59 => 3,  36 => 1,);
+        return array (  125 => 28,  119 => 25,  115 => 24,  109 => 21,  101 => 16,  96 => 14,  88 => 8,  78 => 7,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -172,10 +174,12 @@ class __TwigTemplate_fefe6028ef36a5132aca91387c763affc89ece4ce19b0168e47074da7f0
             </div>
 
             <div class=\"col\" id=\"some-custom-id\">
+                <h2><small>Nom</small></h2>
                 {{ form_row(Formulaire.nom) }}
-
-                {{ form_row(Formulaire.photo) }}
-                {{ form_row(Formulaire.save) }}
+                
+                <h2><small>Photo</small></h2>
+                <div class=\"m-2 pb-3 btn btn-light bg-light\">{{ form_row(Formulaire.photo) }}</div>
+                <div class=\"m-2 btn btn-light bg-light rounded\">{{ form_row(Formulaire.enregistrer) }}</div>
             </div>
             
         {{ form_end(Formulaire) }}
@@ -185,6 +189,6 @@ class __TwigTemplate_fefe6028ef36a5132aca91387c763affc89ece4ce19b0168e47074da7f0
    
 
 {% endblock %}
-", "admin/gestion.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/admin/gestion.html.twig");
+", "admin/gestion.html.twig", "/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/templates/admin/gestion.html.twig");
     }
 }

@@ -17,10 +17,12 @@
             </div>
 
             <div class="col" id="some-custom-id">
+                <h2><small>Nom</small></h2>
                 {{ form_row(Formulaire.nom) }}
-
-                {{ form_row(Formulaire.photo) }}
-                {{ form_row(Formulaire.save) }}
+                
+                <h2><small>Photo</small></h2>
+                <div class="m-2 pb-3 btn btn-light bg-light">{{ form_row(Formulaire.photo) }}</div>
+                <div class="m-2 btn btn-light bg-light rounded">{{ form_row(Formulaire.enregistrer) }}</div>
             </div>
             
         {{ form_end(Formulaire) }}

@@ -2,13 +2,14 @@
 
 {% block title %}Troc'Eco | Annonce {% endblock %}
 
+{# En cours... #}
 {% block contenuPrincipal %}
 
 <div class="shadow-lg">
     <h1 class="text-center py-3 my-5">Annonce</h1>
 </div>
 <div class="container">
-    <ul class="row">
+    <div class="row">
     
         <div class="card mb-3 card-size shadow" style="max-width: 1120px;">
             <div class="row g-0">
@@ -17,15 +18,15 @@
                 </div>
                 <div class="col-md-8">
                     <div class="card-body background-maison">
-                        <h5 class="card-title">{{ produit.titre }}</h5>
+                        <h2 class="card-title">{{ produit.titre }}</h2>
                         <p class="card-text">{{ produit.description }}</p>
-                        <p class="card-text"><small class="text-muted"></small></p>
+                        
                     </div>
                 </div>
             </div>
         </div>
   
-    </ul>
+    </div>
 </div>
 
 {% endblock %}

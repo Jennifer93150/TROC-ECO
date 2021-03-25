@@ -26,7 +26,6 @@ return [
         '/categorie/puericulture' => [[['_route' => 'Puericulture', '_controller' => 'App\\Controller\\ProduitController::puericulture'], null, ['GET' => 0], null, false, false, null]],
         '/categorie/multimedia' => [[['_route' => 'Multimedia', '_controller' => 'App\\Controller\\ProduitController::multimedia'], null, ['GET' => 0], null, false, false, null]],
         '/categorie/livre' => [[['_route' => 'Livres', '_controller' => 'App\\Controller\\ProduitController::livre'], null, ['GET' => 0], null, false, false, null]],
-        '/categories/annonce' => [[['_route' => 'annonce', '_controller' => 'App\\Controller\\ProduitController::annonces'], null, ['GET' => 0], null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],
         '/logout' => [[['_route' => 'app_logout', '_controller' => 'App\\Controller\\SecurityController::logout'], null, null, null, false, false, null]],
         '/inscription' => [[['_route' => 'inscription', '_controller' => 'App\\Controller\\UserController::new'], null, ['GET' => 0, 'POST' => 1], null, false, false, null]],
@@ -49,8 +48,7 @@ return [
                         .'|(*:159)'
                     .')'
                 .')'
-                .'|/edit/(\\d+)(*:180)'
-                .'|/delete/(\\d+)(*:201)'
+                .'|/profil/edit/(\\d+)(*:187)'
             .')/?$}sD',
     ],
     [ // $dynamicRoutes
@@ -61,9 +59,8 @@ return [
         136 => [[['_route' => '_profiler_exception', '_controller' => 'web_profiler.controller.exception_panel::body'], ['token'], null, null, false, false, null]],
         149 => [[['_route' => '_profiler_exception_css', '_controller' => 'web_profiler.controller.exception_panel::stylesheet'], ['token'], null, null, false, false, null]],
         159 => [[['_route' => '_profiler', '_controller' => 'web_profiler.controller.profiler::panelAction'], ['token'], null, null, false, true, null]],
-        180 => [[['_route' => 'edit_profil', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], null, null, false, true, null]],
-        201 => [
-            [['_route' => 'delete_user', '_controller' => 'App\\Controller\\UserController::delete'], ['id'], null, null, false, true, null],
+        187 => [
+            [['_route' => 'edit_profil', '_controller' => 'App\\Controller\\UserController::edit'], ['id'], null, null, false, true, null],
             [null, null, null, null, false, false, 0],
         ],
     ],

@@ -3,8 +3,8 @@
 {% block title %}Troc'Eco | Connexion{% endblock %}
 
 {% block contenuPrincipal %}
-{{parent()}}
 
+<section>
     <div class="shadow-lg">
         <h1 class="text-center my-5 py-3">En avant pour troquer !</h1>
     </div>
@@ -17,8 +17,8 @@
             {% endif %}
 
             {% if app.user %}
-                <div class="mb-3">
-                    Vous êtes déjà connecté en tant que {{ app.user.nom }}, 
+                <div class="bg-warning mb-3">
+                    Vous êtes déjà connecté en tant que {{ app.user.nom }}.
                 </div>
             {% endif %}
 
@@ -41,7 +41,7 @@
                     <button class="btn btn-outline-info" type="submit">Se connecter</button>
                 </div>
             </div>
-            
+        
 
             {#
                 Décommentez cette section et ajoutez une option Remember_me sous votre pare-feu pour activer la fonctionnalité Remember me.
@@ -57,4 +57,5 @@
             
         </form>
     </div>
+</section>
 {% endblock %}

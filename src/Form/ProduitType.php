@@ -11,8 +11,8 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Validator\Constraints\File;
 
+# formulaire nouveau produit/annonce
 class ProduitType extends AbstractType
 {
     public function buildForm(FormBuilderInterface $builder, array $options)
@@ -22,14 +22,14 @@ class ProduitType extends AbstractType
             # SELECT CATEGORIES
             ->add('categorie', EntityType::class, [
                 'class' => Categorie::class, 
-                'choice_label' => 'nom',
+                'choice_label' => 'Nom',
                 'required' => true,]) 
             ->add('photo', FileType::class, [
-                'label' => 'photo',])
-            ->add('titre',TextType::class, ['label' => 'titre','required' => true,])
-            ->add('description', TextType::class, ['label' => 'description','required' => true,])
-            ->add('save', SubmitType::class, [
-                'attr' => ['class' => 'save'],
+                'label' => 'Photo',])
+            ->add('titre',TextType::class, ['label' => 'Titre','required' => true,])
+            ->add('description', TextType::class, ['label' => 'Description','required' => true,])
+            ->add('enregistrer', SubmitType::class, [
+                'attr' => ['class' => 'Enregistrer'],
             ]);
 
         ;

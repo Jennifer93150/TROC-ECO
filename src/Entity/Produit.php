@@ -4,15 +4,13 @@ namespace App\Entity;
 
 use App\Repository\ProduitRepository;
 use Doctrine\ORM\Mapping as ORM;
-use Symfony\Component\HttpFoundation\File\File;
-use Vich\UploaderBundle\Mapping\Annotation as Vich;
-use Symfony\Component\Validator\Constraints as Assert;
+#use Symfony\Component\HttpFoundation\File\File;
+#use Symfony\Component\Validator\Constraints as Assert;
 
 
 /**
  * @ORM\Entity(repositoryClass=ProduitRepository::class)
  * @ORM\Table(name="produit")
- * @Vich\Uploadable
  */
 class Produit
 {
@@ -27,11 +25,6 @@ class Produit
      * @ORM\Column(type="string", length=255)
      */
     private $titre;
-
-    /**
-     * @ORM\Column(type="string", length=255, nullable=true)
-     */
-    private $photo;
 
     
     /**
@@ -62,6 +55,13 @@ class Produit
      * @ORM\Column(name="date", type="datetime", nullable=true)
      */
     private $date;
+
+
+    # J'ai du RENDRE cet attribut NULL pour permettre l'envoi du reste des infos a la bdd, car malgré le code de la fonction correct (code identique à la fonction categorie ) ET l'attribut non null au depart, le fichier est considéré comme null à l'envoi.
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $photo;
  
  
     public function __construct()
@@ -83,30 +83,6 @@ class Produit
     public function setTitre(string $titre): self
     {
         $this->titre = $titre;
-
-        return $this;
-    }
-
-    public function getType(): ?string
-    {
-        return $this->type;
-    }
-
-    public function setType(string $type): self
-    {
-        $this->type = $type;
-
-        return $this;
-    }
-
-    public function getPhoto()
-    {
-        return $this->photo;
-    }
-
-    public function setPhoto($photo)
-    {
-        $this->photo = $photo;
 
         return $this;
     }
@@ -155,8 +131,6 @@ class Produit
         return $this;
     }
 
-  
-
     /**
      * Get the value of date
      *
@@ -177,6 +151,20 @@ class Produit
     public function setDate(\DateTime $date)
     {
         $this->date = $date;
+
+        return $this;
+    }
+    
+# S'est arreté de fonctionner
+
+    public function getPhoto(): ?string
+    {
+        return $this->photo;
+    }
+
+    public function setPhoto(string $photo): self
+    {
+        $this->photo = $photo;
 
         return $this;
     }

@@ -39,7 +39,7 @@ class GestionController extends AbstractController
            $brochureFile = $form->get('photo')->getData();
 
            # cette condition est nécessaire car le champ 'brochure' n'est pas obligatoire
-           # donc le fichier PDF ne doit être traité que lorsqu'un fichier est téléchargé
+           # donc le fichier ne doit être traité que lorsqu'un fichier est téléchargé
            if ($brochureFile) {
                $originalFilename = pathinfo($brochureFile->getClientOriginalName(), PATHINFO_FILENAME);
                # cela est nécessaire pour inclure en toute sécurité le nom du fichier dans l'URL

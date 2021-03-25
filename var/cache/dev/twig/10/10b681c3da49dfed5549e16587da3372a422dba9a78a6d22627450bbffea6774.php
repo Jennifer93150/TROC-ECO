@@ -85,54 +85,51 @@ class __TwigTemplate_77b28e53ee747a5f89dad051a6f076d235badc1b8ec3a711183d7a1cc75
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "contenuPrincipal"));
 
         // line 6
-        echo "
-<div class=\"shadow-lg\">
-    <h1 class=\"text-center py-3 my-5\">Catégorie Vêtement</h1>
-</div>
-<div>
-    <ul>
-    ";
+        echo "<section>
+    <div class=\"shadow-lg\">
+        <h1 class=\"text-center py-3 my-5\">Catégorie Vêtement</h1>
+    </div>
+    <div class=\"container\">
+        <div class=\"row\">
+        ";
         // line 12
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 12, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
             // line 13
-            echo "        <div class=\"card mb-3 card-size shadow\" style=\"max-width: 1120px;\">
-            <div class=\"row g-0\">
-                <div class=\"col-md-4 image\">
-                <img src=\"";
+            echo "            <div class=\"card mb-3 p-3 card-size shadow\" style=\"max-width: 1120px;\">
+                <div class=\"row g-0\">
+                    <div class=\"col-md-4 image\">
+                        <a href=\"#\"><img src=\"";
             // line 16
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("/uploads/brochures/" . twig_get_attribute($this->env, $this->source, $context["produit"], "photo", [], "any", false, false, false, 16))), "html", null, true);
-            echo "\" class=\"img-thumbnail\" alt=\"photo-produit\"/>
-                </div>
-                <div class=\"col-md-8\">
-                    <div class=\"card-body background-maison\">
-                    <!-- synthaxe: produit.titre (produit= nom1ereVarDuFor . titre= nomDonnéSurFormulaireAdd) -->
-                        <h5 class=\"card-title\">";
+            echo "\" class=\"img-thumbnail\" alt=\"photo-produit\"/></a>
+                    </div>
+                    <div class=\"col-md-8\">
+                        <div class=\"card-body background-maison\">
+                        <!-- synthaxe: produit.titre (produit= nom1ereVarDuFor . titre= nomDonnéSurFormulaireAdd) -->
+                            <h2 class=\"card-title\">";
             // line 21
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "titre", [], "any", false, false, false, 21), "html", null, true);
-            echo "</h5>
-                        <p class=\"card-text\">";
+            echo "</h2>
+                            <p class=\"card-text\">";
             // line 22
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 22), "html", null, true);
             echo "</p>
-                        <p class=\"card-text\"><small class=\"text-muted\"></small></p>
+                        </div>
                     </div>
                 </div>
+                <a href=\"#\"><h3 class=\"btn text-center text-dark \">Voir ce troc</h3></a>
             </div>
-            <a href=\"";
-            // line 27
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("annonce");
-            echo "\"><span class=\"badge badge-pill badge-danger\">Voir ce troc</span>
-        </div>
-    ";
+        ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 30
-        echo "    </ul>
-</div>
+        // line 29
+        echo "        </div>
+    </div>
+</section>
 
 ";
         
@@ -155,7 +152,7 @@ class __TwigTemplate_77b28e53ee747a5f89dad051a6f076d235badc1b8ec3a711183d7a1cc75
 
     public function getDebugInfo()
     {
-        return array (  134 => 30,  125 => 27,  117 => 22,  113 => 21,  105 => 16,  100 => 13,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  130 => 29,  117 => 22,  113 => 21,  105 => 16,  100 => 13,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -165,33 +162,33 @@ class __TwigTemplate_77b28e53ee747a5f89dad051a6f076d235badc1b8ec3a711183d7a1cc75
 {% block title %}Troc'Eco | Catégorie Vêtement{% endblock %}
 
 {% block contenuPrincipal %}
-
-<div class=\"shadow-lg\">
-    <h1 class=\"text-center py-3 my-5\">Catégorie Vêtement</h1>
-</div>
-<div>
-    <ul>
-    {% for produit in produits %}
-        <div class=\"card mb-3 card-size shadow\" style=\"max-width: 1120px;\">
-            <div class=\"row g-0\">
-                <div class=\"col-md-4 image\">
-                <img src=\"{{ asset('/uploads/brochures/' ~ produit.photo) }}\" class=\"img-thumbnail\" alt=\"photo-produit\"/>
-                </div>
-                <div class=\"col-md-8\">
-                    <div class=\"card-body background-maison\">
-                    <!-- synthaxe: produit.titre (produit= nom1ereVarDuFor . titre= nomDonnéSurFormulaireAdd) -->
-                        <h5 class=\"card-title\">{{ produit.titre }}</h5>
-                        <p class=\"card-text\">{{ produit.description }}</p>
-                        <p class=\"card-text\"><small class=\"text-muted\"></small></p>
+<section>
+    <div class=\"shadow-lg\">
+        <h1 class=\"text-center py-3 my-5\">Catégorie Vêtement</h1>
+    </div>
+    <div class=\"container\">
+        <div class=\"row\">
+        {% for produit in produits %}
+            <div class=\"card mb-3 p-3 card-size shadow\" style=\"max-width: 1120px;\">
+                <div class=\"row g-0\">
+                    <div class=\"col-md-4 image\">
+                        <a href=\"#\"><img src=\"{{ asset('/uploads/brochures/' ~ produit.photo) }}\" class=\"img-thumbnail\" alt=\"photo-produit\"/></a>
+                    </div>
+                    <div class=\"col-md-8\">
+                        <div class=\"card-body background-maison\">
+                        <!-- synthaxe: produit.titre (produit= nom1ereVarDuFor . titre= nomDonnéSurFormulaireAdd) -->
+                            <h2 class=\"card-title\">{{ produit.titre }}</h2>
+                            <p class=\"card-text\">{{ produit.description }}</p>
+                        </div>
                     </div>
                 </div>
+                <a href=\"#\"><h3 class=\"btn text-center text-dark \">Voir ce troc</h3></a>
             </div>
-            <a href=\"{{ path('annonce')}}\"><span class=\"badge badge-pill badge-danger\">Voir ce troc</span>
+        {% endfor %}
         </div>
-    {% endfor %}
-    </ul>
-</div>
+    </div>
+</section>
 
-{% endblock %}", "/troc-eco/categories/vetement.html.twig", "/Users/bouhidjennifer/Desktop/projet-symfony/projet-soutenance/templates/troc-eco/categories/vetement.html.twig");
+{% endblock %}", "/troc-eco/categories/vetement.html.twig", "/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/templates/troc-eco/categories/vetement.html.twig");
     }
 }

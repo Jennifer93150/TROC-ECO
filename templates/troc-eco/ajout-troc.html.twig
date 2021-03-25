@@ -1,8 +1,8 @@
 {% extends 'base.html.twig' %}
 
-{% form_theme Formulaire 'bootstrap_4_layout.html.twig' %}
 
 
+{% block title %}Troc'Eco | Ajouter un troc {% endblock %}
 
 {% block contenuPrincipal %}
     <section>
@@ -21,14 +21,13 @@
                         <div class="row">
                             <h2 class="annonce">Annonce</h2>
                         
-                            <h2 class="type">Categorie</h2>
                             
                             <div class="col" id="some-custom-id">
                                 {{ form_row(Formulaire.categorie) }}
                                 {{ form_row(Formulaire.photo) }}
                                 {{ form_row(Formulaire.titre) }}
                                 {{ form_row(Formulaire.description) }}
-                                {{ form_row(Formulaire.save) }}
+                                {{ form_row(Formulaire.enregistrer) }}
                             </div>
                                 
                         </div>

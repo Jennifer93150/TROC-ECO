@@ -1,0 +1,20 @@
+/********** GENERAL **********/
+
+*
+{
+    box-sizing: border-box;
+}
+
+/******* Affichage Catégorie Maison **********/
+
+.card-size{
+    
+    background-color: #FFDAC3;
+}
+
+.liste-produit{
+    margin: auto;
+    padding-left: 30px;
+    
+
+}

@@ -2,20 +2,16 @@
 // src/Controller/FormController.php
 namespace App\Controller;
 
-use App\Entity\Produit;
+
 use App\Entity\User;
 use App\Form\UserType;
-use App\Repository\ProduitRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\File\File;
-use Symfony\Component\HttpFoundation\File\Exception\FileException;
-use Symfony\Component\HttpFoundation\File\UploadedFile;
-use Symfony\Component\Security\Core\User\UserInterface;
+
 
 #use App\Service\MessageGenerator;
 
@@ -23,6 +19,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
 class UserController extends AbstractController
 {
      # Fonction inscription (Ajout nouvel user)
+
     /**
      * @Route("/inscription", name="inscription", methods={"GET","POST"})
      */
@@ -73,25 +70,10 @@ class UserController extends AbstractController
     }
 
 
-    
-    /**
-     * @Route("/profil", name="profil" )
-     */
-    /*public function show(Request $request)
-    {
-       # Selection des données ds la bdd
-        $repository = $this->getDoctrine()->getRepository(User::class);
-        $user = $repository->findBy(['id'=> 1]);
-
-    # Passer le formulaire à la vue
-    return $this->render('/user/profil.html.twig', ['monprofil'=>$user]);
-    
-    }*/
-
     # Modification du profil
 
     /**
-     * @Route("/edit/{id<\d+>}", name="edit_profil")
+     * @Route("/profil/edit/{id<\d+>}", name="edit_profil")
      */
     public function edit(Request $request, User $user, UserPasswordEncoderInterface $encoder)
     {
@@ -126,13 +108,16 @@ class UserController extends AbstractController
     
     }
 
+
     # Suppression user
+
+    # Fonction a terminer rechercher delete en cascade
     
     /**
-     * @Route("/delete/{id<\d+>}", name="delete_user")
+     * @Route("/profil/delete/{id<\d+>}", name="delete_user")
      * @return Response
      */
-    public function delete(User $user)
+    /*public function delete(User $user)
     {
        
         $em = $this->getDoctrine()->getManager();
@@ -142,7 +127,7 @@ class UserController extends AbstractController
         # redirige la page
         # return $this->redirectToRoute('accueil');
         return new Response('Votre compte a bien été supprimé.');
-    }
+    }*/
 
     
 }
