@@ -100,21 +100,22 @@ class __TwigTemplate_77b28e53ee747a5f89dad051a6f076d235badc1b8ec3a711183d7a1cc75
             echo "            <div class=\"card mb-3 p-3 card-size shadow\" style=\"max-width: 1120px;\">
                 <div class=\"row g-0\">
                     <div class=\"col-md-4 image\">
+                        <!-- j'ai du retirer l'affichage dynamique recuperant les photos de la bdd car un probleme s'est produit et l'envoi de file ne s'effectuait plus asset('/uploads/brochures/' ~ produit.photo)-->
                         <a href=\"#\"><img src=\"";
-            // line 16
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("/uploads/brochures/" . twig_get_attribute($this->env, $this->source, $context["produit"], "photo", [], "any", false, false, false, 16))), "html", null, true);
+            // line 17
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/uploads/brochures/shoes2-1494496195158-c3becb4f2475.jpeg"), "html", null, true);
             echo "\" class=\"img-thumbnail\" alt=\"photo-produit\"/></a>
                     </div>
                     <div class=\"col-md-8\">
                         <div class=\"card-body background-maison\">
                         <!-- synthaxe: produit.titre (produit= nom1ereVarDuFor . titre= nomDonnéSurFormulaireAdd) -->
                             <h2 class=\"card-title\">";
-            // line 21
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "titre", [], "any", false, false, false, 21), "html", null, true);
+            // line 22
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "titre", [], "any", false, false, false, 22), "html", null, true);
             echo "</h2>
                             <p class=\"card-text\">";
-            // line 22
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 22), "html", null, true);
+            // line 23
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 23), "html", null, true);
             echo "</p>
                         </div>
                     </div>
@@ -126,7 +127,7 @@ class __TwigTemplate_77b28e53ee747a5f89dad051a6f076d235badc1b8ec3a711183d7a1cc75
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 29
+        // line 30
         echo "        </div>
     </div>
 </section>
@@ -152,7 +153,7 @@ class __TwigTemplate_77b28e53ee747a5f89dad051a6f076d235badc1b8ec3a711183d7a1cc75
 
     public function getDebugInfo()
     {
-        return array (  130 => 29,  117 => 22,  113 => 21,  105 => 16,  100 => 13,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  131 => 30,  118 => 23,  114 => 22,  106 => 17,  100 => 13,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -172,7 +173,8 @@ class __TwigTemplate_77b28e53ee747a5f89dad051a6f076d235badc1b8ec3a711183d7a1cc75
             <div class=\"card mb-3 p-3 card-size shadow\" style=\"max-width: 1120px;\">
                 <div class=\"row g-0\">
                     <div class=\"col-md-4 image\">
-                        <a href=\"#\"><img src=\"{{ asset('/uploads/brochures/' ~ produit.photo) }}\" class=\"img-thumbnail\" alt=\"photo-produit\"/></a>
+                        <!-- j'ai du retirer l'affichage dynamique recuperant les photos de la bdd car un probleme s'est produit et l'envoi de file ne s'effectuait plus asset('/uploads/brochures/' ~ produit.photo)-->
+                        <a href=\"#\"><img src=\"{{ asset('/uploads/brochures/shoes2-1494496195158-c3becb4f2475.jpeg') }}\" class=\"img-thumbnail\" alt=\"photo-produit\"/></a>
                     </div>
                     <div class=\"col-md-8\">
                         <div class=\"card-body background-maison\">

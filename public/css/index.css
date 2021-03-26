@@ -100,19 +100,19 @@
     padding: 50px;
 }
 
-.partie3 h2{/* Espace des lettres et lignes */
+/*.partie3 h2{/* Espace des lettres et lignes 
     letter-spacing: 0.5em;
     line-height: 1em;
-}
+}*/
 
 .h2-partie3{
 
-    color: #cfffe2;
+    color: #03989E;
     font-family: 'Lato';
     font-size: 9.5vh;
     text-shadow:#e7f6ff 0 -1px 0,
                 #00abf0 1px 1px 0,
-                #03989E 2px 2px 0,
+                #cfffe2 2px 2px 0,
                 #00ceff 3px 3px 0,
                 #006392 4px 4px 0,
                 #FFF 5px 5px 0,
@@ -124,13 +124,50 @@
              
 }
 
-.partie3 p{
+.partie3 p{ 
+    background-color:#cfffe280;
     font-size: 22px;
     text-align: center;
-    padding-left: 25%;
-    padding-right:25%;
+    padding-left: 20%;
+    padding-right:20%;
     padding-top: 40px;
+    padding-bottom:20px;
    
-    
   
+} 
+
+/********** LE RESPONSIVE ****************/
+/*TABLET A partir de 1024px et inférieur*/
+@media screen and (max-width: 1024px){
+    .h2-partie1{ 
+        font-size: 4vh;
+    }
+    .h2-partie2{ 
+        font-size: 4vh;
+        flex-direction: column;
+        
+    }
+    .h2-partie3{ 
+        font-size: 4vh;
+        margin-left: 30%;
+       
+    }
+    .figcaption{
+        font-size: 2vh;
+    }
+}
+/*MOBILE A partir de 767px et inférieur*/
+@media screen and (max-width: 767px){
+    .h2-partie1{ 
+        font-size: 2vh;
+    }
+    .h2-partie2{ 
+        font-size: 2vh;
+    }
+    .h2-partie3{ 
+        font-size: 2vh;
+    }
+    .figcaption{
+        font-size: 1vh;
+    }
 }

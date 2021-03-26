@@ -4,8 +4,8 @@
 
 {% block contenuPrincipal %}
 <section>
-    <div>
-        <h1 class="text-center">Catégorie Maison</h1>
+    <div class="shadow-lg">
+        <h1 class="py-3 my-5 text-center">Catégorie Maison</h1>
     </div>
     <div class="container">
         <div class="row">
@@ -13,7 +13,8 @@
             <div class="card mb-3 card-size" style="max-width: 1120px;">
                 <div class="row g-0">
                     <div class="col-md-4 image">
-                    <a href="#"><img src="{{ asset('/uploads/brochures/' ~ produit.photo) }}" class="img-thumbnail" alt="photo-produit"/></a>
+                    <!-- j'ai du retirer l'affichage dynamique recuperant les photos de la bdd car un probleme s'est produit et l'envoi de file ne s'effectuait plus asset('/uploads/brochures/' ~ produit.photo)-->
+                        <a href="#"><img src="{{ asset('/uploads/brochures/seche-cheveux-605b85de55ef2.jpeg') }}" class="img-thumbnail" alt="photo-produit"/></a>
                     </div>
                     <div class="col-md-8">
                         <div class="card-body background-maison">

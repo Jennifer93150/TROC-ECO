@@ -12,14 +12,14 @@
                 <!-- J'AFFICHE LES CATEGORIES -->
                 {% for categorie in noscategories %}
 
-                        <div class="carte-categorie card col-lg-5 m-1 shadow rounded">
+                        <div class="carte-categorie card col-lg-5 m-3 shadow rounded">
                             <div class="card-body">
                                 <h2 class="card-title text-center"><a href="{{ path(categorie.nom)}}">{{ categorie.nom }}</a></h2>
                                 
                             </div>
                             <div class="text-center">
                                 <a href="{{ path(categorie.nom)}}" class="align-self-center justify-self-center">
-                                    <img src="{{ asset('/uploads/brochures/' ~ categorie.photo) }}" class="card-img-bottom" alt="photo-{{ categorie.nom }}">
+                                    <img src="{{ asset('/uploads/brochures/' ~ categorie.photo) }}" class="card-img-bottom border border-4" alt="photo-{{ categorie.nom }}">
                                 </a>  
                             </div>
                             

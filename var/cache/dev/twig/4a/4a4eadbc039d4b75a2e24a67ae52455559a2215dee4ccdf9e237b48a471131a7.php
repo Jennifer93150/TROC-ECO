@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* troc-eco/categories/livre.html.twig */
+/* /troc-eco/categories/livre.html.twig */
 class __TwigTemplate_a58033554b71862893b446b974d911c6e11ae5da3ac507590aebcdda052d5414 extends \Twig\Template
 {
     private $source;
@@ -40,12 +40,12 @@ class __TwigTemplate_a58033554b71862893b446b974d911c6e11ae5da3ac507590aebcdda052
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "troc-eco/categories/livre.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/troc-eco/categories/livre.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "troc-eco/categories/livre.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/troc-eco/categories/livre.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "troc-eco/categories/livre.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "/troc-eco/categories/livre.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -101,37 +101,33 @@ class __TwigTemplate_a58033554b71862893b446b974d911c6e11ae5da3ac507590aebcdda052
             echo "                <div class=\"carte-produit shadow card p-3 mb-3 card-size\" style=\"max-width: 1120px;\">
                     <div class=\"row g-0\">
                         <div class=\"col-6 image\">
-                        <img src=\"";
-            // line 17
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/brochures/" . twig_get_attribute($this->env, $this->source, $context["produit"], "photo", [], "any", false, false, false, 17))), "html", null, true);
-            echo "\" class=\"img-thumbnail\" alt=\"";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "titre", [], "any", false, false, false, 17), "html", null, true);
-            echo "\"/>
+                        <!-- j'ai du retirer l'affichage dynamique recuperant les photos de la bdd car un probleme s'est produit et l'envoi de file ne s'effectuait plus asset('/uploads/brochures/' ~ produit.photo)-->
+                        <a href=\"#\"><img src=\"";
+            // line 18
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/uploads/brochures/romeo-et-juliette-1544716278-ca5e3f4abd8c.jpeg"), "html", null, true);
+            echo "\" class=\"img-thumbnail\" alt=\"photo-produit\"/></a>
                         </div>
                         <div class=\"col-6\">
                             <div class=\"card-body background-maison\">
                                 <h2 class=\"card-title\">";
-            // line 21
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "titre", [], "any", false, false, false, 21), "html", null, true);
+            // line 22
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "titre", [], "any", false, false, false, 22), "html", null, true);
             echo "</h2>
                                 <p class=\"card-text\">";
-            // line 22
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 22), "html", null, true);
+            // line 23
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 23), "html", null, true);
             echo "</p>
                             </div>
                         </div>
                     </div>
-                    <a href=\"";
-            // line 26
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("annonce");
-            echo "\"><h3 class=\"btn text-center text-dark \">Voir ce troc</h3></a>
+                    <a href=\"#\"><h3 class=\"btn text-center text-dark \">Voir ce troc</h3></a>
                 </div>
             ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 29
+        // line 30
         echo "            
         </div>
     </div>
@@ -148,7 +144,7 @@ class __TwigTemplate_a58033554b71862893b446b974d911c6e11ae5da3ac507590aebcdda052
 
     public function getTemplateName()
     {
-        return "troc-eco/categories/livre.html.twig";
+        return "/troc-eco/categories/livre.html.twig";
     }
 
     public function isTraitable()
@@ -158,7 +154,7 @@ class __TwigTemplate_a58033554b71862893b446b974d911c6e11ae5da3ac507590aebcdda052
 
     public function getDebugInfo()
     {
-        return array (  135 => 29,  126 => 26,  119 => 22,  115 => 21,  106 => 17,  101 => 14,  97 => 13,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  131 => 30,  118 => 23,  114 => 22,  107 => 18,  101 => 14,  97 => 13,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -179,7 +175,8 @@ class __TwigTemplate_a58033554b71862893b446b974d911c6e11ae5da3ac507590aebcdda052
                 <div class=\"carte-produit shadow card p-3 mb-3 card-size\" style=\"max-width: 1120px;\">
                     <div class=\"row g-0\">
                         <div class=\"col-6 image\">
-                        <img src=\"{{ asset('uploads/brochures/' ~ produit.photo) }}\" class=\"img-thumbnail\" alt=\"{{ produit.titre }}\"/>
+                        <!-- j'ai du retirer l'affichage dynamique recuperant les photos de la bdd car un probleme s'est produit et l'envoi de file ne s'effectuait plus asset('/uploads/brochures/' ~ produit.photo)-->
+                        <a href=\"#\"><img src=\"{{ asset('/uploads/brochures/romeo-et-juliette-1544716278-ca5e3f4abd8c.jpeg') }}\" class=\"img-thumbnail\" alt=\"photo-produit\"/></a>
                         </div>
                         <div class=\"col-6\">
                             <div class=\"card-body background-maison\">
@@ -188,7 +185,7 @@ class __TwigTemplate_a58033554b71862893b446b974d911c6e11ae5da3ac507590aebcdda052
                             </div>
                         </div>
                     </div>
-                    <a href=\"{{ path('annonce')}}\"><h3 class=\"btn text-center text-dark \">Voir ce troc</h3></a>
+                    <a href=\"#\"><h3 class=\"btn text-center text-dark \">Voir ce troc</h3></a>
                 </div>
             {% endfor %}
             
@@ -196,6 +193,6 @@ class __TwigTemplate_a58033554b71862893b446b974d911c6e11ae5da3ac507590aebcdda052
     </div>
 </section>
 
-{% endblock %}", "troc-eco/categories/livre.html.twig", "/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/templates/troc-eco/categories/livre.html.twig");
+{% endblock %}", "/troc-eco/categories/livre.html.twig", "/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/templates/troc-eco/categories/livre.html.twig");
     }
 }

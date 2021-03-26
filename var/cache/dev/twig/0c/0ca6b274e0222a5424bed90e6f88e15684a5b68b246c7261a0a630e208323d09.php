@@ -86,8 +86,8 @@ class __TwigTemplate_16a77dcfb0d651bc43c3958730467cdedafb255127f0e4130f5e05e9241
 
         // line 6
         echo "<section>
-    <div>
-        <h1 class=\"text-center\">Catégorie Puériculture</h1>
+    <div class=\"shadow-lg\">
+        <h1 class=\"py-3 my-5  text-center\">Catégorie Puériculture</h1>
     </div>
     <div class=\"container\">
         <div class=\"row\">
@@ -100,20 +100,21 @@ class __TwigTemplate_16a77dcfb0d651bc43c3958730467cdedafb255127f0e4130f5e05e9241
             echo "            <div class=\"card mb-3 card-size\" style=\"max-width: 1120px;\">
                 <div class=\"row g-0\">
                     <div class=\"col-md-4 image\">
+                        <!-- j'ai du retirer l'affichage dynamique recuperant les photos de la bdd car un probleme s'est produit et l'envoi de file ne s'effectuait plus asset('/uploads/brochures/' ~ produit.photo)-->
                         <a href=\"#\"><img src=\"";
-            // line 16
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("/uploads/brochures/" . twig_get_attribute($this->env, $this->source, $context["produit"], "photo", [], "any", false, false, false, 16))), "html", null, true);
+            // line 17
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/uploads/brochures/poussette-1533759278811-fa72b947a7d7.jpeg"), "html", null, true);
             echo "\" class=\"img-thumbnail\" alt=\"photo-produit\"/></a>
                     </div>
                     <div class=\"col-md-8\">
                         <div class=\"card-body background-maison\">
                             <h2 class=\"card-title\">";
-            // line 20
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "titre", [], "any", false, false, false, 20), "html", null, true);
+            // line 21
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "titre", [], "any", false, false, false, 21), "html", null, true);
             echo "</h2>
                             <p class=\"card-text\">";
-            // line 21
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 21), "html", null, true);
+            // line 22
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 22), "html", null, true);
             echo "</p>
                         </div>
                     </div>
@@ -125,7 +126,7 @@ class __TwigTemplate_16a77dcfb0d651bc43c3958730467cdedafb255127f0e4130f5e05e9241
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 28
+        // line 29
         echo "        </div>
     </div>
 </section>
@@ -151,7 +152,7 @@ class __TwigTemplate_16a77dcfb0d651bc43c3958730467cdedafb255127f0e4130f5e05e9241
 
     public function getDebugInfo()
     {
-        return array (  129 => 28,  116 => 21,  112 => 20,  105 => 16,  100 => 13,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  130 => 29,  117 => 22,  113 => 21,  106 => 17,  100 => 13,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -162,8 +163,8 @@ class __TwigTemplate_16a77dcfb0d651bc43c3958730467cdedafb255127f0e4130f5e05e9241
 
 {% block contenuPrincipal %}
 <section>
-    <div>
-        <h1 class=\"text-center\">Catégorie Puériculture</h1>
+    <div class=\"shadow-lg\">
+        <h1 class=\"py-3 my-5  text-center\">Catégorie Puériculture</h1>
     </div>
     <div class=\"container\">
         <div class=\"row\">
@@ -171,7 +172,8 @@ class __TwigTemplate_16a77dcfb0d651bc43c3958730467cdedafb255127f0e4130f5e05e9241
             <div class=\"card mb-3 card-size\" style=\"max-width: 1120px;\">
                 <div class=\"row g-0\">
                     <div class=\"col-md-4 image\">
-                        <a href=\"#\"><img src=\"{{ asset('/uploads/brochures/' ~ produit.photo) }}\" class=\"img-thumbnail\" alt=\"photo-produit\"/></a>
+                        <!-- j'ai du retirer l'affichage dynamique recuperant les photos de la bdd car un probleme s'est produit et l'envoi de file ne s'effectuait plus asset('/uploads/brochures/' ~ produit.photo)-->
+                        <a href=\"#\"><img src=\"{{ asset('/uploads/brochures/poussette-1533759278811-fa72b947a7d7.jpeg') }}\" class=\"img-thumbnail\" alt=\"photo-produit\"/></a>
                     </div>
                     <div class=\"col-md-8\">
                         <div class=\"card-body background-maison\">

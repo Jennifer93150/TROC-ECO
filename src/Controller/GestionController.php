@@ -17,7 +17,9 @@ use Symfony\Component\Routing\Annotation\Route;
 class GestionController extends AbstractController
 {
     # Fonction ajout nouvelle categorie
-    # (Pour chaque ajout de catégorie créer absolumt la route + function d'affichage sur ProduitController.php + ajouter une page html.twig afin d'afficher ses produits sinon qd je cliquerai sur cette categorie pour acceder a ses produits cela affichera une erreur de chemin)
+    # (Pour chaque ajout de catégorie créer absolumt la route + function d'affichage sur ProduitController.php
+    #+ ajouter une page html.twig afin d'afficher ses produits sinon qd je cliquerai sur cette categorie 
+    #pour acceder a ses produits cela affichera une erreur de chemin)
     
     /**
      * @Route("/admin/gestion", name="gestion", methods={"GET","POST"})

@@ -65,7 +65,7 @@ class __TwigTemplate_db53546b6d72e611c8050bf0caf61de018066193af1fd77a83c5eda7c86
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Troc'Eco | Connexion";
+        echo "Troc'Eco | Inscription";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -88,7 +88,7 @@ class __TwigTemplate_db53546b6d72e611c8050bf0caf61de018066193af1fd77a83c5eda7c86
         echo "
 <section>
     <div class=\"shadow-lg\">
-        <h1 class=\"text-center py-3 my-5\">Connexion</h1>
+        <h1 class=\"text-center py-3 my-5\">Je m'inscris</h1>
     </div>
     
      ";
@@ -96,11 +96,11 @@ class __TwigTemplate_db53546b6d72e611c8050bf0caf61de018066193af1fd77a83c5eda7c86
         echo "        <div>
                 <form method=\"post\">
                         <div class=\"container shadow bg-vert rounded\">
-                                <button type=\"button\" class=\"btn btn-outline-info\">
+                                <button type=\"button\" class=\"btn\">
                                         <a class=\"text-dark btn\" href=\"";
         // line 21
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
-        echo "\">J'ai déjà un compte</a>
+        echo "\">J'ai déjà un compte ></a>
                                 </button>
                         
                         ";
@@ -169,23 +169,24 @@ class __TwigTemplate_db53546b6d72e611c8050bf0caf61de018066193af1fd77a83c5eda7c86
         echo "
                                 </div>
                               
-                                <div class=\"col-12\">
+                                <div class=\"col-12 my-3\">
                                 <!-- En cours de création -->
                                         <label for=\"verifpass\">Saisir une seconde fois le mot de passe</label>
                                         <input type=\"password\" id=\"verifpass\" required>
                                 </div>
+                               
                         </div>
                                 
                                 ";
-        // line 58
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 58, $this->source); })()), 'form_end');
+        // line 59
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 59, $this->source); })()), 'form_end');
         echo "
-
-                                <a href=\"";
-        // line 60
+                        <button type=\"button\" class=\"btn\">
+                                <a class=\"text-dark btn\" href=\"";
+        // line 61
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("accueil");
-        echo "\">Retour à l'accueil</a>
-                        
+        echo "\"> Retour à l'accueil > </a>
+                        </button>
                         
                 </form>
         </div>
@@ -212,7 +213,7 @@ class __TwigTemplate_db53546b6d72e611c8050bf0caf61de018066193af1fd77a83c5eda7c86
 
     public function getDebugInfo()
     {
-        return array (  186 => 60,  181 => 58,  168 => 48,  164 => 47,  158 => 44,  154 => 43,  148 => 40,  144 => 39,  138 => 36,  134 => 35,  128 => 32,  124 => 31,  118 => 28,  114 => 27,  108 => 24,  102 => 21,  96 => 17,  88 => 10,  78 => 9,  59 => 6,  36 => 1,);
+        return array (  187 => 61,  182 => 59,  168 => 48,  164 => 47,  158 => 44,  154 => 43,  148 => 40,  144 => 39,  138 => 36,  134 => 35,  128 => 32,  124 => 31,  118 => 28,  114 => 27,  108 => 24,  102 => 21,  96 => 17,  88 => 10,  78 => 9,  59 => 6,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -222,22 +223,22 @@ class __TwigTemplate_db53546b6d72e611c8050bf0caf61de018066193af1fd77a83c5eda7c86
 {# PAGE INSCRIPTION #}
 
 
-{% block title %}Troc'Eco | Connexion{% endblock %}
+{% block title %}Troc'Eco | Inscription{% endblock %}
 
 {# MAIN #}
 {% block contenuPrincipal %}
 
 <section>
     <div class=\"shadow-lg\">
-        <h1 class=\"text-center py-3 my-5\">Connexion</h1>
+        <h1 class=\"text-center py-3 my-5\">Je m'inscris</h1>
     </div>
     
      {# FORMULAIRE#}
         <div>
                 <form method=\"post\">
                         <div class=\"container shadow bg-vert rounded\">
-                                <button type=\"button\" class=\"btn btn-outline-info\">
-                                        <a class=\"text-dark btn\" href=\"{{ path('app_login') }}\">J'ai déjà un compte</a>
+                                <button type=\"button\" class=\"btn\">
+                                        <a class=\"text-dark btn\" href=\"{{ path('app_login') }}\">J'ai déjà un compte ></a>
                                 </button>
                         
                         {{ form_start(Formulaire, {'attr': {'id': 'new_user'}}) }}
@@ -267,17 +268,18 @@ class __TwigTemplate_db53546b6d72e611c8050bf0caf61de018066193af1fd77a83c5eda7c86
                                         {{ form_widget(Formulaire.telephone) }}
                                 </div>
                               
-                                <div class=\"col-12\">
+                                <div class=\"col-12 my-3\">
                                 <!-- En cours de création -->
                                         <label for=\"verifpass\">Saisir une seconde fois le mot de passe</label>
                                         <input type=\"password\" id=\"verifpass\" required>
                                 </div>
+                               
                         </div>
                                 
                                 {{ form_end(Formulaire) }}
-
-                                <a href=\"{{ path('accueil') }}\">Retour à l'accueil</a>
-                        
+                        <button type=\"button\" class=\"btn\">
+                                <a class=\"text-dark btn\" href=\"{{ path('accueil') }}\"> Retour à l'accueil > </a>
+                        </button>
                         
                 </form>
         </div>

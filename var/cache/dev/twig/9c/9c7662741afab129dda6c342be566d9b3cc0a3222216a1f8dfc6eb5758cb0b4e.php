@@ -99,7 +99,7 @@ class __TwigTemplate_35cf021704e1c745abfc86d8308cf5aa447b1b43117c946a553504107f5
         foreach ($context['_seq'] as $context["_key"] => $context["categorie"]) {
             // line 14
             echo "
-                        <div class=\"carte-categorie card col-lg-5 m-1 shadow rounded\">
+                        <div class=\"carte-categorie card col-lg-5 m-3 shadow rounded\">
                             <div class=\"card-body\">
                                 <h2 class=\"card-title text-center\"><a href=\"";
             // line 17
@@ -117,7 +117,7 @@ class __TwigTemplate_35cf021704e1c745abfc86d8308cf5aa447b1b43117c946a553504107f5
                                     <img src=\"";
             // line 22
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("/uploads/brochures/" . twig_get_attribute($this->env, $this->source, $context["categorie"], "photo", [], "any", false, false, false, 22))), "html", null, true);
-            echo "\" class=\"card-img-bottom\" alt=\"photo-";
+            echo "\" class=\"card-img-bottom border border-4\" alt=\"photo-";
             echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "nom", [], "any", false, false, false, 22), "html", null, true);
             echo "\">
                                 </a>  
@@ -188,14 +188,14 @@ class __TwigTemplate_35cf021704e1c745abfc86d8308cf5aa447b1b43117c946a553504107f5
                 <!-- J'AFFICHE LES CATEGORIES -->
                 {% for categorie in noscategories %}
 
-                        <div class=\"carte-categorie card col-lg-5 m-1 shadow rounded\">
+                        <div class=\"carte-categorie card col-lg-5 m-3 shadow rounded\">
                             <div class=\"card-body\">
                                 <h2 class=\"card-title text-center\"><a href=\"{{ path(categorie.nom)}}\">{{ categorie.nom }}</a></h2>
                                 
                             </div>
                             <div class=\"text-center\">
                                 <a href=\"{{ path(categorie.nom)}}\" class=\"align-self-center justify-self-center\">
-                                    <img src=\"{{ asset('/uploads/brochures/' ~ categorie.photo) }}\" class=\"card-img-bottom\" alt=\"photo-{{ categorie.nom }}\">
+                                    <img src=\"{{ asset('/uploads/brochures/' ~ categorie.photo) }}\" class=\"card-img-bottom border border-4\" alt=\"photo-{{ categorie.nom }}\">
                                 </a>  
                             </div>
                             

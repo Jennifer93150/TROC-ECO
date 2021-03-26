@@ -123,7 +123,10 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
                     <div class=\"container\">
                         <div class=\"row\">
                             <h2 class=\"col-8 h2-partie1 mb-5 ml-5\">TROC'ECO, </br>UN GESTE SIMPLE.</h2>
-                            
+                            <img class=\"robe col-4\" src=\"";
+        // line 35
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/super.png"), "html", null, true);
+        echo "\" alt=\"image super\">
                         </div>
                     </div>
                     
@@ -213,7 +216,7 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
 
     public function getDebugInfo()
     {
-        return array (  164 => 59,  159 => 57,  143 => 44,  139 => 43,  135 => 42,  120 => 29,  111 => 23,  107 => 22,  104 => 21,  102 => 20,  88 => 8,  78 => 7,  59 => 4,  36 => 1,);
+        return array (  167 => 59,  162 => 57,  146 => 44,  142 => 43,  138 => 42,  128 => 35,  120 => 29,  111 => 23,  107 => 22,  104 => 21,  102 => 20,  88 => 8,  78 => 7,  59 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -252,7 +255,7 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
                     <div class=\"container\">
                         <div class=\"row\">
                             <h2 class=\"col-8 h2-partie1 mb-5 ml-5\">TROC'ECO, </br>UN GESTE SIMPLE.</h2>
-                            
+                            <img class=\"robe col-4\" src=\"{{ asset('img/super.png')}}\" alt=\"image super\">
                         </div>
                     </div>
                     

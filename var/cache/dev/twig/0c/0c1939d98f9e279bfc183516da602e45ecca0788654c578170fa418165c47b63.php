@@ -104,7 +104,7 @@ class __TwigTemplate_eaaa53524ff0a5fcaaa3dfbc73c45b679bb3d7f3874470fbbddaa48375f
                     <!-- mettre path ('')-->
                         <a href=\"#\"><img src=\"";
             // line 18
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("/uploads/brochures/" . twig_get_attribute($this->env, $this->source, $context["produit"], "photo", [], "any", false, false, false, 18))), "html", null, true);
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/uploads/brochures/outils-jardin-1589051039495-eb77709c8268.jpeg"), "html", null, true);
             echo "\" class=\"img-thumbnail\" alt=\"photo-produit\"/></a>
                     </div>
                     <div class=\"col-md-8\">
@@ -175,7 +175,7 @@ class __TwigTemplate_eaaa53524ff0a5fcaaa3dfbc73c45b679bb3d7f3874470fbbddaa48375f
                 <div class=\"row g-0\">
                     <div class=\"col-md-4 image\">
                     <!-- mettre path ('')-->
-                        <a href=\"#\"><img src=\"{{ asset('/uploads/brochures/' ~ produit.photo) }}\" class=\"img-thumbnail\" alt=\"photo-produit\"/></a>
+                        <a href=\"#\"><img src=\"{{ asset('/uploads/brochures/outils-jardin-1589051039495-eb77709c8268.jpeg') }}\" class=\"img-thumbnail\" alt=\"photo-produit\"/></a>
                     </div>
                     <div class=\"col-md-8\">
                         <div class=\"card-body background-maison\">
