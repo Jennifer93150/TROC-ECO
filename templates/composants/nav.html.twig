@@ -1,5 +1,6 @@
 <header>
     <!-- BLOC HEADER -->
+    
         {% block header %}
 
 
@@ -15,39 +16,39 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="{{ path('accueil') }}">Comment je fais ?</a>
+          <a class="nav-link active text-light" aria-current="page" href="{{ path('accueil') }}">Comment je fais ?</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ path('recherche') }}">Je recherche</a>
+          <a class="nav-link text-light"  href="{{ path('recherche') }}">Je recherche</a>
         </li>
 
         {% if is_granted('IS_AUTHENTICATED_FULLY') %}
         <li class="nav-item">
-          <a class="nav-link" href="{{ path('ajout') }}">J'ajoute un troc</a>
+          <a class="nav-link text-light" href="{{ path('ajout') }}">J'ajoute un troc</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ path('profil') }}">Mon Profil</a>
+          <a class="nav-link text-light" href="{{ path('profil') }}">Mon Profil</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ path('message') }}">Mes Messages</a>
+          <a class="nav-link text-light" href="{{ path('message') }}">Mes Messages</a>
         </li>
 
         {% if is_granted('ROLE_ADMIN') %}
         <li class="nav-item">
-          <a class="nav-link" href="{{ path('gestion') }}">Gestion</a>
+          <a class="nav-link text-light" href="{{ path('gestion') }}">Gestion</a>
         </li>
         {% endif %}
 
         <li class="nav-item">
-          <a class="nav-link" href="{{ path('app_logout') }}">Je me déconnecte</a>
+          <a class="nav-link text-light" href="{{ path('app_logout') }}">Je me déconnecte</a>
         </li>
 
         {% else %}
         <li class="nav-item">
-          <a class="nav-link" href="{{ path('inscription') }}">Je m'inscris</a>
+          <a class="nav-link text-light" href="{{ path('inscription') }}">Je m'inscris</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="{{ path('app_login') }}">Je me connecte</a>
+          <a class="nav-link text-light" href="{{ path('app_login') }}">Je me connecte</a>
         </li>
         {% endif %}
 
