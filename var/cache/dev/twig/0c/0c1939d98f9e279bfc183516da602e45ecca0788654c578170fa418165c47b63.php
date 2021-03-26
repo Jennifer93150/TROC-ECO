@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* troc-eco/categories/jardin.html.twig */
+/* /troc-eco/categories/jardin.html.twig */
 class __TwigTemplate_eaaa53524ff0a5fcaaa3dfbc73c45b679bb3d7f3874470fbbddaa48375ff784b extends \Twig\Template
 {
     private $source;
@@ -40,12 +40,12 @@ class __TwigTemplate_eaaa53524ff0a5fcaaa3dfbc73c45b679bb3d7f3874470fbbddaa48375f
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "troc-eco/categories/jardin.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/troc-eco/categories/jardin.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "troc-eco/categories/jardin.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/troc-eco/categories/jardin.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "troc-eco/categories/jardin.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "/troc-eco/categories/jardin.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -102,10 +102,10 @@ class __TwigTemplate_eaaa53524ff0a5fcaaa3dfbc73c45b679bb3d7f3874470fbbddaa48375f
                 <div class=\"row g-0\">
                     <div class=\"col-md-4 image\">
                     <!-- mettre path ('')-->
-                        <img src=\"#\" class=\"img-thumbnail\" alt=\"";
+                        <a href=\"#\"><img src=\"";
             // line 18
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "titre", [], "any", false, false, false, 18), "html", null, true);
-            echo "\"/>
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("/uploads/brochures/" . twig_get_attribute($this->env, $this->source, $context["produit"], "photo", [], "any", false, false, false, 18))), "html", null, true);
+            echo "\" class=\"img-thumbnail\" alt=\"photo-produit\"/></a>
                     </div>
                     <div class=\"col-md-8\">
                         <div class=\"card-body background-maison\">
@@ -120,10 +120,7 @@ class __TwigTemplate_eaaa53524ff0a5fcaaa3dfbc73c45b679bb3d7f3874470fbbddaa48375f
                         </div>
                     </div>
                 </div>
-                <a href=\"";
-            // line 27
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("annonce");
-            echo "\"><h3 class=\"btn text-center text-dark \">Voir ce troc</h3></a>
+                <a href=\"#\"><h3 class=\"btn text-center text-dark \">Voir ce troc</h3></a>
             </div>
         ";
         }
@@ -146,7 +143,7 @@ class __TwigTemplate_eaaa53524ff0a5fcaaa3dfbc73c45b679bb3d7f3874470fbbddaa48375f
 
     public function getTemplateName()
     {
-        return "troc-eco/categories/jardin.html.twig";
+        return "/troc-eco/categories/jardin.html.twig";
     }
 
     public function isTraitable()
@@ -156,7 +153,7 @@ class __TwigTemplate_eaaa53524ff0a5fcaaa3dfbc73c45b679bb3d7f3874470fbbddaa48375f
 
     public function getDebugInfo()
     {
-        return array (  134 => 30,  125 => 27,  118 => 23,  114 => 22,  107 => 18,  101 => 14,  97 => 13,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  131 => 30,  118 => 23,  114 => 22,  107 => 18,  101 => 14,  97 => 13,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -178,7 +175,7 @@ class __TwigTemplate_eaaa53524ff0a5fcaaa3dfbc73c45b679bb3d7f3874470fbbddaa48375f
                 <div class=\"row g-0\">
                     <div class=\"col-md-4 image\">
                     <!-- mettre path ('')-->
-                        <img src=\"#\" class=\"img-thumbnail\" alt=\"{{ produit.titre }}\"/>
+                        <a href=\"#\"><img src=\"{{ asset('/uploads/brochures/' ~ produit.photo) }}\" class=\"img-thumbnail\" alt=\"photo-produit\"/></a>
                     </div>
                     <div class=\"col-md-8\">
                         <div class=\"card-body background-maison\">
@@ -187,13 +184,13 @@ class __TwigTemplate_eaaa53524ff0a5fcaaa3dfbc73c45b679bb3d7f3874470fbbddaa48375f
                         </div>
                     </div>
                 </div>
-                <a href=\"{{ path('annonce')}}\"><h3 class=\"btn text-center text-dark \">Voir ce troc</h3></a>
+                <a href=\"#\"><h3 class=\"btn text-center text-dark \">Voir ce troc</h3></a>
             </div>
         {% endfor %}
         </div>
     </div>
 </section>
 
-{% endblock %}", "troc-eco/categories/jardin.html.twig", "/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/templates/troc-eco/categories/jardin.html.twig");
+{% endblock %}", "/troc-eco/categories/jardin.html.twig", "/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/templates/troc-eco/categories/jardin.html.twig");
     }
 }

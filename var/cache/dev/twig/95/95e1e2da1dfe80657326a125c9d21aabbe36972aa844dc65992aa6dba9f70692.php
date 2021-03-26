@@ -45,6 +45,9 @@ class __TwigTemplate_cc746f6c53b649514e35842e9e62e501b8f134356801f49c6488627afce
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/troc-eco/ajout-troc.html.twig"));
 
+        // line 3
+        $this->env->getRuntime("Symfony\\Component\\Form\\FormRenderer")->setTheme((isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 3, $this->source); })()), [0 => "bootstrap_4_layout.html.twig"], true);
+        // line 1
         $this->parent = $this->loadTemplate("base.html.twig", "/troc-eco/ajout-troc.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
@@ -110,32 +113,41 @@ class __TwigTemplate_cc746f6c53b649514e35842e9e62e501b8f134356801f49c6488627afce
                         
                             
                             <div class=\"col\" id=\"some-custom-id\">
-                                ";
-        // line 26
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 26, $this->source); })()), "categorie", [], "any", false, false, false, 26), 'row');
-        echo "
+                                <div class=\"mb-2\">
                                 ";
         // line 27
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 27, $this->source); })()), "photo", [], "any", false, false, false, 27), 'row');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 27, $this->source); })()), "categorie", [], "any", false, false, false, 27), 'row');
         echo "
-                                ";
-        // line 28
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 28, $this->source); })()), "titre", [], "any", false, false, false, 28), 'row');
-        echo "
-                                ";
-        // line 29
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 29, $this->source); })()), "description", [], "any", false, false, false, 29), 'row');
-        echo "
+                                </div>
+                                 <div class=\"mb-2\">
                                 ";
         // line 30
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 30, $this->source); })()), "enregistrer", [], "any", false, false, false, 30), 'row');
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 30, $this->source); })()), "photo", [], "any", false, false, false, 30), 'row');
         echo "
-                            </div>
-                                
+                                </div>
+                                 <div class=\"mb-2\">
+                                ";
+        // line 33
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 33, $this->source); })()), "titre", [], "any", false, false, false, 33), 'row');
+        echo "
+                                </div>
+                                 <div class=\"mb-2\">
+                                ";
+        // line 36
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 36, $this->source); })()), "description", [], "any", false, false, false, 36), 'row');
+        echo "
+                                </div>
+                                 <div class=\"mb-2 produit_save\">
+                                ";
+        // line 39
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 39, $this->source); })()), "enregistrer", [], "any", false, false, false, 39), 'row');
+        echo "
+                                </div>
+                            </div>   
                         </div>
                     ";
-        // line 34
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 34, $this->source); })()), 'form_end');
+        // line 43
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 43, $this->source); })()), 'form_end');
         echo "
                 </div>
             </form>
@@ -164,14 +176,14 @@ class __TwigTemplate_cc746f6c53b649514e35842e9e62e501b8f134356801f49c6488627afce
 
     public function getDebugInfo()
     {
-        return array (  138 => 34,  131 => 30,  127 => 29,  123 => 28,  119 => 27,  115 => 26,  104 => 18,  99 => 16,  94 => 13,  88 => 8,  78 => 7,  59 => 5,  36 => 1,);
+        return array (  150 => 43,  143 => 39,  137 => 36,  131 => 33,  125 => 30,  119 => 27,  107 => 18,  102 => 16,  97 => 13,  91 => 8,  81 => 7,  62 => 5,  51 => 1,  49 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Source("{% extends 'base.html.twig' %}
 
-
+{% form_theme Formulaire 'bootstrap_4_layout.html.twig' %}
 
 {% block title %}Troc'Eco | Ajouter un troc {% endblock %}
 
@@ -194,13 +206,22 @@ class __TwigTemplate_cc746f6c53b649514e35842e9e62e501b8f134356801f49c6488627afce
                         
                             
                             <div class=\"col\" id=\"some-custom-id\">
+                                <div class=\"mb-2\">
                                 {{ form_row(Formulaire.categorie) }}
+                                </div>
+                                 <div class=\"mb-2\">
                                 {{ form_row(Formulaire.photo) }}
+                                </div>
+                                 <div class=\"mb-2\">
                                 {{ form_row(Formulaire.titre) }}
+                                </div>
+                                 <div class=\"mb-2\">
                                 {{ form_row(Formulaire.description) }}
+                                </div>
+                                 <div class=\"mb-2 produit_save\">
                                 {{ form_row(Formulaire.enregistrer) }}
-                            </div>
-                                
+                                </div>
+                            </div>   
                         </div>
                     {{ form_end(Formulaire) }}
                 </div>

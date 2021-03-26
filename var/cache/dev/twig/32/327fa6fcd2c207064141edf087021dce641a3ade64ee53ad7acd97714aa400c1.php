@@ -12,7 +12,7 @@ use Twig\Sandbox\SecurityNotAllowedFunctionError;
 use Twig\Source;
 use Twig\Template;
 
-/* troc-eco/index.html.twig */
+/* /troc-eco/index.html.twig */
 class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f7e5b9 extends \Twig\Template
 {
     private $source;
@@ -40,12 +40,12 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
     {
         $macros = $this->macros;
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e = $this->extensions["Symfony\\Bundle\\WebProfilerBundle\\Twig\\WebProfilerExtension"];
-        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "troc-eco/index.html.twig"));
+        $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->enter($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/troc-eco/index.html.twig"));
 
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
-        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "troc-eco/index.html.twig"));
+        $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "/troc-eco/index.html.twig"));
 
-        $this->parent = $this->loadTemplate("base.html.twig", "troc-eco/index.html.twig", 1);
+        $this->parent = $this->loadTemplate("base.html.twig", "/troc-eco/index.html.twig", 1);
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -119,7 +119,7 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
         // line 29
         echo "        
            
-                <article class=\"col\">
+                <article class=\"col partie1\">
                     <h2 class=\"h2-partie1 mb-5 ml-5\">TROC'ECO, </br>UN GESTE SIMPLE.</h2>
                     <div class=\"container\">
                         <div class=\"row\">
@@ -145,28 +145,43 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
 
         </section>
         <section class=\"partie2\">
-            <div>
-                <article>
-                    <h2 class=\"mb-5 ml-5\">Comment </br>troquer</h2>
-                    <p>
-                    </p>
-                </article>
-
-            </div>
-        
+            <article>
+                <h2 class=\" h2-partie2 pt-5 text-center\">Comment troquer</h2>
+                <div class=\"text-center\">
+                    <img class=\" m-5 img1-partie2  \" src=\"";
+        // line 51
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/je-propose.png"), "html", null, true);
+        echo "\" alt=\"paragraphe\">
+                    <img class=\" m-5 img2-partie2\" 
+                         src=\"";
+        // line 53
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/je-cherche.png"), "html", null, true);
+        echo "\" alt=\"paragraphe\">
+                </div>
+            </article>
         </section>
         <section class=\"partie3\">
-            <div>
-                <article>
-                    <h2>
+            <article class=\"p-5\">
+                
+                    <h2 class=\"h2-partie3 \">  
+                        LE TROC  </br>  UNE SOLUTION
                     </h2>
-                    <p>
+                    <p class=\"text-center\">  
+                        Troc'eco s'adresse à tous les écolos, à ceux qui ont envie de faire économies, ou tout simplement qui veulent consommer autrement.</br> A travers ce site, nous souhaitons réduire le gaspillage, la surconsommation que notre société engendre, et par la même occasion développer l'échange, l'entraide et la solidarité.
                     </p>
-                </article>
+                    
+                
 
-            </div>
+            </article>
         
         </section>
+        <div>
+            <!-- btn de scroll  -->
+            <a href=\"#\" class=\"scroll-btn\">
+                <button class=\"bouton-scroll\"><i class=\"fas fa-arrow-up\"></i></button>
+            </a>
+        </div>
+        
     </section>
         
     
@@ -182,7 +197,7 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
 
     public function getTemplateName()
     {
-        return "troc-eco/index.html.twig";
+        return "/troc-eco/index.html.twig";
     }
 
     public function isTraitable()
@@ -192,7 +207,7 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
 
     public function getDebugInfo()
     {
-        return array (  137 => 38,  133 => 37,  129 => 36,  120 => 29,  111 => 23,  107 => 22,  104 => 21,  102 => 20,  88 => 8,  78 => 7,  59 => 4,  36 => 1,);
+        return array (  158 => 53,  153 => 51,  137 => 38,  133 => 37,  129 => 36,  120 => 29,  111 => 23,  107 => 22,  104 => 21,  102 => 20,  88 => 8,  78 => 7,  59 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -227,7 +242,7 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
             {% endif %}
         
            
-                <article class=\"col\">
+                <article class=\"col partie1\">
                     <h2 class=\"h2-partie1 mb-5 ml-5\">TROC'ECO, </br>UN GESTE SIMPLE.</h2>
                     <div class=\"container\">
                         <div class=\"row\">
@@ -244,32 +259,41 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
 
         </section>
         <section class=\"partie2\">
-            <div>
-                <article>
-                    <h2 class=\"mb-5 ml-5\">Comment </br>troquer</h2>
-                    <p>
-                    </p>
-                </article>
-
-            </div>
-        
+            <article>
+                <h2 class=\" h2-partie2 pt-5 text-center\">Comment troquer</h2>
+                <div class=\"text-center\">
+                    <img class=\" m-5 img1-partie2  \" src=\"{{ asset('img/je-propose.png')}}\" alt=\"paragraphe\">
+                    <img class=\" m-5 img2-partie2\" 
+                         src=\"{{ asset('img/je-cherche.png')}}\" alt=\"paragraphe\">
+                </div>
+            </article>
         </section>
         <section class=\"partie3\">
-            <div>
-                <article>
-                    <h2>
+            <article class=\"p-5\">
+                
+                    <h2 class=\"h2-partie3 \">  
+                        LE TROC  </br>  UNE SOLUTION
                     </h2>
-                    <p>
+                    <p class=\"text-center\">  
+                        Troc'eco s'adresse à tous les écolos, à ceux qui ont envie de faire économies, ou tout simplement qui veulent consommer autrement.</br> A travers ce site, nous souhaitons réduire le gaspillage, la surconsommation que notre société engendre, et par la même occasion développer l'échange, l'entraide et la solidarité.
                     </p>
-                </article>
+                    
+                
 
-            </div>
+            </article>
         
         </section>
+        <div>
+            <!-- btn de scroll  -->
+            <a href=\"#\" class=\"scroll-btn\">
+                <button class=\"bouton-scroll\"><i class=\"fas fa-arrow-up\"></i></button>
+            </a>
+        </div>
+        
     </section>
         
     
 
-{% endblock %}", "troc-eco/index.html.twig", "/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/templates/troc-eco/index.html.twig");
+{% endblock %}", "/troc-eco/index.html.twig", "/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/templates/troc-eco/index.html.twig");
     }
 }

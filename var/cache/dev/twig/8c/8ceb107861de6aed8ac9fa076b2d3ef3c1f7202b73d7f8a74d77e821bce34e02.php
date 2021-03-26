@@ -41,12 +41,12 @@ class __TwigTemplate_2e676c5a63732802057007e0dc599302b3b86ab65bd768bbe9de6b58420
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "template", "composants/footer.html.twig"));
 
         // line 2
-        echo "<footer>
+        echo "<footer class=\"mt-5 p-5\">
 
 ";
         // line 4
         $this->displayBlock('footer', $context, $blocks);
-        // line 34
+        // line 41
         echo "
 </footer>";
         
@@ -70,29 +70,36 @@ class __TwigTemplate_2e676c5a63732802057007e0dc599302b3b86ab65bd768bbe9de6b58420
         // line 5
         echo "    <div class=\"footer\">
      <!-- DEBUT CONTENU FOOTER -->
-        <!-- btn de scroll TELECHARGER FONTAWESOME -->
-        <a href=\"#\" class=\"btn-scroll\">
-            <i class=\"fas fa-arrow-circle-up\"></i>
-        </a>
+        
 
         <!-- DEBUT FOOTER  -->
-
+        
         <div class=\"row\">
-            <div class=\"col-md-6 text-left\">
-                <a href=\"";
-        // line 16
+            <div>
+                <a class=\"a-right\" href=\"";
+        // line 13
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("contact");
         echo "\">Contactez-nous</a>
                         
             </div>
-            <div class=\"col-md-6 text-right\">
-                <a href=\"";
-        // line 20
+            <div >
+                <a class=\"a-left\" href=\"";
+        // line 17
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("politique");
         echo "\">Politique de confidentialité</a>
-                        
+                       
             </div>
+        </div>
         <div>
+        <h2 class=\"text-center pt-3\"> Suivez nous sur nos réseaux </h2>
+          <div class=\"pb-5 logo-footer\">
+            <a class=\"facebook\" href=\"https://www.facebook.com/TROC-100909455434533\"><i class=\"fab fa-facebook-f\"></i></a>
+            <a class=\"instagram\" href=\"https://www.instagram.com/troc.eco.contact/\"><i class=\"fab fa-instagram\"></i></a>
+            <a class=\"twitter\" href=\"https://twitter.com/eco_troc\"><i class=\"fab fa-twitter\"></i></a>
+          </div>
+       
+        </div>
+        
 
     </div>
 
@@ -118,34 +125,41 @@ class __TwigTemplate_2e676c5a63732802057007e0dc599302b3b86ab65bd768bbe9de6b58420
 
     public function getDebugInfo()
     {
-        return array (  91 => 20,  84 => 16,  71 => 5,  61 => 4,  50 => 34,  48 => 4,  44 => 2,);
+        return array (  88 => 17,  81 => 13,  71 => 5,  61 => 4,  50 => 41,  48 => 4,  44 => 2,);
     }
 
     public function getSourceContext()
     {
         return new Source("{# BLOC FOOTER #}
-<footer>
+<footer class=\"mt-5 p-5\">
 
 {% block footer %}
     <div class=\"footer\">
      <!-- DEBUT CONTENU FOOTER -->
-        <!-- btn de scroll TELECHARGER FONTAWESOME -->
-        <a href=\"#\" class=\"btn-scroll\">
-            <i class=\"fas fa-arrow-circle-up\"></i>
-        </a>
+        
 
         <!-- DEBUT FOOTER  -->
-
+        
         <div class=\"row\">
-            <div class=\"col-md-6 text-left\">
-                <a href=\"{{ path('contact') }}\">Contactez-nous</a>
+            <div>
+                <a class=\"a-right\" href=\"{{ path('contact') }}\">Contactez-nous</a>
                         
             </div>
-            <div class=\"col-md-6 text-right\">
-                <a href=\"{{ path('politique') }}\">Politique de confidentialité</a>
-                        
+            <div >
+                <a class=\"a-left\" href=\"{{ path('politique') }}\">Politique de confidentialité</a>
+                       
             </div>
+        </div>
         <div>
+        <h2 class=\"text-center pt-3\"> Suivez nous sur nos réseaux </h2>
+          <div class=\"pb-5 logo-footer\">
+            <a class=\"facebook\" href=\"https://www.facebook.com/TROC-100909455434533\"><i class=\"fab fa-facebook-f\"></i></a>
+            <a class=\"instagram\" href=\"https://www.instagram.com/troc.eco.contact/\"><i class=\"fab fa-instagram\"></i></a>
+            <a class=\"twitter\" href=\"https://twitter.com/eco_troc\"><i class=\"fab fa-twitter\"></i></a>
+          </div>
+       
+        </div>
+        
 
     </div>
 

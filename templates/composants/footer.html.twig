@@ -1,26 +1,33 @@
 {# BLOC FOOTER #}
-<footer>
+<footer class="mt-5 p-5">
 
 {% block footer %}
     <div class="footer">
      <!-- DEBUT CONTENU FOOTER -->
-        <!-- btn de scroll TELECHARGER FONTAWESOME -->
-        <a href="#" class="btn-scroll">
-            <i class="fas fa-arrow-circle-up"></i>
-        </a>
+        
 
         <!-- DEBUT FOOTER  -->
-
+        
         <div class="row">
-            <div class="col-md-6 text-left">
-                <a href="{{ path('contact') }}">Contactez-nous</a>
+            <div>
+                <a class="a-right" href="{{ path('contact') }}">Contactez-nous</a>
                         
             </div>
-            <div class="col-md-6 text-right">
-                <a href="{{ path('politique') }}">Politique de confidentialité</a>
-                        
+            <div >
+                <a class="a-left" href="{{ path('politique') }}">Politique de confidentialité</a>
+                       
             </div>
+        </div>
         <div>
+        <h2 class="text-center pt-3"> Suivez nous sur nos réseaux </h2>
+          <div class="pb-5 logo-footer">
+            <a class="facebook" href="https://www.facebook.com/TROC-100909455434533"><i class="fab fa-facebook-f"></i></a>
+            <a class="instagram" href="https://www.instagram.com/troc.eco.contact/"><i class="fab fa-instagram"></i></a>
+            <a class="twitter" href="https://twitter.com/eco_troc"><i class="fab fa-twitter"></i></a>
+          </div>
+       
+        </div>
+        
 
     </div>
 

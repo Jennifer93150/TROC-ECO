@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-
+{% form_theme Formulaire 'bootstrap_4_layout.html.twig' %}
 
 {% block title %}Troc'Eco | Ajouter un troc {% endblock %}
 
@@ -23,13 +23,22 @@
                         
                             
                             <div class="col" id="some-custom-id">
+                                <div class="mb-2">
                                 {{ form_row(Formulaire.categorie) }}
+                                </div>
+                                 <div class="mb-2">
                                 {{ form_row(Formulaire.photo) }}
+                                </div>
+                                 <div class="mb-2">
                                 {{ form_row(Formulaire.titre) }}
+                                </div>
+                                 <div class="mb-2">
                                 {{ form_row(Formulaire.description) }}
+                                </div>
+                                 <div class="mb-2 produit_save">
                                 {{ form_row(Formulaire.enregistrer) }}
-                            </div>
-                                
+                                </div>
+                            </div>   
                         </div>
                     {{ form_end(Formulaire) }}
                 </div>

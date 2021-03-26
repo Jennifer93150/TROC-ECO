@@ -45,7 +45,7 @@
 
 /*lien de la navbar*/
 
-header a .link-nav{
+/*header a .link-nav{
     font-family: 'Lato';
     color: white;;
     margin-left: 40px;
@@ -94,14 +94,12 @@ h1{ /* Tous les titres */
 }
 
 
-
-
 /**** BOUTON SCROLL ****/
 
 .fas{ /* Taille Fleche du scroll */
 
     font-size: 2.5rem;
-    color:  #03989E;
+    color:  white;
    
 }
 /*.fa-arrow-up:before { 
@@ -115,6 +113,55 @@ h1{ /* Tous les titres */
     background: #03989E;
     height: 10% !important;
 
+}
+
+/*********** FOOTER ***************/
+footer{
+    background-color:#03989E ;
+    height:15%;
+    
+   
+}
+
+footer a  { /*les liens de la footer */
+    color:#fff;
+    
+    text-decoration: none;
+}
+
+footer h2{ /*le h2 dans le footer*/
+    color: #fff;
+    font-size: 22px;
+    border-top: 2px solid #fff;
+    margin-left: 50px;
+    margin-right: 60px;
+   
+    
+    margin-bottom: 20px;
+    padding-top: 10px;
+}
+
+.a-left{/* le lien qui ramène à la page Politique de confidentialité*/
+   margin-left:70%;
+  
+  
+}
+
+.a-right{/* le lien qui ramène à la page politique et contactez nous */
+    margin-left:15%;
+    
+    
+}
+
+.logo-footer{/*la div des logos qui sont dans le footer*/
+    margin-left: 40%;
+}
+
+.facebook, .instagram, .twitter{ 
+    padding-left: 40px;
+    padding-right: 20px;
+    margin-bottom: 50px;
+    
 }
 
   

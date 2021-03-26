@@ -69,7 +69,7 @@ class __TwigTemplate_696db48eb11ddf85b8e67f253cb8f0c1e948611fe1c3f845e646822dd16
         // line 4
         echo "
 
-<nav class=\"navbar navbar-expand-lg navbar-light bg-nav \">
+<nav class=\"shadow-lg mt-3 navbar navbar-expand-lg navbar-light bg-nav \">
   <div class=\"container-fluid\">
     <a class=\"navbar-brand\" href=\"";
         // line 8
@@ -193,7 +193,7 @@ class __TwigTemplate_696db48eb11ddf85b8e67f253cb8f0c1e948611fe1c3f845e646822dd16
         {% block header %}
 
 
-<nav class=\"navbar navbar-expand-lg navbar-light bg-nav \">
+<nav class=\"shadow-lg mt-3 navbar navbar-expand-lg navbar-light bg-nav \">
   <div class=\"container-fluid\">
     <a class=\"navbar-brand\" href=\"{{ path('accueil') }}\">
       <img  class=\"logo m-3\" src=\"{{ asset('img/logo.png') }}\" alt=\"logo\" width=\"50\" height=\"50\">
