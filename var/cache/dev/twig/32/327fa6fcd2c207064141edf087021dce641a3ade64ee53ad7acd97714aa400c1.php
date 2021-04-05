@@ -132,21 +132,18 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
                     
                     <div class=\"container\">
                         <div class=\"row\">
-                            
                                 <img class=\"robe col-4\" src=\"";
-        // line 42
+        // line 41
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/robe.png"), "html", null, true);
         echo "\" alt=\"Robe bleu\">
                                 <img class=\"fleche col-4\" src=\"";
-        // line 43
+        // line 42
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/fleche.png"), "html", null, true);
         echo "\" alt=\"fleche echange\">
                                 <img class=\"livres col-4\" src=\"";
-        // line 44
+        // line 43
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/livres.png"), "html", null, true);
         echo "\" alt=\"livres\">
-                            
-                            
                         </div>
                         <p class=\"figcaption text-center mt-3\">Echangez un de vos objet contre un autre objet</p>
                     </div>
@@ -158,12 +155,12 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
                 <h2 class=\" h2-partie2 pt-5 text-center\">Comment troquer</h2>
                 <div class=\"text-center\">
                     <img class=\" m-5 img1-partie2  \" src=\"";
-        // line 57
+        // line 54
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/je-propose.png"), "html", null, true);
         echo "\" alt=\"paragraphe\">
                     <img class=\" m-5 img2-partie2\" 
                          src=\"";
-        // line 59
+        // line 56
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/je-cherche.png"), "html", null, true);
         echo "\" alt=\"paragraphe\">
                 </div>
@@ -176,7 +173,7 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
                         LE TROC  </br>  UNE SOLUTION
                     </h2>
                     <p class=\"text-center px-5 mt-5 fs-1\">  
-                        Troc'eco s'adresse à tous les écolos, à ceux qui ont envie de faire économies, ou tout simplement qui veulent consommer autrement.</br> A travers ce site, nous souhaitons réduire le gaspillage, la surconsommation que notre société engendre, et par la même occasion développer l'échange, l'entraide et la solidarité.
+                        Troc'eco s'adresse à tous les écolos, à ceux qui ont envie de faire des économies, ou tout simplement qui veulent consommer autrement.</br> A travers ce site, nous souhaitons réduire le gaspillage, la surconsommation que notre société engendre, et par la même occasion développer l'échange, l'entraide et la solidarité.
                     </p>
                     
                 
@@ -216,7 +213,7 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
 
     public function getDebugInfo()
     {
-        return array (  167 => 59,  162 => 57,  146 => 44,  142 => 43,  138 => 42,  128 => 35,  120 => 29,  111 => 23,  107 => 22,  104 => 21,  102 => 20,  88 => 8,  78 => 7,  59 => 4,  36 => 1,);
+        return array (  164 => 56,  159 => 54,  145 => 43,  141 => 42,  137 => 41,  128 => 35,  120 => 29,  111 => 23,  107 => 22,  104 => 21,  102 => 20,  88 => 8,  78 => 7,  59 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -261,12 +258,9 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
                     
                     <div class=\"container\">
                         <div class=\"row\">
-                            
                                 <img class=\"robe col-4\" src=\"{{ asset('img/robe.png')}}\" alt=\"Robe bleu\">
                                 <img class=\"fleche col-4\" src=\"{{ asset('img/fleche.png')}}\" alt=\"fleche echange\">
                                 <img class=\"livres col-4\" src=\"{{ asset('img/livres.png')}}\" alt=\"livres\">
-                            
-                            
                         </div>
                         <p class=\"figcaption text-center mt-3\">Echangez un de vos objet contre un autre objet</p>
                     </div>
@@ -290,7 +284,7 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
                         LE TROC  </br>  UNE SOLUTION
                     </h2>
                     <p class=\"text-center px-5 mt-5 fs-1\">  
-                        Troc'eco s'adresse à tous les écolos, à ceux qui ont envie de faire économies, ou tout simplement qui veulent consommer autrement.</br> A travers ce site, nous souhaitons réduire le gaspillage, la surconsommation que notre société engendre, et par la même occasion développer l'échange, l'entraide et la solidarité.
+                        Troc'eco s'adresse à tous les écolos, à ceux qui ont envie de faire des économies, ou tout simplement qui veulent consommer autrement.</br> A travers ce site, nous souhaitons réduire le gaspillage, la surconsommation que notre société engendre, et par la même occasion développer l'échange, l'entraide et la solidarité.
                     </p>
                     
                 

@@ -10,7 +10,7 @@ if (in_array(PHP_SAPI, ['cli', 'phpdbg'], true)) {
 }
 
 require dirname(__DIR__, 3).'/vendor/autoload.php';
-require __DIR__.'/ContainerR3qpjcZ/srcApp_KernelDevDebugContainer.php';
+require __DIR__.'/ContainerXrTfWh1/srcApp_KernelDevDebugContainer.php';
 
 $classes = [];
 $classes[] = 'Symfony\Bundle\FrameworkBundle\FrameworkBundle';
@@ -36,7 +36,7 @@ $classes[] = 'Symfony\Component\DependencyInjection\ServiceLocator';
 $classes[] = 'App\Controller\DefaultController';
 $classes[] = 'App\Controller\GestionController';
 $classes[] = 'App\Controller\MessageController';
-$classes[] = 'App\Controller\ProduitController';
+$classes[] = 'App\Controller\Produit1Controller';
 $classes[] = 'App\Controller\SecurityController';
 $classes[] = 'App\Controller\UserController';
 $classes[] = 'App\Form\CategorieType';
@@ -46,6 +46,7 @@ $classes[] = 'App\Form\ProduitType';
 $classes[] = 'App\Form\UserType';
 $classes[] = 'App\Repository\CategorieRepository';
 $classes[] = 'App\Repository\MessageRepository';
+$classes[] = 'App\Repository\PictureRepository';
 $classes[] = 'App\Repository\ProduitRepository';
 $classes[] = 'App\Repository\UserRepository';
 $classes[] = 'App\Security\ApploginAuthenticator';

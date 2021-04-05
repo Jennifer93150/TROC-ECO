@@ -3,6 +3,8 @@
 namespace App\Entity;
 
 use App\Repository\ProduitRepository;
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 #use Symfony\Component\HttpFoundation\File\File;
 #use Symfony\Component\Validator\Constraints as Assert;
@@ -57,17 +59,24 @@ class Produit
      */
     private $date;
 
+    # En cours d'essai, création d'une relation avec cet attribut et la table picture afin de stocker les photos ds la table picture
+    /**
+     * Un produit a une ou plusieurs prictures
+     * @ORM\OneToMany(targetEntity="App\Entity\Picture", mappedBy="produit")
+     */
+    private $pictures;
 
     # J'ai du RENDRE cet attribut NULL pour permettre l'envoi du reste des infos a la bdd, car malgré le code de la fonction correct (code identique à la fonction categorie ) ET l'attribut non null au depart, le fichier est considéré comme null à l'envoi.
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $photo;
- 
- 
+
+    
     public function __construct()
     {
         $this->date = new \DateTime('NOW');
+        $this->pictures = new ArrayCollection();
     }
 
    
@@ -155,18 +164,34 @@ class Produit
 
         return $this;
     }
-    
-# S'est arreté de fonctionner
 
-    public function getPhoto(): ?string
+    # En cours d'essai, création d'une relation avec cet attribut et la table picture
+    /**
+     * @return Collection|Images[]
+     */
+    public function getPictures(): Collection
+    {
+        return $this->pictures;
+    }
+
+    public function setPictures(string $pictures): self
+    {
+        $this->pictures = $pictures;
+
+        return $this;
+    }
+
+    public function getPhoto()
     {
         return $this->photo;
     }
 
-    public function setPhoto(string $photo): self
+    public function setPhoto($photo)
     {
         $this->photo = $photo;
 
         return $this;
     }
+
+    
 }

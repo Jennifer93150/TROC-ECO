@@ -96,7 +96,7 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
                     <div class=\"col-lg-6\">
                         <img class=\"rounded abeille\" src=\"";
         // line 15
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/abeille-profil.png"), "html", null, true);
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/profil.png"), "html", null, true);
         echo "\" alt=\"img-profil\">
                     </div>
                     <div class=\"contenu-profil col-lg-6 px-5 pb-5\">
@@ -176,6 +176,59 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
         // line 53
         echo "                
             </div>
+            <div>
+                <h2>Messages envoyés</h2>
+                <!-- Faire une boucle for  -->
+                ";
+        // line 58
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 58, $this->source); })()), "user", [], "any", false, false, false, 58), "messages", [], "any", false, false, false, 58));
+        foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+            // line 59
+            echo "                <div class=\"mb-3\">
+                    <div class=\"row g-0 border\">
+                        
+                        <div class=\"col-12 p-5\">
+                            <div>
+                                <h2 class=\"text-capitalize\"></h2>
+                                <p class=\"\">";
+            // line 65
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["message"], "message", [], "any", false, false, false, 65), "html", null, true);
+            echo "</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+                ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 73
+        echo "                
+            </div>
+            <!-- <div>
+                <h2>Messages reçus</h2>
+                Faire une boucle for  
+                for message in mesmessages 
+                <div class=\"mb-3\">
+                    <div class=\"row g-0 border\">
+                        
+                        <div class=\"col-12 p-5\">
+                            <div>
+                                <h2 class=\"text-capitalize\"></h2>
+                                <p class=\"\"></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+                endfor 
+                
+            </div>-->
 
         </div>
     </section>
@@ -202,7 +255,7 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
 
     public function getDebugInfo()
     {
-        return array (  177 => 53,  162 => 44,  158 => 43,  149 => 39,  144 => 36,  140 => 35,  132 => 30,  122 => 23,  118 => 22,  114 => 21,  110 => 20,  106 => 19,  99 => 15,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  210 => 73,  196 => 65,  188 => 59,  184 => 58,  177 => 53,  162 => 44,  158 => 43,  149 => 39,  144 => 36,  140 => 35,  132 => 30,  122 => 23,  118 => 22,  114 => 21,  110 => 20,  106 => 19,  99 => 15,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -221,7 +274,7 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
             <div class=\"mb-3\">
                 <div class=\"row g-0\">
                     <div class=\"col-lg-6\">
-                        <img class=\"rounded abeille\" src=\"{{ asset('img/abeille-profil.png')}}\" alt=\"img-profil\">
+                        <img class=\"rounded abeille\" src=\"{{ asset('img/profil.png')}}\" alt=\"img-profil\">
                     </div>
                     <div class=\"contenu-profil col-lg-6 px-5 pb-5\">
                         
@@ -261,6 +314,46 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
                 {% endfor %}
                 
             </div>
+            <div>
+                <h2>Messages envoyés</h2>
+                <!-- Faire une boucle for  -->
+                {% for message in app.user.messages %}
+                <div class=\"mb-3\">
+                    <div class=\"row g-0 border\">
+                        
+                        <div class=\"col-12 p-5\">
+                            <div>
+                                <h2 class=\"text-capitalize\"></h2>
+                                <p class=\"\">{{ message.message }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+                {% endfor %}
+                
+            </div>
+            <!-- <div>
+                <h2>Messages reçus</h2>
+                Faire une boucle for  
+                for message in mesmessages 
+                <div class=\"mb-3\">
+                    <div class=\"row g-0 border\">
+                        
+                        <div class=\"col-12 p-5\">
+                            <div>
+                                <h2 class=\"text-capitalize\"></h2>
+                                <p class=\"\"></p>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                </div>
+                endfor 
+                
+            </div>-->
 
         </div>
     </section>

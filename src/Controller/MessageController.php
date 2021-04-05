@@ -5,6 +5,7 @@ namespace App\Controller;
 
 use App\Entity\Message;
 use App\Form\MessageType;
+use App\Repository\MessageRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -57,5 +58,17 @@ class MessageController extends AbstractController
         # Passer le formulaire à la vue
         return $this->render('/user/message.html.twig', ['Formulaire' => $form->createView()]);
     }
+
+    
+    # essai affichage message recu dans profil
+    /**
+     * @Route("/profil/{id<\d+>}", name="liste" , methods={"GET"})
+     */
+    /*public function recu(Request $request, MessageRepository $messageRepository, $id)
+    {
+        # je recupere mes produit par leur id de categorie avec la variable $id que je rappelle dans le findBy categorie=>$id
+        return $this->render('/user/profil.html.twig', ['mesmessages'=>$messageRepository->findBy(['destinataire'=> $id])]);
+        
+    }*/
     
 }

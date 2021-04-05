@@ -6,7 +6,6 @@ namespace App\Controller;
 use App\Entity\Categorie;
 use App\Form\CategorieType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\BrowserKit\Response;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 use Symfony\Component\HttpFoundation\File\UploadedFile;
 use Symfony\Component\HttpFoundation\File\File;
@@ -17,9 +16,6 @@ use Symfony\Component\Routing\Annotation\Route;
 class GestionController extends AbstractController
 {
     # Fonction ajout nouvelle categorie
-    # (Pour chaque ajout de catégorie créer absolumt la route + function d'affichage sur ProduitController.php
-    #+ ajouter une page html.twig afin d'afficher ses produits sinon qd je cliquerai sur cette categorie 
-    #pour acceder a ses produits cela affichera une erreur de chemin)
     
     /**
      * @Route("/admin/gestion", name="gestion", methods={"GET","POST"})
@@ -33,7 +29,7 @@ class GestionController extends AbstractController
 
         # Création d'un nouvel objet form
         $form = $this->createForm(CategorieType::class, $categorie);
- 		$form->handleRequest($request);
+        $form->handleRequest($request);
        
         if ($form->isSubmitted() && $form->isValid()) {
 
@@ -42,6 +38,7 @@ class GestionController extends AbstractController
 
            # cette condition est nécessaire car le champ 'brochure' n'est pas obligatoire
            # donc le fichier ne doit être traité que lorsqu'un fichier est téléchargé
+
            if ($brochureFile) {
                $originalFilename = pathinfo($brochureFile->getClientOriginalName(), PATHINFO_FILENAME);
                # cela est nécessaire pour inclure en toute sécurité le nom du fichier dans l'URL
@@ -64,9 +61,9 @@ class GestionController extends AbstractController
                $categorie->setPhoto(new File($this->getParameter('brochures_directory').'/'.$categorie->getPhoto()));
                 # je remet ca ici pour que ca envoi juste le nom de photo sans le chemin
                 $categorie->setPhoto($newFilename);
-           }
+            }
 
-
+        
             # Insertion dans la BDD
             $em = $this->getDoctrine()->getManager();
             $em->persist($categorie);
@@ -98,3 +95,4 @@ class GestionController extends AbstractController
         return $this->redirectToRoute('accueil');
         #return new Response('La catégorie a bien été supprimé.');
     }*/
+

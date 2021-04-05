@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Troc'Eco | Catégorie {% endblock %}
+
+{% block contenuPrincipal %}
+<section>
+    <div class="shadow-lg">
+        <h1 class="py-3 my-5  text-center">Catégorie</h1>
+    </div>
+    {% for produit in lesproduits %}
+    
+    <div class="container">
+        <div class="row">
+            <div class="card mb-3 p-3 card-size" style="max-width: 1120px;">
+                <div class="row g-0">
+                    <div class="col-md-4 image">
+                        <!-- j'ai du retirer l'affichage dynamique recuperant les photos de la bdd car un probleme s'est produit et l'envoi de file ne s'effectuait plus asset('/uploads/brochures/' ~ produit.photo)
+                        L'AFFCIHAGE DYNAMIQUE DES PHOTOS REFONCTIONNE -->
+                        <a href="{{ path('annonce', {'id':produit.id})}}"><img src="{{ asset('/uploads/brochures/'~ produit.photo) }}" class="img-thumbnail" alt="{{ produit.titre }}"/></a>
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body background-maison">
+                            <h2 class="card-title">Catégorie {{ produit.categorie.nom }}</h2>
+                            <h3 class="card-title">{{ produit.titre }}</h3>
+
+                            <p class="card-text">{{ produit.description }}</p>
+                        </div>
+                    </div>
+                </div>
+                <a href="{{ path('annonce', {'id':produit.id})}}"><h3 class="btn text-center text-dark ">Voir ce troc</h3></a>
+                {% if is_granted('ROLE_ADMIN')%}
+                   
+
+                        <a href="{{ path('deleteproduit', {'id':produit.id})}}"><h3 class="btn text-center text-dark ">Supprimer ce troc</h3></a>
+
+
+                   
+                {% endif %}
+            </div>
+        {% endfor %}
+        </div>
+    </div>
+</section>
+
+{% endblock %}

@@ -101,24 +101,25 @@ class __TwigTemplate_35cf021704e1c745abfc86d8308cf5aa447b1b43117c946a553504107f5
             echo "
                         <div class=\"carte-categorie card col-lg-5 m-3 shadow rounded\">
                             <div class=\"card-body\">
+                            <!-- !!!!! en date du 26/03/2021 On a  du enlever ce lien  path(categorie.nom)  du href car cela affichait une erreur de route introuvable et cela empeche donc l'affichage de la page recherche ,je suppose que cela est du au fait que la route de la nouvelle categorie venant d'etre ajoutée est encore inexistantes dans le code à la création de celles ci !!!!!!-->
                                 <h2 class=\"card-title text-center\"><a href=\"";
-            // line 17
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath(twig_get_attribute($this->env, $this->source, $context["categorie"], "nom", [], "any", false, false, false, 17));
+            // line 18
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste", ["id" => twig_get_attribute($this->env, $this->source, $context["categorie"], "id", [], "any", false, false, false, 18)]), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "nom", [], "any", false, false, false, 17), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "nom", [], "any", false, false, false, 18), "html", null, true);
             echo "</a></h2>
                                 
                             </div>
                             <div class=\"text-center\">
                                 <a href=\"";
-            // line 21
-            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath(twig_get_attribute($this->env, $this->source, $context["categorie"], "nom", [], "any", false, false, false, 21));
+            // line 22
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste", ["id" => twig_get_attribute($this->env, $this->source, $context["categorie"], "id", [], "any", false, false, false, 22)]), "html", null, true);
             echo "\" class=\"align-self-center justify-self-center\">
                                     <img src=\"";
-            // line 22
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("/uploads/brochures/" . twig_get_attribute($this->env, $this->source, $context["categorie"], "photo", [], "any", false, false, false, 22))), "html", null, true);
+            // line 23
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("/uploads/brochures/" . twig_get_attribute($this->env, $this->source, $context["categorie"], "photo", [], "any", false, false, false, 23))), "html", null, true);
             echo "\" class=\"card-img-bottom border border-4\" alt=\"photo-";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "nom", [], "any", false, false, false, 22), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "nom", [], "any", false, false, false, 23), "html", null, true);
             echo "\">
                                 </a>  
                             </div>
@@ -129,18 +130,18 @@ class __TwigTemplate_35cf021704e1c745abfc86d8308cf5aa447b1b43117c946a553504107f5
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['categorie'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 28
+        // line 29
         echo "
                 ";
-        // line 29
+        // line 30
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 30
+            // line 31
             echo "                    <div><a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("gestion");
             echo "\">Ajouter une catégorie</a></div>
                 ";
         }
-        // line 32
+        // line 33
         echo "                            
             
         </div>
@@ -169,7 +170,7 @@ class __TwigTemplate_35cf021704e1c745abfc86d8308cf5aa447b1b43117c946a553504107f5
 
     public function getDebugInfo()
     {
-        return array (  144 => 32,  138 => 30,  136 => 29,  133 => 28,  119 => 22,  115 => 21,  106 => 17,  101 => 14,  97 => 13,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  145 => 33,  139 => 31,  137 => 30,  134 => 29,  120 => 23,  116 => 22,  107 => 18,  101 => 14,  97 => 13,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -190,11 +191,12 @@ class __TwigTemplate_35cf021704e1c745abfc86d8308cf5aa447b1b43117c946a553504107f5
 
                         <div class=\"carte-categorie card col-lg-5 m-3 shadow rounded\">
                             <div class=\"card-body\">
-                                <h2 class=\"card-title text-center\"><a href=\"{{ path(categorie.nom)}}\">{{ categorie.nom }}</a></h2>
+                            <!-- !!!!! en date du 26/03/2021 On a  du enlever ce lien  path(categorie.nom)  du href car cela affichait une erreur de route introuvable et cela empeche donc l'affichage de la page recherche ,je suppose que cela est du au fait que la route de la nouvelle categorie venant d'etre ajoutée est encore inexistantes dans le code à la création de celles ci !!!!!!-->
+                                <h2 class=\"card-title text-center\"><a href=\"{{ path('liste', {'id':categorie.id})}}\">{{ categorie.nom }}</a></h2>
                                 
                             </div>
                             <div class=\"text-center\">
-                                <a href=\"{{ path(categorie.nom)}}\" class=\"align-self-center justify-self-center\">
+                                <a href=\"{{ path('liste', {'id':categorie.id})}}\" class=\"align-self-center justify-self-center\">
                                     <img src=\"{{ asset('/uploads/brochures/' ~ categorie.photo) }}\" class=\"card-img-bottom border border-4\" alt=\"photo-{{ categorie.nom }}\">
                                 </a>  
                             </div>

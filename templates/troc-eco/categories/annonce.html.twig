@@ -11,17 +11,21 @@
 <div class="container">
     <div class="row">
     
-        <div class="card mb-3 card-size shadow" style="max-width: 1120px;">
+        <div class="card mb-3 p-3 card-size shadow" style="max-width: 1120px;">
             <div class="row g-0">
                 <div class="col-md-4 image">
                 <img src="{{ asset('/uploads/brochures/' ~ produit.photo) }}" class="img-thumbnail" alt="{{ produit.titre }}"/>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-4">
                     <div class="card-body background-maison">
                         <h2 class="card-title">{{ produit.titre }}</h2>
                         <p class="card-text">{{ produit.description }}</p>
                         
                     </div>
+                    
+                </div>
+                <div class="col-md-4">
+                    <button class="btn btn-outline-light ml-3">Contacter le troqueur</button>
                 </div>
             </div>
         </div>

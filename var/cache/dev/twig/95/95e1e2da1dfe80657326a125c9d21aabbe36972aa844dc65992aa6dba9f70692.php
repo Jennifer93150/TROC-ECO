@@ -95,7 +95,7 @@ class __TwigTemplate_cc746f6c53b649514e35842e9e62e501b8f134356801f49c6488627afce
         ";
         // line 13
         echo "        <div class=\"container shadow bg-vert rounded\">
-            <form method=\"post\">
+            <form method=\"post\" enctype = \"multipart / form-data\">
                 <div>
                     ";
         // line 16
@@ -194,7 +194,7 @@ class __TwigTemplate_cc746f6c53b649514e35842e9e62e501b8f134356801f49c6488627afce
         </div>
         {# FORMULAIRE#}
         <div class=\"container shadow bg-vert rounded\">
-            <form method=\"post\">
+            <form method=\"post\" enctype = \"multipart / form-data\">
                 <div>
                     {{ form_start(Formulaire) }}
                         <div class=\"my-custom-class-for-errors\">

@@ -24,8 +24,7 @@ class ProduitType extends AbstractType
                 'class' => Categorie::class, 
                 'choice_label' => 'Nom',
                 'required' => true,]) 
-            ->add('photo', FileType::class, [
-                'label' => 'Photo',])
+            ->add('photo', FileType::class, ['required' => false])
             ->add('titre',TextType::class, ['label' => 'Titre','required' => true,])
             ->add('description', TextType::class, ['label' => 'Description','required' => true,])
             ->add('enregistrer', SubmitType::class, [

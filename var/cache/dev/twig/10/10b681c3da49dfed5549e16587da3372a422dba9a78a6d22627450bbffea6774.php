@@ -104,7 +104,9 @@ class __TwigTemplate_77b28e53ee747a5f89dad051a6f076d235badc1b8ec3a711183d7a1cc75
                         <a href=\"#\"><img src=\"";
             // line 17
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("/uploads/brochures/shoes2-1494496195158-c3becb4f2475.jpeg"), "html", null, true);
-            echo "\" class=\"img-thumbnail\" alt=\"photo-produit\"/></a>
+            echo "\" class=\"img-thumbnail\" alt=\"";
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "titre", [], "any", false, false, false, 17), "html", null, true);
+            echo "\"/></a>
                     </div>
                     <div class=\"col-md-8\">
                         <div class=\"card-body background-maison\">
@@ -153,7 +155,7 @@ class __TwigTemplate_77b28e53ee747a5f89dad051a6f076d235badc1b8ec3a711183d7a1cc75
 
     public function getDebugInfo()
     {
-        return array (  131 => 30,  118 => 23,  114 => 22,  106 => 17,  100 => 13,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  133 => 30,  120 => 23,  116 => 22,  106 => 17,  100 => 13,  96 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -174,7 +176,7 @@ class __TwigTemplate_77b28e53ee747a5f89dad051a6f076d235badc1b8ec3a711183d7a1cc75
                 <div class=\"row g-0\">
                     <div class=\"col-md-4 image\">
                         <!-- j'ai du retirer l'affichage dynamique recuperant les photos de la bdd car un probleme s'est produit et l'envoi de file ne s'effectuait plus asset('/uploads/brochures/' ~ produit.photo)-->
-                        <a href=\"#\"><img src=\"{{ asset('/uploads/brochures/shoes2-1494496195158-c3becb4f2475.jpeg') }}\" class=\"img-thumbnail\" alt=\"photo-produit\"/></a>
+                        <a href=\"#\"><img src=\"{{ asset('/uploads/brochures/shoes2-1494496195158-c3becb4f2475.jpeg') }}\" class=\"img-thumbnail\" alt=\"{{ produit.titre }}\"/></a>
                     </div>
                     <div class=\"col-md-8\">
                         <div class=\"card-body background-maison\">

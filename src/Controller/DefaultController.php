@@ -3,10 +3,11 @@
 namespace App\Controller;
 
 use App\Repository\CategorieRepository;
+use App\Repository\ProduitRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
-
+use Symfony\Component\HttpFoundation\Request;
 
 class DefaultController extends AbstractController
 {
@@ -30,20 +31,14 @@ class DefaultController extends AbstractController
     /**
     * @Route("/recherche", name="recherche")
     */
-    public function recherche(CategorieRepository $categorieRepository)
+    public function affiche(CategorieRepository $categorieRepository)
     {
-        /*# Selection des données ds la bdd
-        $repository = $this->getDoctrine()->getRepository(Categorie::class);
-        # je stock ds la var $cateegories TOUTES mes categories
-        $categories = $repository->findAll();
-        # Envoi à la vue
-        return $this->render('/troc-eco/recherche.html.twig', ['noscategories'=>$categories]);*/
-
-        return $this->render('/troc-eco/recherche.html.twig', ['noscategories'=>$categorieRepository->findAll()]);
+        
+        return $this->render('/troc-eco/categories/recherche_categorie.html.twig', ['noscategories'=>$categorieRepository->findAll()]);
         
     }
 
-    
+
     /**
     * @Route("/message", name="message")
     * @IsGranted("IS_AUTHENTICATED_FULLY")
