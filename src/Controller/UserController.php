@@ -11,6 +11,8 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Component\HttpFoundation\Response;
+# use App\Service\MessageGenerator;
+# , MessageGenerator $messageGenerator
 
 
 #use App\Service\MessageGenerator;
@@ -33,7 +35,11 @@ class UserController extends AbstractController
 
         # création d'un nouvel objet form
         $form = $this->createForm(UserType::class, $user);
-        $form->handleRequest($request);
+        $form->handleRequest($request);//Verification des contraintes imposées (ex: min caractères pr le champs description, NotBlank {ne pas retourner vide}..)
+
+        # je cree une variable message vide qui contiendra mon msg flash
+        # $message = '';
+
 
         #Si "submit" ET tout valide
         if ($form->isSubmitted() && $form->isValid()) { 
@@ -49,12 +55,18 @@ class UserController extends AbstractController
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);
             $em->flush();
+
+            #$message = $messageGenerator->getHappyMessage();
+            $this->addFlash('success', 'Génial, vous venez de créer un compte, connectez-vous dès maintenant pour commencer à troquer !');
+            
             
             return $this->redirectToRoute('accueil');
         }
 
         # Passer le formulaire à la vue
-        return $this->render('/user/inscription.html.twig', ['user' => $user, 'Formulaire' => $form->createView()]);
+        return $this->render('/user/inscription.html.twig', ['user' => $user, 'Formulaire' => $form->createView(),
+         ]);
+         # 'message'=>$message a mettre ds array de return au dessus
     }
 
    

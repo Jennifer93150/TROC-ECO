@@ -7,12 +7,19 @@
     <div class="shadow-lg">
         <h1 class="text-center py-3 my-5">Recherche</h1>
     </div>
+    {# Affichage du message de succes #}
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-success">
+            {{ message }}
+        </div>
+    {% endfor %}
+
     <div class="container">
         <div class="row g-2">
                 <!-- J'AFFICHE LES CATEGORIES -->
                 {% for categorie in noscategories %}
 
-                        <div class="carte-categorie card col-lg-5 m-3 shadow rounded">
+                        <div class="carte-categorie card col-lg-5 m-3 p-3 shadow rounded">
                             <div class="card-body">
                             <!-- !!!!! en date du 26/03/2021 On a  du enlever ce lien  path(categorie.nom)  du href car cela affichait une erreur de route introuvable et cela empeche donc l'affichage de la page recherche ,je suppose que cela est du au fait que la route de la nouvelle categorie venant d'etre ajoutée est encore inexistantes dans le code à la création de celles ci !!!!!!-->
                                 <h2 class="card-title text-center"><a href="{{ path('liste', {'id':categorie.id})}}">{{ categorie.nom }}</a></h2>

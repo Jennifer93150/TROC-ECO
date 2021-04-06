@@ -38,7 +38,7 @@ class Produit1Controller extends AbstractController
         $form->handleRequest($request);
        
         if ($form->isSubmitted() && $form->isValid()) {
-
+            
             
              /** @var UploadedFile $brochureFile */
            $brochureFile = $form->get('photo')->getData();
@@ -49,6 +49,9 @@ class Produit1Controller extends AbstractController
            # !! J'ai du rendre null l'attribut photo car un probleme au niveau de l'envoi de la photo (il est null à l'envoi)
            if ($brochureFile) {
                $originalFilename = pathinfo($brochureFile->getClientOriginalName(), PATHINFO_FILENAME);
+
+               dump($originalFilename);//alors afficher le contenu de l'objet $user sur la console
+               
                # cela est nécessaire pour inclure en toute sécurité le nom du fichier dans l'URL
                #$safeFilename = transliterator_transliterate('Any-Latin; Latin-ASCII; [^A-Za-z0-9_] remove; Lower()', $originalFilename);
                $newFilename = $originalFilename.'-'.uniqid().'.'.$brochureFile->guessExtension();
@@ -78,6 +81,8 @@ class Produit1Controller extends AbstractController
             $em = $this->getDoctrine()->getManager();
             $em->persist($produit);
             $em->flush();
+
+            $this->addFlash('success', 'Félicitations, votre produit a bien été ajouté !');
 
             return $this->redirectToRoute('recherche');
 

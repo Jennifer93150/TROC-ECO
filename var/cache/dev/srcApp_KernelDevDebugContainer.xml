@@ -433,6 +433,7 @@
       <argument type="service" id="security.user_password_encoder.generic"/>
     </service>
     <service id="App\Services\FileUploader" class="App\Services\FileUploader" autowire="true" autoconfigure="true"/>
+    <service id="App\Services\MessageGenerator" class="App\Services\MessageGenerator" autowire="true" autoconfigure="true"/>
     <service id=".legacy_controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
       <argument type="service" id="kernel"/>

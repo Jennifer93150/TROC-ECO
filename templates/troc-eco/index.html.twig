@@ -10,9 +10,14 @@
         <div  class="shadow-lg">
             <h1 class="text-center my-5 py-3">Comment je fais ?</h1>
         </div>
+        
+        {# Affichage du message de succes #}
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
   
-   
-    
         <section class="partie1">
         
             <!-- Fonction is_granted() => permet de savoir si l’utilisateur possède un certain rôle 

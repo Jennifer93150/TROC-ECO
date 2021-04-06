@@ -128,6 +128,7 @@ return [
     'App\\Security\\ApploginAuthenticator' => true,
     'App\\Service\\FileUploader' => true,
     'App\\Services\\FileUploader' => true,
+    'App\\Services\\MessageGenerator' => true,
     'Doctrine\\Common\\Annotations\\Reader' => true,
     'Doctrine\\Common\\Persistence\\ManagerRegistry' => true,
     'Doctrine\\DBAL\\Connection' => true,

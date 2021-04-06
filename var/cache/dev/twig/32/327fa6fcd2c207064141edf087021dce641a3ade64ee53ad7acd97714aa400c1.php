@@ -90,25 +90,43 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
         <div  class=\"shadow-lg\">
             <h1 class=\"text-center my-5 py-3\">Comment je fais ?</h1>
         </div>
-  
-   
-    
+        
+        ";
+        // line 15
+        echo "        ";
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 15, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 15));
+        foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+            // line 16
+            echo "            <div class=\"alert alert-success\">
+                ";
+            // line 17
+            echo twig_escape_filter($this->env, $context["message"], "html", null, true);
+            echo "
+            </div>
+        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 20
+        echo "  
         <section class=\"partie1\">
         
             <!-- Fonction is_granted() => permet de savoir si l’utilisateur possède un certain rôle 
             IS_AUTHENTICATED_FULLY => si réellement connecté-->
             ";
-        // line 20
+        // line 25
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 21
+            // line 26
             echo "            <div class=\"text-end\">
                 <a class=\"lien-profil\" href=\"";
-            // line 22
+            // line 27
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profil");
             echo "\">
                     <h2 class=\"text-capitalize\">Bonjour ";
-            // line 23
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "user", [], "any", false, false, false, 23), "nom", [], "any", false, false, false, 23), "html", null, true);
+            // line 28
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 28, $this->source); })()), "user", [], "any", false, false, false, 28), "nom", [], "any", false, false, false, 28), "html", null, true);
             echo ".</h2>
                     <!-- \"app\" : pr acceder a user, la variable est une instance de Symfony\\Bridge\\Twig\\AppVariable qui donne auto accès à user (variable specifique a l'appli)-->
                 </a>     
@@ -116,7 +134,7 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
                         
             ";
         }
-        // line 29
+        // line 34
         echo "        
            
                 <article class=\"partie1\">
@@ -124,7 +142,7 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
                         <div class=\"row\">
                             <h2 class=\"col-8 h2-partie1 mb-5 ml-5\">TROC'ECO, </br>UN GESTE SIMPLE.</h2>
                             <img class=\"robe col-4\" src=\"";
-        // line 35
+        // line 40
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/super.png"), "html", null, true);
         echo "\" alt=\"image super\">
                         </div>
@@ -133,15 +151,15 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
                     <div class=\"container\">
                         <div class=\"row\">
                                 <img class=\"robe col-4\" src=\"";
-        // line 41
+        // line 46
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/robe.png"), "html", null, true);
         echo "\" alt=\"Robe bleu\">
                                 <img class=\"fleche col-4\" src=\"";
-        // line 42
+        // line 47
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/fleche.png"), "html", null, true);
         echo "\" alt=\"fleche echange\">
                                 <img class=\"livres col-4\" src=\"";
-        // line 43
+        // line 48
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/livres.png"), "html", null, true);
         echo "\" alt=\"livres\">
                         </div>
@@ -155,12 +173,12 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
                 <h2 class=\" h2-partie2 pt-5 text-center\">Comment troquer</h2>
                 <div class=\"text-center\">
                     <img class=\" m-5 img1-partie2  \" src=\"";
-        // line 54
+        // line 59
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/je-propose.png"), "html", null, true);
         echo "\" alt=\"paragraphe\">
                     <img class=\" m-5 img2-partie2\" 
                          src=\"";
-        // line 56
+        // line 61
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/je-cherche.png"), "html", null, true);
         echo "\" alt=\"paragraphe\">
                 </div>
@@ -213,7 +231,7 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
 
     public function getDebugInfo()
     {
-        return array (  164 => 56,  159 => 54,  145 => 43,  141 => 42,  137 => 41,  128 => 35,  120 => 29,  111 => 23,  107 => 22,  104 => 21,  102 => 20,  88 => 8,  78 => 7,  59 => 4,  36 => 1,);
+        return array (  182 => 61,  177 => 59,  163 => 48,  159 => 47,  155 => 46,  146 => 40,  138 => 34,  129 => 28,  125 => 27,  122 => 26,  120 => 25,  113 => 20,  104 => 17,  101 => 16,  96 => 15,  88 => 8,  78 => 7,  59 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -230,9 +248,14 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
         <div  class=\"shadow-lg\">
             <h1 class=\"text-center my-5 py-3\">Comment je fais ?</h1>
         </div>
+        
+        {# Affichage du message de succes #}
+        {% for message in app.flashes('success') %}
+            <div class=\"alert alert-success\">
+                {{ message }}
+            </div>
+        {% endfor %}
   
-   
-    
         <section class=\"partie1\">
         
             <!-- Fonction is_granted() => permet de savoir si l’utilisateur possède un certain rôle 

@@ -89,37 +89,57 @@ class __TwigTemplate_64eeb4e1d18b561d0dcb94e676b73dd691a786ba2e8ecd98319038b400e
     <div class=\"shadow-lg\">
         <h1 class=\"text-center py-3 my-5\">Recherche</h1>
     </div>
+    ";
+        // line 11
+        echo "    ";
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 11, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 11));
+        foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+            // line 12
+            echo "        <div class=\"alert alert-success\">
+            ";
+            // line 13
+            echo twig_escape_filter($this->env, $context["message"], "html", null, true);
+            echo "
+        </div>
+    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 16
+        echo "
     <div class=\"container\">
         <div class=\"row g-2\">
                 <!-- J'AFFICHE LES CATEGORIES -->
                 ";
-        // line 13
+        // line 20
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["noscategories"]) || array_key_exists("noscategories", $context) ? $context["noscategories"] : (function () { throw new RuntimeError('Variable "noscategories" does not exist.', 13, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["noscategories"]) || array_key_exists("noscategories", $context) ? $context["noscategories"] : (function () { throw new RuntimeError('Variable "noscategories" does not exist.', 20, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["categorie"]) {
-            // line 14
+            // line 21
             echo "
-                        <div class=\"carte-categorie card col-lg-5 m-3 shadow rounded\">
+                        <div class=\"carte-categorie card col-lg-5 m-3 p-3 shadow rounded\">
                             <div class=\"card-body\">
                             <!-- !!!!! en date du 26/03/2021 On a  du enlever ce lien  path(categorie.nom)  du href car cela affichait une erreur de route introuvable et cela empeche donc l'affichage de la page recherche ,je suppose que cela est du au fait que la route de la nouvelle categorie venant d'etre ajoutée est encore inexistantes dans le code à la création de celles ci !!!!!!-->
                                 <h2 class=\"card-title text-center\"><a href=\"";
-            // line 18
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste", ["id" => twig_get_attribute($this->env, $this->source, $context["categorie"], "id", [], "any", false, false, false, 18)]), "html", null, true);
+            // line 25
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste", ["id" => twig_get_attribute($this->env, $this->source, $context["categorie"], "id", [], "any", false, false, false, 25)]), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "nom", [], "any", false, false, false, 18), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "nom", [], "any", false, false, false, 25), "html", null, true);
             echo "</a></h2>
                                 
                             </div>
                             <div class=\"text-center\">
                                 <a href=\"";
-            // line 22
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste", ["id" => twig_get_attribute($this->env, $this->source, $context["categorie"], "id", [], "any", false, false, false, 22)]), "html", null, true);
+            // line 29
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste", ["id" => twig_get_attribute($this->env, $this->source, $context["categorie"], "id", [], "any", false, false, false, 29)]), "html", null, true);
             echo "\" class=\"align-self-center justify-self-center\">
                                     <img src=\"";
-            // line 23
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("/uploads/brochures/" . twig_get_attribute($this->env, $this->source, $context["categorie"], "photo", [], "any", false, false, false, 23))), "html", null, true);
+            // line 30
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("/uploads/brochures/" . twig_get_attribute($this->env, $this->source, $context["categorie"], "photo", [], "any", false, false, false, 30))), "html", null, true);
             echo "\" class=\"card-img-bottom border border-4\" alt=\"photo-";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "nom", [], "any", false, false, false, 23), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "nom", [], "any", false, false, false, 30), "html", null, true);
             echo "\">
                                 </a>  
                             </div>
@@ -130,18 +150,18 @@ class __TwigTemplate_64eeb4e1d18b561d0dcb94e676b73dd691a786ba2e8ecd98319038b400e
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['categorie'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 29
+        // line 36
         echo "
                 ";
-        // line 30
+        // line 37
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 31
+            // line 38
             echo "                    <div><a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("gestion");
             echo "\">Ajouter une catégorie</a></div>
                 ";
         }
-        // line 33
+        // line 40
         echo "                            
             
         </div>
@@ -170,7 +190,7 @@ class __TwigTemplate_64eeb4e1d18b561d0dcb94e676b73dd691a786ba2e8ecd98319038b400e
 
     public function getDebugInfo()
     {
-        return array (  145 => 33,  139 => 31,  137 => 30,  134 => 29,  120 => 23,  116 => 22,  107 => 18,  101 => 14,  97 => 13,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  165 => 40,  159 => 38,  157 => 37,  154 => 36,  140 => 30,  136 => 29,  127 => 25,  121 => 21,  117 => 20,  111 => 16,  102 => 13,  99 => 12,  94 => 11,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -184,12 +204,19 @@ class __TwigTemplate_64eeb4e1d18b561d0dcb94e676b73dd691a786ba2e8ecd98319038b400e
     <div class=\"shadow-lg\">
         <h1 class=\"text-center py-3 my-5\">Recherche</h1>
     </div>
+    {# Affichage du message de succes #}
+    {% for message in app.flashes('success') %}
+        <div class=\"alert alert-success\">
+            {{ message }}
+        </div>
+    {% endfor %}
+
     <div class=\"container\">
         <div class=\"row g-2\">
                 <!-- J'AFFICHE LES CATEGORIES -->
                 {% for categorie in noscategories %}
 
-                        <div class=\"carte-categorie card col-lg-5 m-3 shadow rounded\">
+                        <div class=\"carte-categorie card col-lg-5 m-3 p-3 shadow rounded\">
                             <div class=\"card-body\">
                             <!-- !!!!! en date du 26/03/2021 On a  du enlever ce lien  path(categorie.nom)  du href car cela affichait une erreur de route introuvable et cela empeche donc l'affichage de la page recherche ,je suppose que cela est du au fait que la route de la nouvelle categorie venant d'etre ajoutée est encore inexistantes dans le code à la création de celles ci !!!!!!-->
                                 <h2 class=\"card-title text-center\"><a href=\"{{ path('liste', {'id':categorie.id})}}\">{{ categorie.nom }}</a></h2>

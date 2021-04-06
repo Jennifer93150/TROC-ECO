@@ -90,35 +90,56 @@ class __TwigTemplate_fefe6028ef36a5132aca91387c763affc89ece4ce19b0168e47074da7f0
         <h1 class=\"text-center py-3 my-5\">J'ajoute une catégorie</h1>
     </div>
 
+    ";
+        // line 14
+        echo "    ";
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 14, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 14));
+        foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+            // line 15
+            echo "        <div class=\"alert alert-success\">
+            ";
+            // line 16
+            echo twig_escape_filter($this->env, $context["message"], "html", null, true);
+            echo "
+        </div>
+    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 19
+        echo "
+
     <div class=\"container shadow bg-vert rounded\">
         ";
-        // line 14
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 14, $this->source); })()), 'form_start');
+        // line 22
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 22, $this->source); })()), 'form_start');
         echo "
             <div class=\"my-custom-class-for-errors\">
                 ";
-        // line 16
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 16, $this->source); })()), 'errors');
+        // line 24
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock((isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 24, $this->source); })()), 'errors');
         echo "
             </div>
             <div class=\"col\" id=\"some-custom-id\">
                 ";
-        // line 19
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 19, $this->source); })()), "nom", [], "any", false, false, false, 19), 'row');
+        // line 27
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 27, $this->source); })()), "nom", [], "any", false, false, false, 27), 'row');
         echo "
                 ";
-        // line 20
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 20, $this->source); })()), "photo", [], "any", false, false, false, 20), 'row');
+        // line 28
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 28, $this->source); })()), "photo", [], "any", false, false, false, 28), 'row');
         echo "
                 <div style=\"background-color:#FFDAC3\" class=\"m-2 px-5 btn rounded\">";
-        // line 21
-        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 21, $this->source); })()), "enregistrer", [], "any", false, false, false, 21), 'row');
+        // line 29
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 29, $this->source); })()), "enregistrer", [], "any", false, false, false, 29), 'row');
         echo "</div>
             </div>
             
         ";
-        // line 24
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 24, $this->source); })()), 'form_end');
+        // line 32
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["Formulaire"]) || array_key_exists("Formulaire", $context) ? $context["Formulaire"] : (function () { throw new RuntimeError('Variable "Formulaire" does not exist.', 32, $this->source); })()), 'form_end');
         echo "
     </div>
 </section>
@@ -146,7 +167,7 @@ class __TwigTemplate_fefe6028ef36a5132aca91387c763affc89ece4ce19b0168e47074da7f0
 
     public function getDebugInfo()
     {
-        return array (  121 => 24,  115 => 21,  111 => 20,  107 => 19,  101 => 16,  96 => 14,  88 => 8,  78 => 7,  59 => 3,  36 => 1,);
+        return array (  142 => 32,  136 => 29,  132 => 28,  128 => 27,  122 => 24,  117 => 22,  112 => 19,  103 => 16,  100 => 15,  95 => 14,  88 => 8,  78 => 7,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -162,6 +183,14 @@ class __TwigTemplate_fefe6028ef36a5132aca91387c763affc89ece4ce19b0168e47074da7f0
     <div class=\"shadow-lg\">
         <h1 class=\"text-center py-3 my-5\">J'ajoute une catégorie</h1>
     </div>
+
+    {# Affichage du message de succes #}
+    {% for message in app.flashes('success') %}
+        <div class=\"alert alert-success\">
+            {{ message }}
+        </div>
+    {% endfor %}
+
 
     <div class=\"container shadow bg-vert rounded\">
         {{ form_start(Formulaire) }}

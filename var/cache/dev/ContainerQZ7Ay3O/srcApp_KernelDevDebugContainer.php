@@ -1,6 +1,6 @@
 <?php
 
-namespace ContainerXrTfWh1;
+namespace ContainerQZ7Ay3O;
 
 use Symfony\Component\DependencyInjection\Argument\RewindableGenerator;
 use Symfony\Component\DependencyInjection\ContainerInterface;
@@ -1830,6 +1830,16 @@ class srcApp_KernelDevDebugContainer extends Container
     }
 
     /**
+     * Gets the private '.errored..service_locator.cGTdvvY.App\Service\MessageGenerator' shared service.
+     *
+     * @return \App\Service\MessageGenerator
+     */
+    protected function getMessageGeneratorService()
+    {
+        $this->throw('Cannot autowire service ".service_locator.cGTdvvY": it references class "App\\Service\\MessageGenerator" but no such service exists.');
+    }
+
+    /**
      * Gets the private '.legacy_resolve_controller_name_subscriber' shared service.
      *
      * @return \Symfony\Bundle\FrameworkBundle\EventListener\ResolveControllerNameSubscriber
@@ -1868,6 +1878,50 @@ class srcApp_KernelDevDebugContainer extends Container
     }
 
     /**
+     * Gets the private '.service_locator.OPRqaFk' shared service.
+     *
+     * @return \Symfony\Component\DependencyInjection\ServiceLocator
+     */
+    protected function get_ServiceLocator_OPRqaFkService()
+    {
+        return $this->privates['.service_locator.OPRqaFk'] = new \Symfony\Component\DependencyInjection\Argument\ServiceLocator($this->getService, [
+            'App\\Controller\\DefaultController::affiche' => ['privates', '.service_locator.hqNb5OX', 'get_ServiceLocator_HqNb5OXService', false],
+            'App\\Controller\\MessageController::new' => ['privates', '.service_locator.RLVVpop', 'get_ServiceLocator_RLVVpopService', false],
+            'App\\Controller\\Produit1Controller::annonces' => ['privates', '.service_locator.D_VxfLH', 'get_ServiceLocator_DVxfLHService', false],
+            'App\\Controller\\Produit1Controller::delete' => ['privates', '.service_locator.J966qaa', 'get_ServiceLocator_J966qaaService', false],
+            'App\\Controller\\Produit1Controller::liste' => ['privates', '.service_locator.D_VxfLH', 'get_ServiceLocator_DVxfLHService', false],
+            'App\\Controller\\SecurityController::login' => ['privates', '.service_locator.g.xob4v', 'get_ServiceLocator_G_Xob4vService', false],
+            'App\\Controller\\UserController::edit' => ['privates', '.service_locator.RQPnyo9', 'get_ServiceLocator_RQPnyo9Service', false],
+            'App\\Controller\\UserController::new' => ['privates', '.service_locator.cGTdvvY', 'get_ServiceLocator_CGTdvvYService', false],
+            'App\\Controller\\DefaultController:affiche' => ['privates', '.service_locator.hqNb5OX', 'get_ServiceLocator_HqNb5OXService', false],
+            'App\\Controller\\MessageController:new' => ['privates', '.service_locator.RLVVpop', 'get_ServiceLocator_RLVVpopService', false],
+            'App\\Controller\\Produit1Controller:annonces' => ['privates', '.service_locator.D_VxfLH', 'get_ServiceLocator_DVxfLHService', false],
+            'App\\Controller\\Produit1Controller:delete' => ['privates', '.service_locator.J966qaa', 'get_ServiceLocator_J966qaaService', false],
+            'App\\Controller\\Produit1Controller:liste' => ['privates', '.service_locator.D_VxfLH', 'get_ServiceLocator_DVxfLHService', false],
+            'App\\Controller\\SecurityController:login' => ['privates', '.service_locator.g.xob4v', 'get_ServiceLocator_G_Xob4vService', false],
+            'App\\Controller\\UserController:edit' => ['privates', '.service_locator.RQPnyo9', 'get_ServiceLocator_RQPnyo9Service', false],
+            'App\\Controller\\UserController:new' => ['privates', '.service_locator.cGTdvvY', 'get_ServiceLocator_CGTdvvYService', false],
+        ], [
+            'App\\Controller\\DefaultController::affiche' => '?',
+            'App\\Controller\\MessageController::new' => '?',
+            'App\\Controller\\Produit1Controller::annonces' => '?',
+            'App\\Controller\\Produit1Controller::delete' => '?',
+            'App\\Controller\\Produit1Controller::liste' => '?',
+            'App\\Controller\\SecurityController::login' => '?',
+            'App\\Controller\\UserController::edit' => '?',
+            'App\\Controller\\UserController::new' => '?',
+            'App\\Controller\\DefaultController:affiche' => '?',
+            'App\\Controller\\MessageController:new' => '?',
+            'App\\Controller\\Produit1Controller:annonces' => '?',
+            'App\\Controller\\Produit1Controller:delete' => '?',
+            'App\\Controller\\Produit1Controller:liste' => '?',
+            'App\\Controller\\SecurityController:login' => '?',
+            'App\\Controller\\UserController:edit' => '?',
+            'App\\Controller\\UserController:new' => '?',
+        ]);
+    }
+
+    /**
      * Gets the private '.service_locator.RLVVpop' shared service.
      *
      * @return \Symfony\Component\DependencyInjection\ServiceLocator
@@ -1898,6 +1952,22 @@ class srcApp_KernelDevDebugContainer extends Container
     }
 
     /**
+     * Gets the private '.service_locator.cGTdvvY' shared service.
+     *
+     * @return \Symfony\Component\DependencyInjection\ServiceLocator
+     */
+    protected function get_ServiceLocator_CGTdvvYService()
+    {
+        return $this->privates['.service_locator.cGTdvvY'] = new \Symfony\Component\DependencyInjection\Argument\ServiceLocator($this->getService, [
+            'encoder' => ['services', 'security.password_encoder', 'getSecurity_PasswordEncoderService', false],
+            'messageGenerator' => ['privates', '.errored..service_locator.cGTdvvY.App\\Service\\MessageGenerator', NULL, 'Cannot autowire service ".service_locator.cGTdvvY": it references class "App\\Service\\MessageGenerator" but no such service exists.'],
+        ], [
+            'encoder' => '?',
+            'messageGenerator' => 'App\\Service\\MessageGenerator',
+        ]);
+    }
+
+    /**
      * Gets the private '.service_locator.g.xob4v' shared service.
      *
      * @return \Symfony\Component\DependencyInjection\ServiceLocator
@@ -1922,64 +1992,6 @@ class srcApp_KernelDevDebugContainer extends Container
             'categorieRepository' => ['privates', 'App\\Repository\\CategorieRepository', 'getCategorieRepositoryService', false],
         ], [
             'categorieRepository' => 'App\\Repository\\CategorieRepository',
-        ]);
-    }
-
-    /**
-     * Gets the private '.service_locator.jmvbEvf' shared service.
-     *
-     * @return \Symfony\Component\DependencyInjection\ServiceLocator
-     */
-    protected function get_ServiceLocator_JmvbEvfService()
-    {
-        return $this->privates['.service_locator.jmvbEvf'] = new \Symfony\Component\DependencyInjection\Argument\ServiceLocator($this->getService, [
-            'encoder' => ['services', 'security.password_encoder', 'getSecurity_PasswordEncoderService', false],
-        ], [
-            'encoder' => '?',
-        ]);
-    }
-
-    /**
-     * Gets the private '.service_locator.vXnQXZo' shared service.
-     *
-     * @return \Symfony\Component\DependencyInjection\ServiceLocator
-     */
-    protected function get_ServiceLocator_VXnQXZoService()
-    {
-        return $this->privates['.service_locator.vXnQXZo'] = new \Symfony\Component\DependencyInjection\Argument\ServiceLocator($this->getService, [
-            'App\\Controller\\DefaultController::affiche' => ['privates', '.service_locator.hqNb5OX', 'get_ServiceLocator_HqNb5OXService', false],
-            'App\\Controller\\MessageController::new' => ['privates', '.service_locator.RLVVpop', 'get_ServiceLocator_RLVVpopService', false],
-            'App\\Controller\\Produit1Controller::annonces' => ['privates', '.service_locator.D_VxfLH', 'get_ServiceLocator_DVxfLHService', false],
-            'App\\Controller\\Produit1Controller::delete' => ['privates', '.service_locator.J966qaa', 'get_ServiceLocator_J966qaaService', false],
-            'App\\Controller\\Produit1Controller::liste' => ['privates', '.service_locator.D_VxfLH', 'get_ServiceLocator_DVxfLHService', false],
-            'App\\Controller\\SecurityController::login' => ['privates', '.service_locator.g.xob4v', 'get_ServiceLocator_G_Xob4vService', false],
-            'App\\Controller\\UserController::edit' => ['privates', '.service_locator.RQPnyo9', 'get_ServiceLocator_RQPnyo9Service', false],
-            'App\\Controller\\UserController::new' => ['privates', '.service_locator.jmvbEvf', 'get_ServiceLocator_JmvbEvfService', false],
-            'App\\Controller\\DefaultController:affiche' => ['privates', '.service_locator.hqNb5OX', 'get_ServiceLocator_HqNb5OXService', false],
-            'App\\Controller\\MessageController:new' => ['privates', '.service_locator.RLVVpop', 'get_ServiceLocator_RLVVpopService', false],
-            'App\\Controller\\Produit1Controller:annonces' => ['privates', '.service_locator.D_VxfLH', 'get_ServiceLocator_DVxfLHService', false],
-            'App\\Controller\\Produit1Controller:delete' => ['privates', '.service_locator.J966qaa', 'get_ServiceLocator_J966qaaService', false],
-            'App\\Controller\\Produit1Controller:liste' => ['privates', '.service_locator.D_VxfLH', 'get_ServiceLocator_DVxfLHService', false],
-            'App\\Controller\\SecurityController:login' => ['privates', '.service_locator.g.xob4v', 'get_ServiceLocator_G_Xob4vService', false],
-            'App\\Controller\\UserController:edit' => ['privates', '.service_locator.RQPnyo9', 'get_ServiceLocator_RQPnyo9Service', false],
-            'App\\Controller\\UserController:new' => ['privates', '.service_locator.jmvbEvf', 'get_ServiceLocator_JmvbEvfService', false],
-        ], [
-            'App\\Controller\\DefaultController::affiche' => '?',
-            'App\\Controller\\MessageController::new' => '?',
-            'App\\Controller\\Produit1Controller::annonces' => '?',
-            'App\\Controller\\Produit1Controller::delete' => '?',
-            'App\\Controller\\Produit1Controller::liste' => '?',
-            'App\\Controller\\SecurityController::login' => '?',
-            'App\\Controller\\UserController::edit' => '?',
-            'App\\Controller\\UserController::new' => '?',
-            'App\\Controller\\DefaultController:affiche' => '?',
-            'App\\Controller\\MessageController:new' => '?',
-            'App\\Controller\\Produit1Controller:annonces' => '?',
-            'App\\Controller\\Produit1Controller:delete' => '?',
-            'App\\Controller\\Produit1Controller:liste' => '?',
-            'App\\Controller\\SecurityController:login' => '?',
-            'App\\Controller\\UserController:edit' => '?',
-            'App\\Controller\\UserController:new' => '?',
         ]);
     }
 
@@ -2950,7 +2962,7 @@ class srcApp_KernelDevDebugContainer extends Container
         include_once \dirname(__DIR__, 4).'/vendor/symfony/http-kernel/Controller/ArgumentResolver/TraceableValueResolver.php';
         include_once \dirname(__DIR__, 4).'/vendor/symfony/http-kernel/Controller/ArgumentResolver/NotTaggedControllerValueResolver.php';
 
-        return $this->privates['debug.argument_resolver.not_tagged_controller'] = new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\TraceableValueResolver(new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver(($this->privates['.service_locator.vXnQXZo'] ?? $this->get_ServiceLocator_VXnQXZoService())), ($this->privates['debug.stopwatch'] ?? ($this->privates['debug.stopwatch'] = new \Symfony\Component\Stopwatch\Stopwatch(true))));
+        return $this->privates['debug.argument_resolver.not_tagged_controller'] = new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\TraceableValueResolver(new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver(($this->privates['.service_locator.OPRqaFk'] ?? $this->get_ServiceLocator_OPRqaFkService())), ($this->privates['debug.stopwatch'] ?? ($this->privates['debug.stopwatch'] = new \Symfony\Component\Stopwatch\Stopwatch(true))));
     }
 
     /**
@@ -2992,7 +3004,7 @@ class srcApp_KernelDevDebugContainer extends Container
         include_once \dirname(__DIR__, 4).'/vendor/symfony/http-kernel/Controller/ArgumentResolver/TraceableValueResolver.php';
         include_once \dirname(__DIR__, 4).'/vendor/symfony/http-kernel/Controller/ArgumentResolver/ServiceValueResolver.php';
 
-        return $this->privates['debug.argument_resolver.service'] = new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\TraceableValueResolver(new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver(($this->privates['.service_locator.vXnQXZo'] ?? $this->get_ServiceLocator_VXnQXZoService())), ($this->privates['debug.stopwatch'] ?? ($this->privates['debug.stopwatch'] = new \Symfony\Component\Stopwatch\Stopwatch(true))));
+        return $this->privates['debug.argument_resolver.service'] = new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\TraceableValueResolver(new \Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver(($this->privates['.service_locator.OPRqaFk'] ?? $this->get_ServiceLocator_OPRqaFkService())), ($this->privates['debug.stopwatch'] ?? ($this->privates['debug.stopwatch'] = new \Symfony\Component\Stopwatch\Stopwatch(true))));
     }
 
     /**

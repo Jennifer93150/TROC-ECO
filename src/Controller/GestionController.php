@@ -69,6 +69,8 @@ class GestionController extends AbstractController
             $em->persist($categorie);
             $em->flush();
 
+            $this->addFlash('success', 'Félicitations, votre catégorie a bien été ajouté !');
+
             return $this->redirectToRoute('recherche');
 
         }
