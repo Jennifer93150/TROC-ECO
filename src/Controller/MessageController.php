@@ -11,16 +11,29 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 
 class MessageController extends AbstractController
 {
     
-    # Fonction envoi message
+    /**
+    * @Route("/message", name="message")
+    * @IsGranted("IS_AUTHENTICATED_FULLY")
+    */
+    /*public function message()
+    {
+    
+        return $this->render('/user/message/show.html.twig');
+    }*/
+
+
+    # ENVOI DE MESSAGE
 
     /**
      * @Route("/message", name="message", methods={"GET","POST"})
+     * @IsGranted("IS_AUTHENTICATED_FULLY")
      */
-    public function new(Request $request, UserInterface $user): Response
+    public function send(Request $request, UserInterface $user): Response
     {
         # Création d'un nouvel object vide
         $message = new Message();
@@ -51,24 +64,27 @@ class MessageController extends AbstractController
             $em->flush();
 
             # Notification de confirmation
-            
+            $this->addFlash('success', 'Super, votre message a bien été envoyé !');
             return $this->redirectToRoute('profil');
         }
 
         # Passer le formulaire à la vue
-        return $this->render('/user/message.html.twig', ['Formulaire' => $form->createView()]);
+        return $this->render('/user/message/message.html.twig', ['Formulaire' => $form->createView()]);
     }
 
     
-    # essai affichage message recu dans profil
+    # AFFICHAGE MESSAGES RECUS
+   
     /**
-     * @Route("/profil/{id<\d+>}", name="liste" , methods={"GET"})
+     * @Route("/messagerie/{id<\d+>}", name="messagerie" , methods={"GET"})
+     * @IsGranted("IS_AUTHENTICATED_FULLY")
      */
-    /*public function recu(Request $request, MessageRepository $messageRepository, $id)
+    public function recu(Request $request, MessageRepository $messageRepository, $id)
     {
-        # je recupere mes produit par leur id de categorie avec la variable $id que je rappelle dans le findBy categorie=>$id
-        return $this->render('/user/profil.html.twig', ['mesmessages'=>$messageRepository->findBy(['destinataire'=> $id])]);
+        # Je recupere mes messages par leur id de destinataire avec la variable $id que je rappelle dans le findBy destinataire=>$id
+        # les messages qui s'afficheront seront ceux de l'user connecté grâce à la route qui recupere id de user connecté. 
+        return $this->render('/user/message/messagerie.html.twig', ['mesmessages'=>$messageRepository->findBy(['destinataire'=> $id])]);
         
-    }*/
+    }
     
 }

@@ -72,22 +72,22 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
             ";
         // line 45
         $this->displayBlock('contenuPrincipal', $context, $blocks);
-        // line 48
+        // line 53
         echo "                  
         </main>
         ";
-        // line 50
-        $this->loadTemplate("composants/footer.html.twig", "base.html.twig", 50)->display($context);
-        // line 51
+        // line 55
+        $this->loadTemplate("composants/footer.html.twig", "base.html.twig", 55)->display($context);
+        // line 56
         echo "
         
         
 
         ";
-        // line 56
+        // line 61
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 72
+        // line 77
         echo "
     </body>
 </html>
@@ -218,7 +218,12 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "contenuPrincipal"));
 
         // line 46
-        echo "                           
+        echo "                <div>
+                    <!-- btn de scroll  -->
+                    <a href=\"#\" class=\"scroll-btn\">
+                        <button class=\"bouton-scroll\"><i class=\"fas fa-arrow-up\"></i></button>
+                    </a>
+                </div>           
             ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -228,7 +233,7 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
 
     }
 
-    // line 56
+    // line 61
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -238,7 +243,7 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 57
+        // line 62
         echo "
              
             <!-- JavaScript Bundle with Popper -->
@@ -274,7 +279,7 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
 
     public function getDebugInfo()
     {
-        return array (  242 => 57,  232 => 56,  221 => 46,  211 => 45,  198 => 30,  194 => 29,  190 => 28,  186 => 27,  182 => 26,  179 => 25,  169 => 24,  156 => 34,  153 => 33,  151 => 24,  133 => 8,  123 => 7,  105 => 5,  91 => 72,  88 => 56,  82 => 51,  80 => 50,  76 => 48,  74 => 45,  69 => 42,  67 => 41,  61 => 37,  59 => 7,  54 => 5,  48 => 1,);
+        return array (  247 => 62,  237 => 61,  221 => 46,  211 => 45,  198 => 30,  194 => 29,  190 => 28,  186 => 27,  182 => 26,  179 => 25,  169 => 24,  156 => 34,  153 => 33,  151 => 24,  133 => 8,  123 => 7,  105 => 5,  91 => 77,  88 => 61,  82 => 56,  80 => 55,  76 => 53,  74 => 45,  69 => 42,  67 => 41,  61 => 37,  59 => 7,  54 => 5,  48 => 1,);
     }
 
     public function getSourceContext()
@@ -324,7 +329,12 @@ class __TwigTemplate_57cc93f113ff6f2dbf348160a53e8b4106eeaad2875f633f55c7ad87c94
         <main>
             
             {% block contenuPrincipal %}
-                           
+                <div>
+                    <!-- btn de scroll  -->
+                    <a href=\"#\" class=\"scroll-btn\">
+                        <button class=\"bouton-scroll\"><i class=\"fas fa-arrow-up\"></i></button>
+                    </a>
+                </div>           
             {% endblock %}
                   
         </main>

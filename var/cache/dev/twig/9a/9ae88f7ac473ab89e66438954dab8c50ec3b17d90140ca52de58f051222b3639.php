@@ -47,7 +47,7 @@ class __TwigTemplate_696db48eb11ddf85b8e67f253cb8f0c1e948611fe1c3f845e646822dd16
         ";
         // line 4
         $this->displayBlock('header', $context, $blocks);
-        // line 61
+        // line 67
         echo "</header>";
         
         $__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e->leave($__internal_085b0142806202599c7fe3b329164a92397d8978207a37e79d70b8c52599e33e_prof);
@@ -116,52 +116,61 @@ class __TwigTemplate_696db48eb11ddf85b8e67f253cb8f0c1e948611fe1c3f845e646822dd16
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("profil");
             echo "\">Mon Profil</a>
         </li>
-        <li class=\"nav-item\">
-          <a class=\"nav-link text-light\" href=\"";
-            // line 33
+        <li class=\"nav-item dropdown\">
+          <a class=\"nav-link dropdown-toggle text-light\" data-bs-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-expanded=\"false\">Mes Messages</a>
+          <ul class=\"dropdown-menu dropdown-menu-end\">
+            <li><a class=\"dropdown-item\" href=\"";
+            // line 35
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("message");
-            echo "\">Mes Messages</a>
+            echo "\">Envoyer un message</a></li>
+            <li><hr class=\"dropdown-divider\"></li> 
+            <!-- pour le chemin de la messagerie j'indique l'id de user connecté pour correspondre à la route demandé dans messagecontroller \"/messagerie/{id<\\d+>}\" -->
+            <li><a class=\"dropdown-item\" href=\"";
+            // line 38
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("messagerie", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 38, $this->source); })()), "user", [], "any", false, false, false, 38), "id", [], "any", false, false, false, 38)]), "html", null, true);
+            echo "\">Ma messagerie</a></li>
+          </ul>
         </li>
 
         ";
-            // line 36
+            // line 42
             if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-                // line 37
+                // line 43
                 echo "        <li class=\"nav-item\">
           <a class=\"nav-link text-light\" href=\"";
-                // line 38
+                // line 44
                 echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("gestion");
                 echo "\">Gestion</a>
         </li>
         ";
             }
-            // line 41
+            // line 47
             echo "
         <li class=\"nav-item\">
           <a class=\"nav-link text-light\" href=\"";
-            // line 43
+            // line 49
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\">Je me déconnecte</a>
         </li>
 
         ";
         } else {
-            // line 47
+            // line 53
             echo "        <li class=\"nav-item\">
           <a class=\"nav-link text-light\" href=\"";
-            // line 48
+            // line 54
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("inscription");
             echo "\">Je m'inscris</a>
         </li>
         <li class=\"nav-item\">
           <a class=\"nav-link text-light\" href=\"";
-            // line 51
+            // line 57
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\">Je me connecte</a>
         </li>
         ";
         }
-        // line 54
+        // line 60
         echo "
       </ul>
     </div>
@@ -184,7 +193,7 @@ class __TwigTemplate_696db48eb11ddf85b8e67f253cb8f0c1e948611fe1c3f845e646822dd16
 
     public function getDebugInfo()
     {
-        return array (  165 => 54,  159 => 51,  153 => 48,  150 => 47,  143 => 43,  139 => 41,  133 => 38,  130 => 37,  128 => 36,  122 => 33,  116 => 30,  110 => 27,  107 => 26,  105 => 25,  99 => 22,  93 => 19,  81 => 10,  77 => 9,  71 => 5,  61 => 4,  51 => 61,  49 => 4,  44 => 1,);
+        return array (  174 => 60,  168 => 57,  162 => 54,  159 => 53,  152 => 49,  148 => 47,  142 => 44,  139 => 43,  137 => 42,  130 => 38,  124 => 35,  116 => 30,  110 => 27,  107 => 26,  105 => 25,  99 => 22,  93 => 19,  81 => 10,  77 => 9,  71 => 5,  61 => 4,  51 => 67,  49 => 4,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -220,8 +229,14 @@ class __TwigTemplate_696db48eb11ddf85b8e67f253cb8f0c1e948611fe1c3f845e646822dd16
         <li class=\"nav-item\">
           <a class=\"nav-link text-light\" href=\"{{ path('profil') }}\">Mon Profil</a>
         </li>
-        <li class=\"nav-item\">
-          <a class=\"nav-link text-light\" href=\"{{ path('message') }}\">Mes Messages</a>
+        <li class=\"nav-item dropdown\">
+          <a class=\"nav-link dropdown-toggle text-light\" data-bs-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-expanded=\"false\">Mes Messages</a>
+          <ul class=\"dropdown-menu dropdown-menu-end\">
+            <li><a class=\"dropdown-item\" href=\"{{ path('message') }}\">Envoyer un message</a></li>
+            <li><hr class=\"dropdown-divider\"></li> 
+            <!-- pour le chemin de la messagerie j'indique l'id de user connecté pour correspondre à la route demandé dans messagecontroller \"/messagerie/{id<\\d+>}\" -->
+            <li><a class=\"dropdown-item\" href=\"{{ path('messagerie', {'id': app.user.id}) }}\">Ma messagerie</a></li>
+          </ul>
         </li>
 
         {% if is_granted('ROLE_ADMIN') %}

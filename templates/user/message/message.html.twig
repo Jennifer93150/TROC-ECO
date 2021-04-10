@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Troc'Eco | Message{% endblock %}
+
+{# MAIN #}
+{% block contenuPrincipal %}
+
+<section>
+    <div class="shadow-lg">
+        <h1 class="text-center py-3 my-5">Message</h1>
+    </div>
+    
+{# FORMULAIRE#}
+    <div class="container shadow bg-vert">
+        <form method="post">
+            <div>
+                
+                {{ form(Formulaire) }}
+                
+            </div>
+        </form>
+    </div>
+    
+</section>
+{# rappel du bouton scroll #}
+{{ parent() }}
+{% endblock %}

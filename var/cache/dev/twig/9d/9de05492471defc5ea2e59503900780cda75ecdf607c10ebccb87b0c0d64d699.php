@@ -90,36 +90,57 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
         <div  class=\"shadow-lg\">
             <h1 class=\"text-center my-5 py-3\">Mon profil</h1>
         </div>
+
+        ";
+        // line 13
+        echo "        ";
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 13, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 13));
+        foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
+            // line 14
+            echo "            <div class=\"alert alert-success\">
+                ";
+            // line 15
+            echo twig_escape_filter($this->env, $context["message"], "html", null, true);
+            echo "
+            </div>
+        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 18
+        echo "        <!-- AFFICHAGE DES INFOS DE USER -->
         <div class=\"container shadow bg-vert rounded\">
             <div class=\"mb-3\">
                 <div class=\"row g-0\">
                     <div class=\"col-lg-6\">
                         <img class=\"rounded abeille\" src=\"";
-        // line 15
+        // line 23
         echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl("img/profil.png"), "html", null, true);
         echo "\" alt=\"img-profil\">
                     </div>
                     <div class=\"contenu-profil col-lg-6 px-5 pb-5\">
                         
                             <h2 class=\"text-capitalize mb-5\">Coucou ";
-        // line 19
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 19, $this->source); })()), "user", [], "any", false, false, false, 19), "nom", [], "any", false, false, false, 19), "html", null, true);
+        // line 27
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 27, $this->source); })()), "user", [], "any", false, false, false, 27), "nom", [], "any", false, false, false, 27), "html", null, true);
         echo "</h2>
                             <p class=\"mb-5\">Email : ";
-        // line 20
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 20, $this->source); })()), "user", [], "any", false, false, false, 20), "email", [], "any", false, false, false, 20), "html", null, true);
+        // line 28
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 28, $this->source); })()), "user", [], "any", false, false, false, 28), "email", [], "any", false, false, false, 28), "html", null, true);
         echo "</p>
                             <p class=\"text-capitalize mb-5\">Ville : ";
-        // line 21
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 21, $this->source); })()), "user", [], "any", false, false, false, 21), "ville", [], "any", false, false, false, 21), "html", null, true);
+        // line 29
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 29, $this->source); })()), "user", [], "any", false, false, false, 29), "ville", [], "any", false, false, false, 29), "html", null, true);
         echo "</p>
                             <p class=\"mb-5\">Code postal : ";
-        // line 22
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 22, $this->source); })()), "user", [], "any", false, false, false, 22), "cp", [], "any", false, false, false, 22), "html", null, true);
+        // line 30
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 30, $this->source); })()), "user", [], "any", false, false, false, 30), "cp", [], "any", false, false, false, 30), "html", null, true);
         echo "</p>
                             <p class=\"mb-5\">Tel : 0";
-        // line 23
-        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 23, $this->source); })()), "user", [], "any", false, false, false, 23), "telephone", [], "any", false, false, false, 23), "html", null, true);
+        // line 31
+        echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 31, $this->source); })()), "user", [], "any", false, false, false, 31), "telephone", [], "any", false, false, false, 31), "html", null, true);
         echo "</p>
                     </div>
                 </div>
@@ -128,44 +149,48 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
                 <h2 class=\"mb-4\">A propos de moi</h2>
                 <p>Gingerbread sesame snaps powder marzipan pie tootsie roll jelly-o. Tiramisu lollipop biscuit liquorice candy canes tootsie roll brownie. Soufflé tiramisu tootsie roll bear claw carrot cake. Jelly-o sweet sesame snaps cheesecake dessert gummies. Muffin sugar plum liquorice caramels fruitcake marzipan candy canes.</p>
                 <a href=\"";
-        // line 30
-        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("edit_profil", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 30, $this->source); })()), "user", [], "any", false, false, false, 30), "id", [], "any", false, false, false, 30)]), "html", null, true);
+        // line 38
+        echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("edit_profil", ["id" => twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 38, $this->source); })()), "user", [], "any", false, false, false, 38), "id", [], "any", false, false, false, 38)]), "html", null, true);
         echo "\">Modifier mon profil</a>
             </div>
             <div>
+            <!-- AFFICHAGE DES PRODUITS DE USER -->
                 <h2>Mes trocs</h2>
                 <!-- Faire une boucle for  -->
                 ";
-        // line 35
+        // line 44
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 35, $this->source); })()), "user", [], "any", false, false, false, 35), "produits", [], "any", false, false, false, 35));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 44, $this->source); })()), "user", [], "any", false, false, false, 44), "produits", [], "any", false, false, false, 44));
         foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
-            // line 36
+            // line 45
             echo "                <div class=\"mb-3\">
                     <div class=\"row g-0 border\">
                         <div class=\"col-md-6\">
                             <img src=\"";
-            // line 39
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/brochures/" . twig_get_attribute($this->env, $this->source, $context["produit"], "photo", [], "any", false, false, false, 39))), "html", null, true);
+            // line 48
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("uploads/brochures/" . twig_get_attribute($this->env, $this->source, $context["produit"], "photo", [], "any", false, false, false, 48))), "html", null, true);
             echo "\" alt=\"Photo-";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "titre", [], "any", false, false, false, 39), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "titre", [], "any", false, false, false, 48), "html", null, true);
             echo "\">
                         </div>
                         <div class=\"col-md-6 p-5\">
                             <div>
                                 <h2 class=\"text-capitalize\">";
-            // line 43
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "titre", [], "any", false, false, false, 43), "html", null, true);
+            // line 52
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "titre", [], "any", false, false, false, 52), "html", null, true);
             echo "</h2>
                                 <p class=\"\">";
-            // line 44
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 44), "html", null, true);
+            // line 53
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 53), "html", null, true);
             echo "</p>
                             </div>
                         </div>
                     </div>
                     <!-- Fonction de suppression du produit par user A faire avec ceci entre accolades: path('deleteproduit', {'id':produit.id})-->
-                   <a href=\"#\"><h3 class=\"btn text-center text-dark\">Supprimer cette annonce</h3></a>
+                   <a href=\"";
+            // line 58
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("deleteproduit", ["id" => twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 58)]), "html", null, true);
+            echo "\"><h3 class=\"btn text-center text-dark\">Supprimer cette annonce</h3></a>
 
                 </div>
                 ";
@@ -173,67 +198,17 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 53
+        // line 62
         echo "                
             </div>
-            <div>
-                <h2>Messages envoyés</h2>
-                <!-- Faire une boucle for  -->
-                ";
-        // line 58
-        $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 58, $this->source); })()), "user", [], "any", false, false, false, 58), "messages", [], "any", false, false, false, 58));
-        foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-            // line 59
-            echo "                <div class=\"mb-3\">
-                    <div class=\"row g-0 border\">
-                        
-                        <div class=\"col-12 p-5\">
-                            <div>
-                                <h2 class=\"text-capitalize\"></h2>
-                                <p class=\"\">";
-            // line 65
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["message"], "message", [], "any", false, false, false, 65), "html", null, true);
-            echo "</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-
-                </div>
-                ";
-        }
-        $_parent = $context['_parent'];
-        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
-        $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 73
-        echo "                
-            </div>
-            <!-- <div>
-                <h2>Messages reçus</h2>
-                Faire une boucle for  
-                for message in mesmessages 
-                <div class=\"mb-3\">
-                    <div class=\"row g-0 border\">
-                        
-                        <div class=\"col-12 p-5\">
-                            <div>
-                                <h2 class=\"text-capitalize\"></h2>
-                                <p class=\"\"></p>
-                            </div>
-                        </div>
-                    </div>
-                    
-
-                </div>
-                endfor 
-                
-            </div>-->
-
+            
         </div>
     </section>
 
-
+";
+        // line 69
+        $this->displayParentBlock("contenuPrincipal", $context, $blocks);
+        echo "
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -255,7 +230,7 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
 
     public function getDebugInfo()
     {
-        return array (  210 => 73,  196 => 65,  188 => 59,  184 => 58,  177 => 53,  162 => 44,  158 => 43,  149 => 39,  144 => 36,  140 => 35,  132 => 30,  122 => 23,  118 => 22,  114 => 21,  110 => 20,  106 => 19,  99 => 15,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  210 => 69,  202 => 62,  192 => 58,  184 => 53,  180 => 52,  171 => 48,  166 => 45,  162 => 44,  153 => 38,  143 => 31,  139 => 30,  135 => 29,  131 => 28,  127 => 27,  120 => 23,  113 => 18,  104 => 15,  101 => 14,  96 => 13,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -270,6 +245,14 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
         <div  class=\"shadow-lg\">
             <h1 class=\"text-center my-5 py-3\">Mon profil</h1>
         </div>
+
+        {# Affichage du message de succes #}
+        {% for message in app.flashes('success') %}
+            <div class=\"alert alert-success\">
+                {{ message }}
+            </div>
+        {% endfor %}
+        <!-- AFFICHAGE DES INFOS DE USER -->
         <div class=\"container shadow bg-vert rounded\">
             <div class=\"mb-3\">
                 <div class=\"row g-0\">
@@ -292,6 +275,7 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
                 <a href=\"{{ path('edit_profil', {'id':app.user.id})}}\">Modifier mon profil</a>
             </div>
             <div>
+            <!-- AFFICHAGE DES PRODUITS DE USER -->
                 <h2>Mes trocs</h2>
                 <!-- Faire une boucle for  -->
                 {% for produit in app.user.produits %}
@@ -308,57 +292,18 @@ class __TwigTemplate_f59c807e27e0d17efb2dcc2a44f47c7791182d1464dd2fc92042f483547
                         </div>
                     </div>
                     <!-- Fonction de suppression du produit par user A faire avec ceci entre accolades: path('deleteproduit', {'id':produit.id})-->
-                   <a href=\"#\"><h3 class=\"btn text-center text-dark\">Supprimer cette annonce</h3></a>
+                   <a href=\"{{ path('deleteproduit', {'id':produit.id})}}\"><h3 class=\"btn text-center text-dark\">Supprimer cette annonce</h3></a>
 
                 </div>
                 {% endfor %}
                 
             </div>
-            <div>
-                <h2>Messages envoyés</h2>
-                <!-- Faire une boucle for  -->
-                {% for message in app.user.messages %}
-                <div class=\"mb-3\">
-                    <div class=\"row g-0 border\">
-                        
-                        <div class=\"col-12 p-5\">
-                            <div>
-                                <h2 class=\"text-capitalize\"></h2>
-                                <p class=\"\">{{ message.message }}</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-
-                </div>
-                {% endfor %}
-                
-            </div>
-            <!-- <div>
-                <h2>Messages reçus</h2>
-                Faire une boucle for  
-                for message in mesmessages 
-                <div class=\"mb-3\">
-                    <div class=\"row g-0 border\">
-                        
-                        <div class=\"col-12 p-5\">
-                            <div>
-                                <h2 class=\"text-capitalize\"></h2>
-                                <p class=\"\"></p>
-                            </div>
-                        </div>
-                    </div>
-                    
-
-                </div>
-                endfor 
-                
-            </div>-->
-
+            
         </div>
     </section>
 
-
+{# rappel du bouton scroll #}
+{{ parent() }}
 {% endblock %}
 ", "/user/profil.html.twig", "/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/templates/user/profil.html.twig");
     }

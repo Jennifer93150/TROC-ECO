@@ -28,18 +28,12 @@
                     </div>
                 </div>
                 <a href="{{ path('annonce', {'id':produit.id})}}"><h3 class="btn text-center text-dark ">Voir ce troc</h3></a>
-                {% if is_granted('ROLE_ADMIN')%}
-                   
-
-                        <a href="{{ path('deleteproduit', {'id':produit.id})}}"><h3 class="btn text-center text-dark ">Supprimer ce troc</h3></a>
-
-
-                   
-                {% endif %}
+                
             </div>
         {% endfor %}
         </div>
     </div>
 </section>
-
+{# rappel du bouton scroll #}
+{{ parent() }}
 {% endblock %}

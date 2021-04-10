@@ -199,17 +199,15 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
             </article>
         
         </section>
-        <div>
-            <!-- btn de scroll  -->
-            <a href=\"#\" class=\"scroll-btn\">
-                <button class=\"bouton-scroll\"><i class=\"fas fa-arrow-up\"></i></button>
-            </a>
-        </div>
+       
         
     </section>
         
     
-
+";
+        // line 86
+        $this->displayParentBlock("contenuPrincipal", $context, $blocks);
+        echo "
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -231,7 +229,7 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
 
     public function getDebugInfo()
     {
-        return array (  182 => 61,  177 => 59,  163 => 48,  159 => 47,  155 => 46,  146 => 40,  138 => 34,  129 => 28,  125 => 27,  122 => 26,  120 => 25,  113 => 20,  104 => 17,  101 => 16,  96 => 15,  88 => 8,  78 => 7,  59 => 4,  36 => 1,);
+        return array (  209 => 86,  182 => 61,  177 => 59,  163 => 48,  159 => 47,  155 => 46,  146 => 40,  138 => 34,  129 => 28,  125 => 27,  122 => 26,  120 => 25,  113 => 20,  104 => 17,  101 => 16,  96 => 15,  88 => 8,  78 => 7,  59 => 4,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -315,17 +313,13 @@ class __TwigTemplate_990da57f11cf6030c9ae8ba61b5557eb4c0cdb3f0add53abe9be738285f
             </article>
         
         </section>
-        <div>
-            <!-- btn de scroll  -->
-            <a href=\"#\" class=\"scroll-btn\">
-                <button class=\"bouton-scroll\"><i class=\"fas fa-arrow-up\"></i></button>
-            </a>
-        </div>
+       
         
     </section>
         
     
-
+{# rappel du bouton scroll #}
+{{ parent() }}
 {% endblock %}", "/troc-eco/index.html.twig", "/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/templates/troc-eco/index.html.twig");
     }
 }

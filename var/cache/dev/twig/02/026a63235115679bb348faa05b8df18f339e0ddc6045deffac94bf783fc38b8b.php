@@ -124,7 +124,10 @@ class __TwigTemplate_4181d9c445e895c384b9e496c3a1ee332dff0c5ffad56da9c85ffec4138
   
     </div>
 </div>
-
+";
+        // line 36
+        $this->displayParentBlock("contenuPrincipal", $context, $blocks);
+        echo "
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -146,7 +149,7 @@ class __TwigTemplate_4181d9c445e895c384b9e496c3a1ee332dff0c5ffad56da9c85ffec4138
 
     public function getDebugInfo()
     {
-        return array (  113 => 22,  109 => 21,  100 => 17,  88 => 7,  78 => 6,  59 => 3,  36 => 1,);
+        return array (  129 => 36,  113 => 22,  109 => 21,  100 => 17,  88 => 7,  78 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -185,7 +188,8 @@ class __TwigTemplate_4181d9c445e895c384b9e496c3a1ee332dff0c5ffad56da9c85ffec4138
   
     </div>
 </div>
-
+{# rappel du bouton scroll #}
+{{ parent() }}
 {% endblock %}", "/troc-eco/categories/annonce.html.twig", "/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/templates/troc-eco/categories/annonce.html.twig");
     }
 }

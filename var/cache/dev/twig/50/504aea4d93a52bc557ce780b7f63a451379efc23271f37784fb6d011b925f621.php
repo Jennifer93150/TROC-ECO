@@ -85,20 +85,21 @@ class __TwigTemplate_64eeb4e1d18b561d0dcb94e676b73dd691a786ba2e8ecd98319038b400e
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "contenuPrincipal"));
 
         // line 6
-        echo "<section>
+        echo "
+<section>
     <div class=\"shadow-lg\">
         <h1 class=\"text-center py-3 my-5\">Recherche</h1>
     </div>
     ";
-        // line 11
+        // line 12
         echo "    ";
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 11, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 11));
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 12, $this->source); })()), "flashes", [0 => "success"], "method", false, false, false, 12));
         foreach ($context['_seq'] as $context["_key"] => $context["message"]) {
-            // line 12
+            // line 13
             echo "        <div class=\"alert alert-success\">
             ";
-            // line 13
+            // line 14
             echo twig_escape_filter($this->env, $context["message"], "html", null, true);
             echo "
         </div>
@@ -107,39 +108,39 @@ class __TwigTemplate_64eeb4e1d18b561d0dcb94e676b73dd691a786ba2e8ecd98319038b400e
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['message'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 16
+        // line 17
         echo "
     <div class=\"container\">
         <div class=\"row g-2\">
                 <!-- J'AFFICHE LES CATEGORIES -->
                 ";
-        // line 20
+        // line 21
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["noscategories"]) || array_key_exists("noscategories", $context) ? $context["noscategories"] : (function () { throw new RuntimeError('Variable "noscategories" does not exist.', 20, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["noscategories"]) || array_key_exists("noscategories", $context) ? $context["noscategories"] : (function () { throw new RuntimeError('Variable "noscategories" does not exist.', 21, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["categorie"]) {
-            // line 21
+            // line 22
             echo "
                         <div class=\"carte-categorie card col-lg-5 m-3 p-3 shadow rounded\">
                             <div class=\"card-body\">
                             <!-- !!!!! en date du 26/03/2021 On a  du enlever ce lien  path(categorie.nom)  du href car cela affichait une erreur de route introuvable et cela empeche donc l'affichage de la page recherche ,je suppose que cela est du au fait que la route de la nouvelle categorie venant d'etre ajoutée est encore inexistantes dans le code à la création de celles ci !!!!!!-->
                                 <h2 class=\"card-title text-center\"><a href=\"";
-            // line 25
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste", ["id" => twig_get_attribute($this->env, $this->source, $context["categorie"], "id", [], "any", false, false, false, 25)]), "html", null, true);
+            // line 26
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste", ["id" => twig_get_attribute($this->env, $this->source, $context["categorie"], "id", [], "any", false, false, false, 26)]), "html", null, true);
             echo "\">";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "nom", [], "any", false, false, false, 25), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "nom", [], "any", false, false, false, 26), "html", null, true);
             echo "</a></h2>
                                 
                             </div>
                             <div class=\"text-center\">
                                 <a href=\"";
-            // line 29
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste", ["id" => twig_get_attribute($this->env, $this->source, $context["categorie"], "id", [], "any", false, false, false, 29)]), "html", null, true);
+            // line 30
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste", ["id" => twig_get_attribute($this->env, $this->source, $context["categorie"], "id", [], "any", false, false, false, 30)]), "html", null, true);
             echo "\" class=\"align-self-center justify-self-center\">
                                     <img src=\"";
-            // line 30
-            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("/uploads/brochures/" . twig_get_attribute($this->env, $this->source, $context["categorie"], "photo", [], "any", false, false, false, 30))), "html", null, true);
+            // line 31
+            echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("/uploads/brochures/" . twig_get_attribute($this->env, $this->source, $context["categorie"], "photo", [], "any", false, false, false, 31))), "html", null, true);
             echo "\" class=\"card-img-bottom border border-4\" alt=\"photo-";
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "nom", [], "any", false, false, false, 30), "html", null, true);
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["categorie"], "nom", [], "any", false, false, false, 31), "html", null, true);
             echo "\">
                                 </a>  
                             </div>
@@ -150,25 +151,28 @@ class __TwigTemplate_64eeb4e1d18b561d0dcb94e676b73dd691a786ba2e8ecd98319038b400e
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['categorie'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 36
+        // line 37
         echo "
                 ";
-        // line 37
+        // line 38
         if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-            // line 38
+            // line 39
             echo "                    <div><a href=\"";
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("gestion");
             echo "\">Ajouter une catégorie</a></div>
                 ";
         }
-        // line 40
+        // line 41
         echo "                            
             
         </div>
     </div>
 </section>
 
-        
+ ";
+        // line 47
+        $this->displayParentBlock("contenuPrincipal", $context, $blocks);
+        echo "       
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -190,7 +194,7 @@ class __TwigTemplate_64eeb4e1d18b561d0dcb94e676b73dd691a786ba2e8ecd98319038b400e
 
     public function getDebugInfo()
     {
-        return array (  165 => 40,  159 => 38,  157 => 37,  154 => 36,  140 => 30,  136 => 29,  127 => 25,  121 => 21,  117 => 20,  111 => 16,  102 => 13,  99 => 12,  94 => 11,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  174 => 47,  166 => 41,  160 => 39,  158 => 38,  155 => 37,  141 => 31,  137 => 30,  128 => 26,  122 => 22,  118 => 21,  112 => 17,  103 => 14,  100 => 13,  95 => 12,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -200,6 +204,7 @@ class __TwigTemplate_64eeb4e1d18b561d0dcb94e676b73dd691a786ba2e8ecd98319038b400e
 {% block title %}Troc'Eco | Recherche | Nos catégories{% endblock %}
 
 {% block contenuPrincipal %}
+
 <section>
     <div class=\"shadow-lg\">
         <h1 class=\"text-center py-3 my-5\">Recherche</h1>
@@ -240,7 +245,7 @@ class __TwigTemplate_64eeb4e1d18b561d0dcb94e676b73dd691a786ba2e8ecd98319038b400e
     </div>
 </section>
 
-        
+ {{ parent() }}       
 {% endblock %}", "/troc-eco/categories/recherche_categorie.html.twig", "/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/templates/troc-eco/categories/recherche_categorie.html.twig");
     }
 }

@@ -346,6 +346,13 @@
     <service id="App\Service\FileUploader" class="App\Service\FileUploader" autowire="true">
       <argument>/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/public/uploads/brochures</argument>
     </service>
+    <service id="App\Controller\CategorieController" class="App\Controller\CategorieController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+      <tag name="container.service_subscriber"/>
+      <call method="setContainer">
+        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\CategorieController"/>
+      </call>
+    </service>
     <service id="App\Controller\DefaultController" class="App\Controller\DefaultController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
@@ -367,11 +374,11 @@
         <argument type="service" id=".service_locator.vdmMuyE.App\Controller\MessageController"/>
       </call>
     </service>
-    <service id="App\Controller\Produit1Controller" class="App\Controller\Produit1Controller" public="true" autowire="true" autoconfigure="true">
+    <service id="App\Controller\ProduitController" class="App\Controller\ProduitController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
       <tag name="container.service_subscriber"/>
       <call method="setContainer">
-        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\Produit1Controller"/>
+        <argument type="service" id=".service_locator.vdmMuyE.App\Controller\ProduitController"/>
       </call>
     </service>
     <service id="App\Controller\SecurityController" class="App\Controller\SecurityController" public="true" autowire="true" autoconfigure="true">
@@ -4918,6 +4925,9 @@
     <service id="doctrine.fixtures.purger.orm_purger_factory" class="Doctrine\Bundle\FixturesBundle\Purger\ORMPurgerFactory" public="false">
       <tag name="doctrine.fixtures.purger_factory" alias="default"/>
     </service>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\CategorieController" class="App\Controller\CategorieController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\CategorieController" class="App\Controller\CategorieController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\CategorieController" class="App\Controller\CategorieController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\DefaultController" class="App\Controller\DefaultController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\DefaultController" class="App\Controller\DefaultController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\DefaultController" class="App\Controller\DefaultController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -4927,9 +4937,9 @@
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\MessageController" class="App\Controller\MessageController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\MessageController" class="App\Controller\MessageController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\MessageController" class="App\Controller\MessageController" autowire="true" autoconfigure="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\Produit1Controller" class="App\Controller\Produit1Controller" autowire="true" abstract="true"/>
-    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\Produit1Controller" class="App\Controller\Produit1Controller" autowire="true" abstract="true"/>
-    <service id=".abstract.instanceof.App\Controller\Produit1Controller" class="App\Controller\Produit1Controller" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\ProduitController" class="App\Controller\ProduitController" autowire="true" abstract="true"/>
+    <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\ProduitController" class="App\Controller\ProduitController" autowire="true" abstract="true"/>
+    <service id=".abstract.instanceof.App\Controller\ProduitController" class="App\Controller\ProduitController" autowire="true" autoconfigure="true" abstract="true"/>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" abstract="true"/>
     <service id=".abstract.instanceof.App\Controller\SecurityController" class="App\Controller\SecurityController" autowire="true" autoconfigure="true" abstract="true"/>
@@ -5251,6 +5261,12 @@
         <argument key="user" type="service" id=".errored..service_locator.RLVVpop.Symfony\Component\Security\Core\User\UserInterface"/>
       </argument>
     </service>
+    <service id=".service_locator.lfs8OYB" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="messageRepository" type="service" id="App\Repository\MessageRepository"/>
+      </argument>
+    </service>
     <service id=".service_locator.D_VxfLH" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -5282,22 +5298,24 @@
         <argument key="user" type="service" id=".errored..service_locator.RQPnyo9.App\Entity\User"/>
       </argument>
     </service>
-    <service id=".service_locator.vXnQXZo" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".service_locator.F3QHENc" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
-        <argument key="App\Controller\DefaultController::affiche" type="service" id=".service_locator.hqNb5OX"/>
-        <argument key="App\Controller\MessageController::new" type="service" id=".service_locator.RLVVpop"/>
-        <argument key="App\Controller\Produit1Controller::annonces" type="service" id=".service_locator.D_VxfLH"/>
-        <argument key="App\Controller\Produit1Controller::delete" type="service" id=".service_locator.J966qaa"/>
-        <argument key="App\Controller\Produit1Controller::liste" type="service" id=".service_locator.D_VxfLH"/>
+        <argument key="App\Controller\CategorieController::affiche" type="service" id=".service_locator.hqNb5OX"/>
+        <argument key="App\Controller\MessageController::recu" type="service" id=".service_locator.lfs8OYB"/>
+        <argument key="App\Controller\MessageController::send" type="service" id=".service_locator.RLVVpop"/>
+        <argument key="App\Controller\ProduitController::annonces" type="service" id=".service_locator.D_VxfLH"/>
+        <argument key="App\Controller\ProduitController::delete" type="service" id=".service_locator.J966qaa"/>
+        <argument key="App\Controller\ProduitController::liste" type="service" id=".service_locator.D_VxfLH"/>
         <argument key="App\Controller\SecurityController::login" type="service" id=".service_locator.g.xob4v"/>
         <argument key="App\Controller\UserController::edit" type="service" id=".service_locator.RQPnyo9"/>
         <argument key="App\Controller\UserController::new" type="service" id=".service_locator.jmvbEvf"/>
-        <argument key="App\Controller\DefaultController:affiche" type="service" id=".service_locator.hqNb5OX"/>
-        <argument key="App\Controller\MessageController:new" type="service" id=".service_locator.RLVVpop"/>
-        <argument key="App\Controller\Produit1Controller:annonces" type="service" id=".service_locator.D_VxfLH"/>
-        <argument key="App\Controller\Produit1Controller:delete" type="service" id=".service_locator.J966qaa"/>
-        <argument key="App\Controller\Produit1Controller:liste" type="service" id=".service_locator.D_VxfLH"/>
+        <argument key="App\Controller\CategorieController:affiche" type="service" id=".service_locator.hqNb5OX"/>
+        <argument key="App\Controller\MessageController:recu" type="service" id=".service_locator.lfs8OYB"/>
+        <argument key="App\Controller\MessageController:send" type="service" id=".service_locator.RLVVpop"/>
+        <argument key="App\Controller\ProduitController:annonces" type="service" id=".service_locator.D_VxfLH"/>
+        <argument key="App\Controller\ProduitController:delete" type="service" id=".service_locator.J966qaa"/>
+        <argument key="App\Controller\ProduitController:liste" type="service" id=".service_locator.D_VxfLH"/>
         <argument key="App\Controller\SecurityController:login" type="service" id=".service_locator.g.xob4v"/>
         <argument key="App\Controller\UserController:edit" type="service" id=".service_locator.RQPnyo9"/>
         <argument key="App\Controller\UserController:new" type="service" id=".service_locator.jmvbEvf"/>
@@ -5593,6 +5611,12 @@
         <argument key="twig" type="service" id="twig" on-invalid="ignore"/>
       </argument>
     </service>
+    <service id=".service_locator.vdmMuyE.App\Controller\CategorieController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\CategorieController"/>
+      <argument>App\Controller\CategorieController</argument>
+      <argument type="service" id="service_container"/>
+      <factory service=".service_locator.vdmMuyE" method="withContext"/>
+    </service>
     <service id=".service_locator.vdmMuyE.App\Controller\DefaultController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator_context" id="App\Controller\DefaultController"/>
       <argument>App\Controller\DefaultController</argument>
@@ -5611,9 +5635,9 @@
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.vdmMuyE" method="withContext"/>
     </service>
-    <service id=".service_locator.vdmMuyE.App\Controller\Produit1Controller" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
-      <tag name="container.service_locator_context" id="App\Controller\Produit1Controller"/>
-      <argument>App\Controller\Produit1Controller</argument>
+    <service id=".service_locator.vdmMuyE.App\Controller\ProduitController" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator_context" id="App\Controller\ProduitController"/>
+      <argument>App\Controller\ProduitController</argument>
       <argument type="service" id="service_container"/>
       <factory service=".service_locator.vdmMuyE" method="withContext"/>
     </service>
@@ -5772,12 +5796,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
-      <argument type="service" id=".service_locator.vXnQXZo"/>
+      <argument type="service" id=".service_locator.F3QHENc"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver" public="false"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver" public="false">
-      <argument type="service" id=".service_locator.vXnQXZo"/>
+      <argument type="service" id=".service_locator.F3QHENc"/>
     </service>
     <service id=".debug.http_client.inner" class="Symfony\Contracts\HttpClient\HttpClientInterface" public="false">
       <argument type="collection"/>
@@ -6170,7 +6194,7 @@
     <service id="Psr\Log\LoggerInterface" alias="monolog.logger" public="false"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.CmORmuK" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem" public="false"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator.vXnQXZo"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.F3QHENc"/>
     <service id="twig.loader" alias="twig.loader.native_filesystem"/>
     <service id="Psr\Log\LoggerInterface $requestLogger" alias="monolog.logger.request"/>
     <service id="Psr\Log\LoggerInterface $consoleLogger" alias="monolog.logger.console"/>

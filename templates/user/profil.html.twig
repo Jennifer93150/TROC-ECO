@@ -8,6 +8,14 @@
         <div  class="shadow-lg">
             <h1 class="text-center my-5 py-3">Mon profil</h1>
         </div>
+
+        {# Affichage du message de succes #}
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success">
+                {{ message }}
+            </div>
+        {% endfor %}
+        <!-- AFFICHAGE DES INFOS DE USER -->
         <div class="container shadow bg-vert rounded">
             <div class="mb-3">
                 <div class="row g-0">
@@ -30,6 +38,7 @@
                 <a href="{{ path('edit_profil', {'id':app.user.id})}}">Modifier mon profil</a>
             </div>
             <div>
+            <!-- AFFICHAGE DES PRODUITS DE USER -->
                 <h2>Mes trocs</h2>
                 <!-- Faire une boucle for  -->
                 {% for produit in app.user.produits %}
@@ -46,55 +55,16 @@
                         </div>
                     </div>
                     <!-- Fonction de suppression du produit par user A faire avec ceci entre accolades: path('deleteproduit', {'id':produit.id})-->
-                   <a href="#"><h3 class="btn text-center text-dark">Supprimer cette annonce</h3></a>
+                   <a href="{{ path('deleteproduit', {'id':produit.id})}}"><h3 class="btn text-center text-dark">Supprimer cette annonce</h3></a>
 
                 </div>
                 {% endfor %}
                 
             </div>
-            <div>
-                <h2>Messages envoyés</h2>
-                <!-- Faire une boucle for  -->
-                {% for message in app.user.messages %}
-                <div class="mb-3">
-                    <div class="row g-0 border">
-                        
-                        <div class="col-12 p-5">
-                            <div>
-                                <h2 class="text-capitalize"></h2>
-                                <p class="">{{ message.message }}</p>
-                            </div>
-                        </div>
-                    </div>
-                    
-
-                </div>
-                {% endfor %}
-                
-            </div>
-            <!-- <div>
-                <h2>Messages reçus</h2>
-                Faire une boucle for  
-                for message in mesmessages 
-                <div class="mb-3">
-                    <div class="row g-0 border">
-                        
-                        <div class="col-12 p-5">
-                            <div>
-                                <h2 class="text-capitalize"></h2>
-                                <p class=""></p>
-                            </div>
-                        </div>
-                    </div>
-                    
-
-                </div>
-                endfor 
-                
-            </div>-->
-
+            
         </div>
     </section>
 
-
+{# rappel du bouton scroll #}
+{{ parent() }}
 {% endblock %}

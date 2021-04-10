@@ -29,8 +29,14 @@
         <li class="nav-item">
           <a class="nav-link text-light" href="{{ path('profil') }}">Mon Profil</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-light" href="{{ path('message') }}">Mes Messages</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-light" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Mes Messages</a>
+          <ul class="dropdown-menu dropdown-menu-end">
+            <li><a class="dropdown-item" href="{{ path('message') }}">Envoyer un message</a></li>
+            <li><hr class="dropdown-divider"></li> 
+            <!-- pour le chemin de la messagerie j'indique l'id de user connecté pour correspondre à la route demandé dans messagecontroller "/messagerie/{id<\d+>}" -->
+            <li><a class="dropdown-item" href="{{ path('messagerie', {'id': app.user.id}) }}">Ma messagerie</a></li>
+          </ul>
         </li>
 
         {% if is_granted('ROLE_ADMIN') %}

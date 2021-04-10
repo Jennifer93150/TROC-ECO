@@ -134,33 +134,21 @@ class __TwigTemplate_6bc895aa15c896ed4bd757863a3913e96f99401b2385cd53d94ec925617
             // line 30
             echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("annonce", ["id" => twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 30)]), "html", null, true);
             echo "\"><h3 class=\"btn text-center text-dark \">Voir ce troc</h3></a>
-                ";
-            // line 31
-            if ($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN")) {
-                // line 32
-                echo "                   
-
-                        <a href=\"";
-                // line 34
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("deleteproduit", ["id" => twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 34)]), "html", null, true);
-                echo "\"><h3 class=\"btn text-center text-dark \">Supprimer ce troc</h3></a>
-
-
-                   
-                ";
-            }
-            // line 39
-            echo "            </div>
+                
+            </div>
         ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 41
+        // line 34
         echo "        </div>
     </div>
 </section>
-
+";
+        // line 38
+        $this->displayParentBlock("contenuPrincipal", $context, $blocks);
+        echo "
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -182,7 +170,7 @@ class __TwigTemplate_6bc895aa15c896ed4bd757863a3913e96f99401b2385cd53d94ec925617
 
     public function getDebugInfo()
     {
-        return array (  160 => 41,  153 => 39,  145 => 34,  141 => 32,  139 => 31,  135 => 30,  128 => 26,  123 => 24,  119 => 23,  108 => 19,  98 => 11,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  150 => 38,  145 => 34,  135 => 30,  128 => 26,  123 => 24,  119 => 23,  108 => 19,  98 => 11,  94 => 10,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -217,20 +205,14 @@ class __TwigTemplate_6bc895aa15c896ed4bd757863a3913e96f99401b2385cd53d94ec925617
                     </div>
                 </div>
                 <a href=\"{{ path('annonce', {'id':produit.id})}}\"><h3 class=\"btn text-center text-dark \">Voir ce troc</h3></a>
-                {% if is_granted('ROLE_ADMIN')%}
-                   
-
-                        <a href=\"{{ path('deleteproduit', {'id':produit.id})}}\"><h3 class=\"btn text-center text-dark \">Supprimer ce troc</h3></a>
-
-
-                   
-                {% endif %}
+                
             </div>
         {% endfor %}
         </div>
     </div>
 </section>
-
+{# rappel du bouton scroll #}
+{{ parent() }}
 {% endblock %}", "/troc-eco/categories/liste_produits.html.twig", "/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/templates/troc-eco/categories/liste_produits.html.twig");
     }
 }

@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Troc'Eco | Ma Messagerie{% endblock %}
+
+{# MAIN #}
+{% block contenuPrincipal %}
+
+<section>
+    <div class="shadow-lg">
+        <h1 class="text-center py-3 my-5">Ma Messagerie</h1>
+    </div>
+    
+{# FORMULAIRE#}
+    <div class="container shadow bg-vert">
+        <div>
+            <h2 class="bg-dark text-light p-5 border">Messages reçus</h2>
+                <!-- Faire une boucle for  -->
+                    
+                    <div class="row g-0 bg-light border mb-5">
+
+                        <table class="table table-secondary">
+                            <thead>
+                                <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Destinataire</th>
+                                <th scope="col">Expéditeur</th>
+                                <th scope="col">Message</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {% for message in mesmessages %}
+                                <tr>
+                                <th scope="row">{{ message.id }}</th>
+                                <td>{{ message.destinataire.nom }}</td>
+                                <td>{{ message.user.nom }}</td>
+                                <td>{{ message.message }}</td>
+                                </tr>
+                            {% endfor %}
+                            </tbody>
+                        </table>
+                       
+                       
+                    </div>
+                    
+            
+        </div>
+        <div>
+                <h2 class="bg-dark text-light p-5 border">Messages envoyés</h2>
+                <!-- Faire une boucle for  -->
+                
+                <div class="row g-0 border">
+                    
+                        <table class="table table-secondary">
+                            <thead>
+                                <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Destinataire</th>
+                                <th scope="col">Expéditeur</th>
+                                <th scope="col">Message</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                            {% for message in app.user.messages %}
+                                <tr>
+                                <th scope="row">{{ message.id }}</th>
+                                <td>{{ message.destinataire.nom }}</td>
+                                <td>{{ message.user.nom }}</td>
+                                <td>{{ message.message }}
+                                    <a href="{{ path('edit_profil', {'id':app.user.id})}}">Supprimer</a>
+                                </td>
+                                
+                                </tr>
+                            {% endfor %} 
+                            </tbody>
+                        </table>
+                    
+                       
+                </div>
+               
+                
+                
+                
+        </div>
+    </div>
+    
+</section>
+{# rappel du bouton scroll #}
+{{ parent() }}
+{% endblock %}

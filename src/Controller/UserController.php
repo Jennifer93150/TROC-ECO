@@ -20,6 +20,18 @@ use Symfony\Component\HttpFoundation\Response;
 
 class UserController extends AbstractController
 {
+     # AFFICHAGE PROFIL (des données user)
+
+    /**
+    * @Route("/profil", name="profil")
+    * @IsGranted("IS_AUTHENTICATED_FULLY")
+    */
+    public function profil()
+    {
+        return $this->render('/user/profil.html.twig');
+    }
+
+    
      # Fonction inscription (Ajout nouvel user)
 
     /**
@@ -70,22 +82,11 @@ class UserController extends AbstractController
     }
 
    
-    # AFFICHAGE PROFIL (des données user)
-
-    /**
-    * @Route("/profil", name="profil")
-    * @IsGranted("IS_AUTHENTICATED_FULLY")
-    */
-    public function profil()
-    {
-        return $this->render('/user/profil.html.twig');
-    }
-
-
     # Modification du profil
 
     /**
      * @Route("/profil/edit/{id<\d+>}", name="edit_profil")
+    * @IsGranted("IS_AUTHENTICATED_FULLY")
      */
     public function edit(Request $request, User $user, UserPasswordEncoderInterface $encoder)
     {
@@ -109,9 +110,10 @@ class UserController extends AbstractController
             #$em->persist($user);
             $em->flush();
             
+            # Notification succes
+            $this->addFlash('success', 'Félicitations, votre profil a bien été modifié !');
             # Redirection au profil
             return $this->redirectToRoute('profil');
-            #return new Response('Votre profil a bien été modifié !');
             
         }
 

@@ -150,7 +150,10 @@ class __TwigTemplate_0456057d721f596645bcd07bbfdbb18b341aba2c76c6e7b0230d51c40b0
 </section>
 
 
-
+";
+        // line 45
+        $this->displayParentBlock("contenuPrincipal", $context, $blocks);
+        echo "
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -172,7 +175,7 @@ class __TwigTemplate_0456057d721f596645bcd07bbfdbb18b341aba2c76c6e7b0230d51c40b0
 
     public function getDebugInfo()
     {
-        return array (  143 => 35,  136 => 31,  132 => 30,  128 => 29,  124 => 28,  120 => 27,  116 => 26,  112 => 25,  105 => 21,  96 => 14,  88 => 7,  78 => 6,  59 => 3,  36 => 1,);
+        return array (  155 => 45,  143 => 35,  136 => 31,  132 => 30,  128 => 29,  124 => 28,  120 => 27,  116 => 26,  112 => 25,  105 => 21,  96 => 14,  88 => 7,  78 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -220,7 +223,8 @@ class __TwigTemplate_0456057d721f596645bcd07bbfdbb18b341aba2c76c6e7b0230d51c40b0
 </section>
 
 
-
+{# rappel du bouton scroll #}
+{{ parent() }}
 {% endblock %}
 ", "/user/edit.html.twig", "/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/templates/user/edit.html.twig");
     }

@@ -105,6 +105,22 @@ class __TwigTemplate_6551caa805820b6bcfae8094f00ec83fff586d33c1205f2b2065286827f
             </div>
         </form>
     </div>
+    <div>
+                <h2>Mes messages</h2>
+                <!-- Faire une boucle for  -->
+                
+                <div class=\"mb-3\">
+                
+                    <!-- Fonction de suppression du produit par user A faire avec ceci entre accolades: path('deleteproduit', {'id':produit.id})-->
+                   <a href=\"";
+        // line 30
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("liste_message");
+        echo "\"><h3 class=\"btn text-center text-dark\">Voir mes messages</h3></a>
+
+                </div>
+                
+                
+            </div>
 </section>
 
 ";
@@ -128,7 +144,7 @@ class __TwigTemplate_6551caa805820b6bcfae8094f00ec83fff586d33c1205f2b2065286827f
 
     public function getDebugInfo()
     {
-        return array (  102 => 18,  96 => 14,  88 => 7,  78 => 6,  59 => 3,  36 => 1,);
+        return array (  117 => 30,  102 => 18,  96 => 14,  88 => 7,  78 => 6,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -155,6 +171,19 @@ class __TwigTemplate_6551caa805820b6bcfae8094f00ec83fff586d33c1205f2b2065286827f
             </div>
         </form>
     </div>
+    <div>
+                <h2>Mes messages</h2>
+                <!-- Faire une boucle for  -->
+                
+                <div class=\"mb-3\">
+                
+                    <!-- Fonction de suppression du produit par user A faire avec ceci entre accolades: path('deleteproduit', {'id':produit.id})-->
+                   <a href=\"{{path('liste_message')}}\"><h3 class=\"btn text-center text-dark\">Voir mes messages</h3></a>
+
+                </div>
+                
+                
+            </div>
 </section>
 
 {% endblock %}", "/user/message.html.twig", "/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/templates/user/message.html.twig");

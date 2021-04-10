@@ -157,6 +157,10 @@ class __TwigTemplate_e2e6d6302ca1fa5b9ae86213efeb8f8e7ae171ac162f7d17cdc4881a0a8
     </div>
 </section>
 ";
+        // line 62
+        $this->displayParentBlock("contenuPrincipal", $context, $blocks);
+        echo "
+";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
@@ -177,7 +181,7 @@ class __TwigTemplate_e2e6d6302ca1fa5b9ae86213efeb8f8e7ae171ac162f7d17cdc4881a0a8
 
     public function getDebugInfo()
     {
-        return array (  154 => 56,  144 => 39,  136 => 34,  128 => 29,  121 => 24,  115 => 21,  112 => 20,  110 => 19,  107 => 18,  101 => 16,  99 => 15,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
+        return array (  161 => 62,  154 => 56,  144 => 39,  136 => 34,  128 => 29,  121 => 24,  115 => 21,  112 => 20,  110 => 19,  107 => 18,  101 => 16,  99 => 15,  88 => 6,  78 => 5,  59 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -242,6 +246,8 @@ class __TwigTemplate_e2e6d6302ca1fa5b9ae86213efeb8f8e7ae171ac162f7d17cdc4881a0a8
         </form>
     </div>
 </section>
+{# rappel du bouton scroll #}
+{{ parent() }}
 {% endblock %}
 ", "security/login.html.twig", "/Users/bouhidjennifer/Desktop/troc-eco/TROC-ECO/templates/security/login.html.twig");
     }
